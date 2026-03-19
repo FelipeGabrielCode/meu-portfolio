@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import { Moon, Sun, Globe, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/routing";
 
 interface NavbarProps {
   darkMode: boolean;
   onToggleDark: () => void;
+  // Props are kept optional for compatibility with older Vite residual pages.
+  language?: "EN" | "PT" | string;
+  onToggleLang?: () => void;
 }
 
 export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
@@ -34,10 +37,7 @@ export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
 
   const handleToggleLang = () => {
     const nextLocale = locale === "pt" ? "en" : "pt";
-    
-    // Remove o locale atual do pathname e adiciona o novo
-    const pathnameWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    router.push(`/${nextLocale}${pathnameWithoutLocale}`);
+    router.replace(pathname, { locale: nextLocale });
   };
 
   const navLinks = [

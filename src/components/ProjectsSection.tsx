@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 function useFadeIn(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,6 +26,102 @@ function TagPill({ label }: { label: string }) {
     <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium text-muted-foreground bg-muted/60 border border-border/50 hover:text-primary hover:border-primary/40 transition-colors duration-200">
       {label}
     </span>
+  );
+}
+
+type Project = {
+  id: string;
+  tags: string[];
+  gradient: string;
+  patternOpacity: number;
+  demoUrl: string;
+  codeUrl: string;
+};
+
+function ProjectCard({
+  project,
+  i,
+  t,
+}: {
+  project: Project;
+  i: number;
+  t: (key: string) => string;
+}) {
+  const { ref, visible } = useFadeIn();
+
+  return (
+    <div
+      ref={ref}
+      className={`group flex flex-col glass rounded-2xl overflow-hidden transition-all duration-500 ease-out hover:scale-[1.018] hover:-translate-y-1.5 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      style={{ transitionDelay: visible ? `${i * 100}ms` : "0ms" }}
+    >
+      <div className="relative h-48 overflow-hidden">
+        <div
+          className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
+          style={{ background: project.gradient }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+            opacity: project.patternOpacity,
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-16"
+          style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--card) / 0.3))" }}
+          aria-hidden="true"
+        />
+        <div className="absolute top-4 right-4 w-8 h-8 rounded-lg glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-1 group-hover:translate-y-0">
+          <ArrowUpRight className="w-4 h-4 text-foreground" />
+        </div>
+      </div>
+
+      <div className="flex flex-col flex-1 p-6 gap-4">
+        <h3 className="font-display text-2xl font-black text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
+          {t(`projects.${project.id}.title`)}
+        </h3>
+        <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t(`projects.${project.id}.description`)}</p>
+
+        <div className="flex flex-wrap gap-1.5">
+          {project.tags.map((tag) => (
+            <TagPill key={tag} label={tag} />
+          ))}
+        </div>
+
+        <div className="h-px bg-border/50 my-2" />
+
+        <div className="flex items-center gap-4">
+          <Link
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link"
+          >
+            <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
+              <ExternalLink className="w-3.5 h-3.5" />
+            </span>
+            {t("aria.liveDemo")}
+          </Link>
+
+          <Link
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link"
+          >
+            <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
+              <Github className="w-3.5 h-3.5" />
+            </span>
+            {t("aria.code")}
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -92,52 +188,8 @@ export default function ProjectsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 xl:grid-cols-2 xl:gap-8">
           {projects.map((project, i) => {
-            const { ref, visible } = useFadeIn();
             return (
-              <div
-                key={project.id}
-                ref={ref}
-                className={`group flex flex-col glass rounded-2xl overflow-hidden transition-all duration-500 ease-out hover:scale-[1.018] hover:-translate-y-1.5 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-                style={{ transitionDelay: visible ? `${i * 100}ms` : "0ms" }}
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110" style={{ background: project.gradient }} aria-hidden="true" />
-                  <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)", backgroundSize: "32px 32px", opacity: project.patternOpacity }} aria-hidden="true" />
-                  <div className="absolute bottom-0 left-0 right-0 h-16" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--card) / 0.3))" }} aria-hidden="true" />
-                  <div className="absolute top-4 right-4 w-8 h-8 rounded-lg glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-1 group-hover:translate-y-0">
-                    <ArrowUpRight className="w-4 h-4 text-foreground" />
-                  </div>
-                </div>
-
-                <div className="flex flex-col flex-1 p-6 gap-4">
-                  <h3 className="font-display text-2xl font-black text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
-                    {t(`projects.${project.id}.title`)}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {t(`projects.${project.id}.description`)}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <TagPill key={tag} label={tag} />
-                    ))}
-                  </div>
-                  <div className="h-px bg-border/50 my-2" />
-                  <div className="flex items-center gap-4">
-                    <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link">
-                      <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </span>
-                      {t("aria.liveDemo")}
-                    </Link>
-                    <Link href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link">
-                      <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
-                        <Github className="w-3.5 h-3.5" />
-                      </span>
-                      {t("aria.code")}
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <ProjectCard key={project.id} project={project as Project} i={i} t={t} />
             );
           })}
         </div>

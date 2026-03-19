@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { ArrowRight, Check, Github, Linkedin, Mail, Sparkles, Stethoscope } from "lucide-react";
