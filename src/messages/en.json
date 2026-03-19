@@ -1,0 +1,197 @@
+{
+  "Navbar": {
+    "links": {
+      "home": "Home",
+      "expertise": "Expertise",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "badge": "Available for new projects",
+    "name": "Felipe Gabriel",
+    "roles": [
+      "Full Stack Developer",
+      "DevOps Engineer",
+      "Automation Creator"
+    ],
+    "description": "Building scalable web applications, robust DevOps pipelines, and intelligent automations that turn ideas into products — from code to cloud.",
+    "cta": {
+      "primary": "View my projects",
+      "secondary": "Let's talk"
+    },
+    "scrollHint": "Scroll to explore"
+  },
+  "Expertise": {
+    "badge": "What I deliver",
+    "title": "Expertise & Stack",
+    "description": "Three pillars that guide every delivery — from concept to production.",
+    "cards": {
+      "fullstack": {
+        "title": "Full Stack Web Development",
+        "description": "End-to-end product engineering — from pixel-perfect interfaces to scalable architectures and APIs."
+      },
+      "devops": {
+        "title": "DevOps & Infrastructure",
+        "description": "Cloud-native deployments, container orchestration, and zero-downtime CI/CD pipelines."
+      },
+      "automations": {
+        "title": "Automations & Workflows",
+        "description": "Intelligent scripts and flows (no-code/low-code) that eliminate repetitive tasks and boost productivity."
+      }
+    }
+  },
+  "Projects": {
+    "badge": "Highlights",
+    "title": "Featured Projects & Automations",
+    "description": "Real-world projects combining web products and automation with a focus on performance, integration, and delivery.",
+    "aria": {
+      "liveDemo": "Live Demo",
+      "tryDemo": "🚀 Try Demo",
+      "code": "Source Code (GitHub)",
+      "codeSrOnly": "Source Code (GitHub)"
+    },
+    "projects": {
+      "hubEcommerce": {
+        "title": "Integrated Management Portal (SaaS)",
+        "description": "Complete financial management platform with real-time dashboard, automatic transaction reconciliation, and inventory control. Centralize all your business operations in an intuitive interface."
+      },
+      "pwaClinics": {
+        "title": "High-Performance HealthTech Platform",
+        "description": "Complete platform for medical clinics with intelligent scheduling, patient management, testimonials, and specialties. Modern interface with PWA and conversion optimization."
+      },
+      "onboardingAiCrm": {
+        "title": "Strategic Sales Ecosystem",
+        "description": "Complete digital product launch system with AI, dynamic countdown, interactive FAQ, and lead nurturing automation. Transform visitors into customers with high conversion."
+      },
+      "cicdAws": {
+        "title": "Intelligent Legal Management System",
+        "description": "High-availability system for law firms with process automation, case management, and compliance. Cloud-native infrastructure with zero downtime and automatic scalability."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Let's connect",
+    "title": "Contact",
+    "description": "Send a message and let's discuss how I can help with your next project.",
+    "left": {
+      "title": "Let's talk?",
+      "description": "Briefly tell me what you need and I'll reply with the next steps. If you prefer, choose a channel below to reach me now."
+    },
+    "buttons": {
+      "whatsapp": { "label": "WhatsApp", "hint": "Fast response" },
+      "linkedin": { "label": "LinkedIn", "hint": "Professional profile" },
+      "github": { "label": "GitHub", "hint": "Repositories & code" },
+      "email": { "label": "Email", "hint": "Proposals and briefing" },
+      "instagram": { "label": "Instagram", "hint": "Behind the scenes & content" }
+    },
+    "fields": {
+      "name": { "label": "Name", "placeholder": "Your name" },
+      "email": { "label": "Email", "placeholder": "you@example.com" },
+      "message": { "label": "Message", "placeholder": "Briefly tell me about the project, goals, and deadlines." }
+    },
+    "cta": { "sending": "Sending...", "send": "Send message" },
+    "validation": { "fillAll": "Please fill in your Name, Email, and a more detailed message." },
+    "errors": { "sendFailed": "Failed to send message.", "generic": "Error sending message." },
+    "success": { "sent": "Message sent successfully!" }
+  },
+  "Footer": {
+    "copyright": "Felipe Gabriel Web Developer © 2026",
+    "whatsappPrefill": "Hi Felipe, I saw your portfolio and would like to talk about a project."
+  },
+  "Demos": {
+    "common": {
+      "backToPortfolio": "Back to Portfolio",
+      "footer": "Felipe Gabriel WebDeveloper © 2026"
+    },
+    "gestao": {
+      "badge": "Smart ERP",
+      "title": "Integrated Management Portal",
+      "hero_desc": "Complete ERP system that unifies finance, inventory, and sales in one platform. Data-driven decision making with real-time insights.",
+      "feature_1": "Executive Dashboard",
+      "feature_1_desc": "View revenue, expenses, and profitability in real-time with interactive charts",
+      "feature_2": "Inventory Control",
+      "feature_2_desc": "Smart management with automatic restock alerts and turnover analysis",
+      "feature_3": "Latest Sales",
+      "feature_3_desc": "Track orders in real-time with updated status and notifications",
+      "cta_primary": "Explore Complete Solution",
+      "cta_secondary": "Discover Features",
+      "chart_title": "Monthly Revenue",
+      "stock_table": "Stock Status",
+      "sales_widget": "Recent Sales",
+      "stats": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "products": "Products",
+        "clients": "Clients"
+      }
+    },
+    "agencia": {
+      "badge": "Performance Marketing",
+      "title": "Digital Marketing Agency",
+      "hero_desc": "Data-driven strategies that generate real results. Increase your digital presence and convert more customers.",
+      "feature_1": "Success Cases",
+      "feature_1_desc": "Proven results: +300% traffic, +150% conversion",
+      "feature_2": "Clients Served",
+      "feature_2_desc": "Portfolio of brands that trust our work",
+      "feature_3": "Creative Team",
+      "feature_3_desc": "Experts in SEO, Ads, Design, and Copywriting",
+      "cta_primary": "Explore Complete Solution",
+      "cta_secondary": "View Success Cases",
+      "cases_title": "Results That Speak",
+      "clients_title": "Brands That Trust Us",
+      "team_title": "Our Team"
+    },
+    "clinica": {
+      "badge": "HealthTech Premium",
+      "title": "High-Performance HealthTech Platform",
+      "hero_desc": "Complete system for clinics and medical offices with smart scheduling, electronic medical records, and integrated telemedicine.",
+      "feature_1": "Medical Specialties",
+      "feature_1_desc": "Cardiology, Dermatology, Orthopedics, Neurology, and 20+ more specialties",
+      "feature_2": "Patient Testimonials",
+      "feature_2_desc": "Real reviews with star rating system and verified feedback",
+      "feature_3": "Smart Scheduling",
+      "feature_3_desc": "Book appointments 24/7 with automatic WhatsApp confirmation",
+      "cta_primary": "Request Free Diagnosis",
+      "cta_secondary": "Discover Specialties",
+      "specialties_title": "Our Specialties",
+      "testimonials_title": "What Our Patients Say",
+      "booking_title": "Schedule Your Appointment",
+      "booking_desc": "Fill out the form and we'll contact you in minutes"
+    },
+    "escritorio": {
+      "badge": "Legal Management",
+      "title": "Intelligent Legal Management System",
+      "hero_desc": "Complete legal platform for lawyers and law firms. Case management, documents, and client relationship.",
+      "feature_1": "Certifications & Badges",
+      "feature_1_desc": "Bar Association, GDPR Compliance, ISO 27001 - your security guaranteed",
+      "feature_2": "Practice Areas",
+      "feature_2_desc": "Civil Law, Labor Law, Corporate Law, Tax Law, and more",
+      "feature_3": "Articles & Publications",
+      "feature_3_desc": "High-quality legal content for your clients",
+      "cta_primary": "Request Demonstration",
+      "cta_secondary": "View Features",
+      "badges_title": "Credentials & Certifications",
+      "areas_title": "Practice Areas",
+      "articles_title": "Recent Publications"
+    },
+    "lancamento": {
+      "badge": "Infoproducts",
+      "title": "Strategic Sales Ecosystem",
+      "hero_desc": "Complete platform for launching courses and digital products. Countdown, automations, and high-conversion landing page.",
+      "feature_1": "Progressive Counter",
+      "feature_1_desc": "Scarcity urgency that increases conversion rates by up to 40%",
+      "feature_2": "Interactive FAQ",
+      "feature_2_desc": "Automatic answers for the main lead objections",
+      "feature_3": "Complete Automation",
+      "feature_3_desc": "Lead nurturing via integrated email, SMS, and WhatsApp",
+      "cta_primary": "Start Launch Strategy",
+      "cta_secondary": "View Plans & Pricing",
+      "countdown_title": "Offer Ends In:",
+      "faq_title": "Frequently Asked Questions",
+      "faq_subtitle": "Get your questions answered before buying",
+      "urgency": "Limited Spots - Last 17 units"
+    }
+  }
+}
+

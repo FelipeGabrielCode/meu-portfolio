@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink, Github, type LucideIcon, Cloud, FileCode2, Sparkles, Workflow } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, type LucideIcon, LayoutDashboard, Stethoscope, Rocket, Scale } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 type FeaturedProject = {
   id: string;
@@ -10,7 +11,6 @@ type FeaturedProject = {
   descriptionKey: string;
   tags: string[];
   demoUrl: string;
-  codeUrl: string;
   gradient: string;
   patternOpacity: number;
   icon: LucideIcon;
@@ -18,52 +18,48 @@ type FeaturedProject = {
 
 const featuredProjects: FeaturedProject[] = [
   {
-    id: "hub-ecommerce-estoque",
+    id: "portal-gestao-integrada",
     titleKey: "projects.hubEcommerce.title",
     descriptionKey: "projects.hubEcommerce.description",
     tags: ["Next.js", "Node.js", "n8n", "API Integration", "PostgreSQL"],
-    demoUrl: "#",
-    codeUrl: "#",
+    demoUrl: "/demos/gestao",
     gradient:
       "linear-gradient(135deg, hsl(221 83% 35%) 0%, hsl(262 83% 40%) 60%, hsl(190 83% 30%) 100%)",
     patternOpacity: 0.12,
-    icon: Workflow,
+    icon: LayoutDashboard,
   },
   {
-    id: "pipeline-cicd-aws",
-    titleKey: "projects.cicdAws.title",
-    descriptionKey: "projects.cicdAws.description",
-    tags: ["AWS", "Kubernetes", "Terraform", "GitHub Actions", "Docker"],
-    demoUrl: "#",
-    codeUrl: "#",
-    gradient:
-      "linear-gradient(135deg, hsl(145 63% 22%) 0%, hsl(213 95% 30%) 60%, hsl(217 75% 22%) 100%)",
-    patternOpacity: 0.12,
-    icon: Cloud,
-  },
-  {
-    id: "bpa-onboarding-ia-crm",
-    titleKey: "projects.onboardingAiCrm.title",
-    descriptionKey: "projects.onboardingAiCrm.description",
-    tags: ["n8n", "OpenAI API", "HubSpot", "Automatização", "Python"],
-    demoUrl: "#",
-    codeUrl: "#",
-    gradient:
-      "linear-gradient(135deg, hsl(16 100% 35%) 0%, hsl(32 95% 32%) 55%, hsl(291 64% 30%) 100%)",
-    patternOpacity: 0.12,
-    icon: Sparkles,
-  },
-  {
-    id: "pwa-agendamento-seo-whatsapp",
+    id: "sistema-clinicas-alta-performance",
     titleKey: "projects.pwaClinics.title",
     descriptionKey: "projects.pwaClinics.description",
     tags: ["React", "Tailwind", "Vite", "PWA", "SEO Técnico"],
-    demoUrl: "#",
-    codeUrl: "#",
+    demoUrl: "/demos/clinica",
     gradient:
       "linear-gradient(135deg, hsl(240 60% 28%) 0%, hsl(262 83% 35%) 55%, hsl(221 83% 28%) 100%)",
     patternOpacity: 0.12,
-    icon: FileCode2,
+    icon: Stethoscope,
+  },
+  {
+    id: "funil-lancamento-estrategico",
+    titleKey: "projects.onboardingAiCrm.title",
+    descriptionKey: "projects.onboardingAiCrm.description",
+    tags: ["n8n", "OpenAI API", "HubSpot", "Automatização", "Python"],
+    demoUrl: "/demos/lancamento",
+    gradient:
+      "linear-gradient(135deg, hsl(16 100% 35%) 0%, hsl(32 95% 32%) 55%, hsl(291 64% 30%) 100%)",
+    patternOpacity: 0.12,
+    icon: Rocket,
+  },
+  {
+    id: "infraestrutura-juridica-premium",
+    titleKey: "projects.cicdAws.title",
+    descriptionKey: "projects.cicdAws.description",
+    tags: ["AWS", "Kubernetes", "Terraform", "GitHub Actions", "Docker"],
+    demoUrl: "/demos/escritorio",
+    gradient:
+      "linear-gradient(135deg, hsl(145 63% 22%) 0%, hsl(213 95% 30%) 60%, hsl(217 75% 22%) 100%)",
+    patternOpacity: 0.12,
+    icon: Scale,
   },
 ];
 
@@ -108,11 +104,9 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
   return (
     <div
       ref={ref}
-      className={`group flex flex-col glass rounded-2xl overflow-hidden
-        transition-all duration-500 ease-out
-        hover:scale-[1.018] hover:-translate-y-1.5
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-      `}
+      className={`group flex flex-col glass rounded-2xl overflow-hidden transition-all duration-500 ease-out hover:scale-[1.018] hover:-translate-y-1.5 ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
       style={{
         transitionDelay: visible ? `${delay}ms` : "0ms",
       }}
@@ -141,7 +135,7 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
         {/* Technical icon (replaces image placeholder) */}
         <div className="absolute inset-0 flex items-center justify-center p-6">
           <div
-            className="glass rounded-2xl p-4 border border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:rotate-[0.5deg]"
+            className="glass rounded-2xl p-4 border border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:rotate-[0.5deg] will-change-transform"
           >
             <Icon className="w-7 h-7 text-primary" />
           </div>
@@ -171,33 +165,28 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
 
         <div className="h-px bg-border/50" />
 
-        {/* Minimal icon footer */}
-        <div className="flex items-center gap-3 pt-1">
-          <a
+        {/* CTA Button - Bigger and more eye-catching */}
+        <div className="flex items-center gap-4 pt-2">
+          <Link
             href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link"
-            aria-label={`${t("aria.liveDemo")} - ${t(project.titleKey)}`}
+            prefetch={true}
+            className="group relative inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-bold text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+            aria-label={`${t("aria.tryDemo")} - ${t(project.titleKey)}`}
           >
-            <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
-              <ExternalLink className="w-3.5 h-3.5" />
+            {/* Animated background effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+            
+            <span className="relative flex items-center gap-2">
+              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm">
+                <ExternalLink className="w-4 h-4" />
+              </span>
+              <span>{t("aria.tryDemo")}</span>
             </span>
-            <span className="sr-only">{t("aria.liveDemo")}</span>
-          </a>
-
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors duration-200 group/link"
-            aria-label={`${t("aria.code")} - ${t(project.titleKey)}`}
-          >
-            <span className="w-7 h-7 rounded-lg border border-border/60 hover:border-primary/50 flex items-center justify-center glass transition-all duration-200 group-hover/link:border-primary/50">
-              <Github className="w-3.5 h-3.5" />
-            </span>
-            <span className="sr-only">{t("aria.codeSrOnly")}</span>
-          </a>
+            
+            {/* Pulse animation dot */}
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping" />
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full" />
+          </Link>
         </div>
       </div>
     </div>
@@ -254,4 +243,3 @@ export default function FeaturedProjectsAndAutomations() {
     </section>
   );
 }
-

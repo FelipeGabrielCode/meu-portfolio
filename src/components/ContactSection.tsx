@@ -110,20 +110,19 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="relative py-20 md:py-28 overflow-hidden">
-      {/* Background blur gradient behind the card */}
+    <section id="contact" className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-background to-background/95">
+      {/* Background mais suave e fluido */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-24 left-1/2 w-[48rem] h-[48rem] -translate-x-1/2 opacity-60">
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/25 via-accent/15 to-transparent blur-3xl" />
+        <div className="absolute -top-24 left-1/2 w-[48rem] h-[48rem] -translate-x-1/2 opacity-40">
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-accent/10 to-transparent blur-3xl" />
         </div>
-        <div className="absolute top-16 right-0 w-[34rem] h-[34rem] opacity-45">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/15 via-cyan-500/10 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[34rem] h-[34rem] opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-cyan-500/5 to-transparent blur-3xl" />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.10),transparent_55%),radial-gradient(circle_at_80%_40%,hsl(var(--accent)/0.08),transparent_50%)] opacity-80" />
       </div>
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-xs font-semibold text-primary mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             {t("badge")}
@@ -134,7 +133,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="glass rounded-3xl p-6 md:p-10 lg:p-12">
+        <div className="glass rounded-3xl p-6 md:p-10 lg:p-12 border border-border/40 shadow-2xl shadow-primary/5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
             {/* Left column */}
             <div className="flex flex-col gap-5">

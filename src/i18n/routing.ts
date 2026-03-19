@@ -1,16 +1,15 @@
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
-import { defaultLocale, locales } from "../../i18n/routing";
-export { locales, defaultLocale } from "../../i18n/routing";
-export type { Locale } from "../../i18n/routing";
+export const locales = ["pt", "en"] as const;
+export type Locale = (typeof locales)[number];
+export const defaultLocale: Locale = "pt";
 
-// Gera helpers (Link/useRouter/usePathname) já com prefixo de idioma.
-const routing = defineRouting({
+// Exportamos o routing para usá-lo no middleware e no request.ts
+export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: "always",
 });
 
 export const { Link, usePathname, useRouter } = createNavigation(routing);
-

@@ -37,7 +37,15 @@ export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
 
   const handleToggleLang = () => {
     const nextLocale = locale === "pt" ? "en" : "pt";
-    router.replace(pathname, { locale: nextLocale });
+    
+    // Captura o hash atual da URL (ex: "#contact" ou "")
+    const currentHash = window.location.hash;
+    
+    // Faz a troca de idioma adicionando o hash e bloqueando o scroll pro topo
+    router.replace(`${pathname}${currentHash}`, {
+      locale: nextLocale,
+      scroll: false,
+    });
   };
 
   const navLinks = [

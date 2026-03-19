@@ -1,61 +1,203 @@
 {
-    "Navbar": {
-      "links": { "home": "Início", "expertise": "Especialidades", "projects": "Projetos", "contact": "Contato" }
+  "Navbar": {
+    "links": {
+      "home": "Início",
+      "expertise": "Especialidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "Hero": {
+    "badge": "Disponível para novos projetos",
+    "name": "Felipe Gabriel",
+    "roles": ["Desenvolvedor Full Stack", "Engenheiro DevOps", "Criador de Automações"],
+    "description": "Construindo aplicações web escaláveis, pipelines DevOps robustos e automações inteligentes que transformam ideias em produto — do código à nuvem.",
+    "cta": {
+      "primary": "Ver meus projetos",
+      "secondary": "Fale comigo"
     },
-    "Hero": {
-      "badge": "Disponível para novos projetos",
-      "name": "Felipe Gabriel",
-      "roles": ["Desenvolvedor Web Full Stack", "Engenheiro DevOps", "Criador de Automações"],
-      "description": "Transformo gargalos de negócios em soluções tecnológicas de alta performance, escaláveis e totalmente automatizadas.",
-      "cta": { "primary": "Ver meu trabalho", "secondary": "Entrar em contato" },
-      "scrollHint": "Role para explorar"
-    },
-    "Expertise": {
-      "badge": "Minhas Habilidades",
-      "title": "Especialidades Técnicas",
-      "description": "Domínio completo do ciclo de desenvolvimento, desde a arquitetura em nuvem até a interface de alta conversão.",
-      "cards": {
-        "fullstack": { "title": "Desenvolvimento Full Stack", "description": "Criação de aplicações web modernas e responsivas utilizando React, Next.js e Node.js." },
-        "devops": { "title": "DevOps & Infraestrutura", "description": "Arquitetura de pipelines de CI/CD, conteinerização com Docker e infraestrutura escalável na AWS." },
-        "automations": { "title": "Automações de Processos", "description": "Integração de sistemas com Python e n8n para reduzir custos operacionais e eliminar tarefas manuais." }
+    "scrollHint": "Role para explorar"
+  },
+  "Expertise": {
+    "badge": "O que eu entrego",
+    "title": "Expertise & Stack",
+    "description": "Três pilares que guiam cada entrega — do conceito à produção.",
+    "cards": {
+      "fullstack": {
+        "title": "Desenvolvimento Web Full Stack",
+        "description": "Engenharia de produto ponta a ponta — de interfaces pixel-perfect a arquiteturas e APIs escaláveis."
+      },
+      "devops": {
+        "title": "DevOps & Infraestrutura",
+        "description": "Deploys cloud-native, orquestração de containers e pipelines CI/CD com zero downtime."
+      },
+      "automations": {
+        "title": "Automações & Workflows",
+        "description": "Scripts e fluxos inteligentes (no-code/low-code) que eliminam tarefas repetitivas e aumentam produtividade."
       }
+    }
+  },
+  "Projects": {
+    "badge": "Destaques",
+    "title": "Projetos & Automações em Destaque",
+    "description": "Projetos reais que unem produto web e automação com foco em performance, integração e entrega.",
+    "aria": {
+      "liveDemo": "Demo ao vivo",
+      "tryDemo": "🚀 Experimentar Demo",
+      "code": "Código (GitHub)",
+      "codeSrOnly": "Código (GitHub)"
     },
-    "Projects": {
-      "badge": "Trabalhos Selecionados",
-      "title": "Projetos & Landing Pages",
-      "description": "Demonstrações reais de soluções de alta performance e páginas focadas em conversão criadas para diversos nichos.",
-      "viewAll": "Ver repositórios no GitHub",
-      "liveDemo": "Acessar Demo",
-      "sourceCode": "Código Fonte",
-      "items": {
-        "agencia": { "title": "Agência de Marketing Digital", "description": "Landing page de alta conversão com animações fluidas e design projetado para maximizar a captação de leads." },
-        "clinica": { "title": "Clínica Médica Premium", "description": "Interface limpa, profissional e acessível, com foco em prova social e agendamentos otimizados." },
-        "escritorio": { "title": "Escritório de Advocacia", "description": "Design corporativo de alto padrão focado em autoridade e confiança, utilizando tipografia clássica e performance extrema." },
-        "gestao": { "title": "SaaS de Gestão Financeira", "description": "Dashboard interativo simulando um produto digital real com visualização de dados complexos em tempo real." }
+    "projects": {
+      "hubEcommerce": {
+        "title": "Portal de Gestão Integrada (SaaS)",
+        "description": "Plataforma completa de gestão financeira com dashboard em tempo real, conciliação automática de transações e controle de estoque. Centralize todas as operações do seu negócio em uma interface intuitiva."
+      },
+      "pwaClinics": {
+        "title": "Plataforma HealthTech de Alta Performance",
+        "description": "Plataforma completa para clínicas médicas com agendamento inteligente, gestão de pacientes, depoimentos e especialidades. Interface moderna com PWA e otimização para conversão."
+      },
+      "onboardingAiCrm": {
+        "title": "Ecossistema de Vendas Estratégicas",
+        "description": "Sistema completo de lançamento de produtos digitais com IA, countdown dinâmico, FAQ interativo e automação de nutrição de leads. Transforme visitantes em clientes com alta conversão."
+      },
+      "cicdAws": {
+        "title": "Sistema de Gestão Legal Inteligente",
+        "description": "Sistema de alta disponibilidade para escritórios de advocacia com automação de processos, gestão de casos e compliance. Infraestrutura cloud-native com zero downtime e escalabilidade automática."
       }
-    },
-    "Contact": {
-      "badge": "Contato",
+    }
+  },
+  "Contact": {
+    "badge": "Vamos conversar",
+    "title": "Contato",
+    "description": "Envie uma mensagem e vamos alinhar como posso ajudar no seu próximo projeto.",
+    "left": {
       "title": "Vamos conversar?",
-      "description": "Pronto para iniciar o seu próximo projeto ou automatizar os seus processos? Envie-me uma mensagem.",
-      "left": {
-        "title": "Conecte-se comigo",
-        "description": "Sinta-se à vontade para me enviar uma mensagem direta através das minhas redes profissionais ou utilize o formulário ao lado."
-      },
-      "buttons": {
-        "whatsapp": { "label": "WhatsApp", "hint": "Resposta Rápida" },
-        "linkedin": { "label": "LinkedIn", "hint": "Perfil Profissional" },
-        "github": { "label": "GitHub", "hint": "Repositórios & Código" },
-        "email": { "label": "E-mail", "hint": "felipegabriel.code@gmail.com" }
-      },
-      "fields": {
-        "name": { "label": "Seu Nome", "placeholder": "Como devo chamá-lo?" },
-        "email": { "label": "Seu E-mail", "placeholder": "Onde posso responder?" },
-        "message": { "label": "Mensagem", "placeholder": "Fale-me um pouco sobre o seu projeto ou necessidade..." }
-      },
-      "cta": { "send": "Enviar Mensagem", "sending": "A enviar..." },
-      "success": { "sent": "Mensagem enviada com sucesso! Retornarei em breve." },
-      "errors": { "sendFailed": "Falha ao enviar a mensagem. Tente pelo WhatsApp.", "generic": "Ocorreu um erro inesperado." },
-      "validation": { "fillAll": "Por favor, preencha todos os campos corretamente antes de enviar." }
+      "description": "Me conte rapidamente o que você precisa e eu te respondo com os próximos passos. Se preferir, escolha um canal abaixo e fale comigo agora."
+    },
+    "buttons": {
+      "whatsapp": { "label": "WhatsApp", "hint": "Resposta rápida" },
+      "linkedin": { "label": "LinkedIn", "hint": "Perfil profissional" },
+      "github": { "label": "GitHub", "hint": "Repositórios & código" },
+      "email": { "label": "Email", "hint": "Propostas e briefing" },
+      "instagram": { "label": "Instagram", "hint": "Bastidores & conteúdo" }
+    },
+    "fields": {
+      "name": { "label": "Nome", "placeholder": "Seu nome" },
+      "email": { "label": "Email", "placeholder": "voce@exemplo.com" },
+      "message": { "label": "Mensagem", "placeholder": "Conte rapidamente sobre o projeto, objetivos e prazos." }
+    },
+    "cta": {
+      "sending": "Enviando...",
+      "send": "Enviar mensagem"
+    },
+    "validation": {
+      "fillAll": "Por favor, preencha Nome, Email e uma mensagem mais detalhada."
+    },
+    "errors": {
+      "sendFailed": "Falha ao enviar mensagem.",
+      "generic": "Erro ao enviar mensagem."
+    },
+    "success": {
+      "sent": "Mensagem enviada com sucesso!"
+    }
+  },
+  "Footer": {
+    "copyright": "Felipe Gabriel Web Developer © 2026",
+    "whatsappPrefill": "Olá Felipe, vi seu portfólio e gostaria de conversar sobre um projeto."
+  },
+  "Demos": {
+    "common": {
+      "backToPortfolio": "Voltar para o Portfólio",
+      "footer": "Felipe Gabriel WebDeveloper © 2026"
+    },
+    "gestao": {
+      "badge": "ERP Inteligente",
+      "title": "Portal de Gestão Integrada",
+      "hero_desc": "Sistema ERP completo que unifica finanças, estoque e vendas em uma única plataforma. Tomada de decisões baseada em dados reais.",
+      "feature_1": "Dashboard Executivo",
+      "feature_1_desc": "Visualize faturamento, despesas e lucratividade em tempo real com gráficos interativos",
+      "feature_2": "Controle de Estoque",
+      "feature_2_desc": "Gestão inteligente com alertas automáticos de reposição e análise de giro",
+      "feature_3": "Últimas Vendas",
+      "feature_3_desc": "Acompanhe pedidos em tempo real com status atualizado e notificações",
+      "cta_primary": "Explorar Solução Completa",
+      "cta_secondary": "Conhecer Funcionalidades",
+      "chart_title": "Faturamento Mensal",
+      "stock_table": "Status de Estoque",
+      "sales_widget": "Últimas Vendas",
+      "stats": {
+        "revenue": "Faturamento",
+        "orders": "Pedidos",
+        "products": "Produtos",
+        "clients": "Clientes"
+      }
+    },
+    "agencia": {
+      "badge": "Marketing Performance",
+      "title": "Agência de Marketing Digital",
+      "hero_desc": "Estratégias data-driven que geram resultados reais. Aumente sua presença digital e converta mais clientes.",
+      "feature_1": "Cases de Sucesso",
+      "feature_1_desc": "Resultados comprovados: +300% em tráfego, +150% em conversão",
+      "feature_2": "Clientes Atendidos",
+      "feature_2_desc": "Portfólio de marcas que confiam em nosso trabalho",
+      "feature_3": "Equipe Criativa",
+      "feature_3_desc": "Especialistas em SEO, Ads, Design e Copywriting",
+      "cta_primary": "Explorar Solução Completa",
+      "cta_secondary": "Ver Cases de Sucesso",
+      "cases_title": "Resultados que Falam",
+      "clients_title": "Marcas que Confiam",
+      "team_title": "Nossa Equipe"
+    },
+    "clinica": {
+      "badge": "HealthTech Premium",
+      "title": "Plataforma HealthTech de Alta Performance",
+      "hero_desc": "Sistema completo para clínicas e consultórios com agendamento inteligente, prontuário eletrônico e telemedicina integrada.",
+      "feature_1": "Especialidades Médicas",
+      "feature_1_desc": "Cardiologia, Dermatologia, Ortopedia, Neurologia e mais 20 especialidades",
+      "feature_2": "Depoimentos de Pacientes",
+      "feature_2_desc": "Avaliações reais com sistema de estrelas e feedbacks verificados",
+      "feature_3": "Agendamento Inteligente",
+      "feature_3_desc": "Marque consultas 24/7 com confirmação automática via WhatsApp",
+      "cta_primary": "Solicitar Diagnóstico Gratuito",
+      "cta_secondary": "Conhecer Especialidades",
+      "specialties_title": "Nossas Especialidades",
+      "testimonials_title": "O que dizem nossos pacientes",
+      "booking_title": "Agende sua Consulta",
+      "booking_desc": "Preencha o formulário e entraremos em contato em minutos"
+    },
+    "escritorio": {
+      "badge": "Gestão Legal",
+      "title": "Sistema de Gestão Legal Inteligente",
+      "hero_desc": "Plataforma jurídica completa para advogados e escritórios. Gestão de casos, documentos e relacionamento com clientes.",
+      "feature_1": "Certificações e Badges",
+      "feature_1_desc": "OAB, Compliance LGPD, ISO 27001 - sua segurança garantida",
+      "feature_2": "Áreas de Atuação",
+      "feature_2_desc": "Direito Civil, Trabalhista, Empresarial, Tributário e mais",
+      "feature_3": "Artigos e Publicações",
+      "feature_3_desc": "Conteúdo jurídico de alta qualidade para seus clientes",
+      "cta_primary": "Solicitar Demonstração",
+      "cta_secondary": "Ver Funcionalidades",
+      "badges_title": "Credenciais e Certificações",
+      "areas_title": "Áreas de Atuação",
+      "articles_title": "Publicações Recentes"
+    },
+    "lancamento": {
+      "badge": "Infoprodutos",
+      "title": "Ecossistema de Vendas Estratégicas",
+      "hero_desc": "Plataforma completa para lançamento de cursos e produtos digitais. Countdown, automações e página de alta conversão.",
+      "feature_1": "Contador Progressivo",
+      "feature_1_desc": "Urgência escassez que aumenta a taxa de conversão em até 40%",
+      "feature_2": "FAQ Interativo",
+      "feature_2_desc": "Respostas automáticas para as principais objeções dos leads",
+      "feature_3": "Automação Completa",
+      "feature_3_desc": "Nutrição de leads via email, SMS e WhatsApp integrados",
+      "cta_primary": "Iniciar Estratégia de Lançamento",
+      "cta_secondary": "Ver Planos e Preços",
+      "countdown_title": "Oferta Termina em:",
+      "faq_title": "Perguntas Frequentes",
+      "faq_subtitle": "Tire suas dúvidas antes de comprar",
+      "urgency": "Vagas Limitadas - Últimas 17 unidades"
     }
   }
+}
+
