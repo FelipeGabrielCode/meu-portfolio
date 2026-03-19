@@ -1,0 +1,61 @@
+{
+    "Navbar": {
+      "links": { "home": "Início", "expertise": "Especialidades", "projects": "Projetos", "contact": "Contato" }
+    },
+    "Hero": {
+      "badge": "Disponível para novos projetos",
+      "name": "Felipe Gabriel",
+      "roles": ["Desenvolvedor Web Full Stack", "Engenheiro DevOps", "Criador de Automações"],
+      "description": "Transformo gargalos de negócios em soluções tecnológicas de alta performance, escaláveis e totalmente automatizadas.",
+      "cta": { "primary": "Ver meu trabalho", "secondary": "Entrar em contato" },
+      "scrollHint": "Role para explorar"
+    },
+    "Expertise": {
+      "badge": "Minhas Habilidades",
+      "title": "Especialidades Técnicas",
+      "description": "Domínio completo do ciclo de desenvolvimento, desde a arquitetura em nuvem até a interface de alta conversão.",
+      "cards": {
+        "fullstack": { "title": "Desenvolvimento Full Stack", "description": "Criação de aplicações web modernas e responsivas utilizando React, Next.js e Node.js." },
+        "devops": { "title": "DevOps & Infraestrutura", "description": "Arquitetura de pipelines de CI/CD, conteinerização com Docker e infraestrutura escalável na AWS." },
+        "automations": { "title": "Automações de Processos", "description": "Integração de sistemas com Python e n8n para reduzir custos operacionais e eliminar tarefas manuais." }
+      }
+    },
+    "Projects": {
+      "badge": "Trabalhos Selecionados",
+      "title": "Projetos & Landing Pages",
+      "description": "Demonstrações reais de soluções de alta performance e páginas focadas em conversão criadas para diversos nichos.",
+      "viewAll": "Ver repositórios no GitHub",
+      "liveDemo": "Acessar Demo",
+      "sourceCode": "Código Fonte",
+      "items": {
+        "agencia": { "title": "Agência de Marketing Digital", "description": "Landing page de alta conversão com animações fluidas e design projetado para maximizar a captação de leads." },
+        "clinica": { "title": "Clínica Médica Premium", "description": "Interface limpa, profissional e acessível, com foco em prova social e agendamentos otimizados." },
+        "escritorio": { "title": "Escritório de Advocacia", "description": "Design corporativo de alto padrão focado em autoridade e confiança, utilizando tipografia clássica e performance extrema." },
+        "gestao": { "title": "SaaS de Gestão Financeira", "description": "Dashboard interativo simulando um produto digital real com visualização de dados complexos em tempo real." }
+      }
+    },
+    "Contact": {
+      "badge": "Contato",
+      "title": "Vamos conversar?",
+      "description": "Pronto para iniciar o seu próximo projeto ou automatizar os seus processos? Envie-me uma mensagem.",
+      "left": {
+        "title": "Conecte-se comigo",
+        "description": "Sinta-se à vontade para me enviar uma mensagem direta através das minhas redes profissionais ou utilize o formulário ao lado."
+      },
+      "buttons": {
+        "whatsapp": { "label": "WhatsApp", "hint": "Resposta Rápida" },
+        "linkedin": { "label": "LinkedIn", "hint": "Perfil Profissional" },
+        "github": { "label": "GitHub", "hint": "Repositórios & Código" },
+        "email": { "label": "E-mail", "hint": "felipegabriel.code@gmail.com" }
+      },
+      "fields": {
+        "name": { "label": "Seu Nome", "placeholder": "Como devo chamá-lo?" },
+        "email": { "label": "Seu E-mail", "placeholder": "Onde posso responder?" },
+        "message": { "label": "Mensagem", "placeholder": "Fale-me um pouco sobre o seu projeto ou necessidade..." }
+      },
+      "cta": { "send": "Enviar Mensagem", "sending": "A enviar..." },
+      "success": { "sent": "Mensagem enviada com sucesso! Retornarei em breve." },
+      "errors": { "sendFailed": "Falha ao enviar a mensagem. Tente pelo WhatsApp.", "generic": "Ocorreu um erro inesperado." },
+      "validation": { "fillAll": "Por favor, preencha todos os campos corretamente antes de enviar." }
+    }
+  }

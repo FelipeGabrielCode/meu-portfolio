@@ -1,0 +1,117 @@
+{
+  "Navbar": {
+    "links": {
+      "home": "Início",
+      "expertise": "Especialidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "Hero": {
+    "badge": "Disponível para novos projetos",
+    "name": "Felipe Gabriel",
+    "roles": ["Desenvolvedor Full Stack", "Engenheiro DevOps", "Criador de Automações"],
+    "description": "Construindo aplicações web escaláveis, pipelines DevOps robustos e automações inteligentes que transformam ideias em produto — do código à nuvem.",
+    "cta": {
+      "primary": "Ver meus projetos",
+      "secondary": "Fale comigo"
+    },
+    "scrollHint": "Role para explorar"
+  },
+  "Expertise": {
+    "badge": "O que eu entrego",
+    "title": "Expertise & Stack",
+    "description": "Três pilares que guiam cada entrega — do conceito à produção.",
+    "cards": {
+      "fullstack": {
+        "title": "Desenvolvimento Web Full Stack",
+        "description": "Engenharia de produto ponta a ponta — de interfaces pixel-perfect a arquiteturas e APIs escaláveis."
+      },
+      "devops": {
+        "title": "DevOps & Infraestrutura",
+        "description": "Deploys cloud-native, orquestração de containers e pipelines CI/CD com zero downtime."
+      },
+      "automations": {
+        "title": "Automações & Workflows",
+        "description": "Scripts e fluxos inteligentes (no-code/low-code) que eliminam tarefas repetitivas e aumentam produtividade."
+      }
+    }
+  },
+  "Projects": {
+    "badge": "Destaques",
+    "title": "Projetos & Automações em Destaque",
+    "description": "Projetos reais que unem produto web e automação com foco em performance, integração e entrega.",
+    "aria": {
+      "liveDemo": "Demo ao vivo",
+      "code": "Código (GitHub)",
+      "codeSrOnly": "Código (GitHub)"
+    },
+    "projects": {
+      "hubEcommerce": {
+        "title": "Hub de E-commerce com Sincronização Automática de Estoque",
+        "description": "Desenvolvimento de uma plataforma web que centraliza o estoque de múltiplas lojas (Mercado Livre, Shopee) e automatiza a atualização de inventário via API sempre que uma venda é confirmada em qualquer canal."
+      },
+      "cicdAws": {
+        "title": "Pipeline CI/CD de Alta Disponibilidade para SaaS na AWS",
+        "description": "Infraestrutura como código (IaC) com Terraform para um cluster Kubernetes (EKS) na AWS, com pipelines de deploy automatizados no GitHub Actions, garantindo zero downtime e auto-scaling."
+      },
+      "onboardingAiCrm": {
+        "title": "Sistema de Onboarding de Clientes com IA e CRM",
+        "description": "Fluxo no n8n que capta leads de anúncios, usa IA para qualificar o lead, cria a conta no HubSpot e envia contrato automatizado para assinatura via DocuSign. Redução de 90% no tempo manual."
+      },
+      "pwaClinics": {
+        "title": "Plataforma de Agendamento para Clínicas com SEO Agressivo",
+        "description": "Aplicação web PWA (React) focada em conversão e velocidade, com agendamento em tempo real via WhatsApp e pontuação 100/100 no Google Lighthouse (Performance/SEO)."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Vamos conversar",
+    "title": "Contato",
+    "description": "Envie uma mensagem e vamos alinhar como posso ajudar no seu próximo projeto.",
+    "left": {
+      "title": "Vamos conversar?",
+      "description": "Me conte rapidamente o que você precisa e eu te respondo com os próximos passos. Se preferir, escolha um canal abaixo e fale comigo agora."
+    },
+    "buttons": {
+      "whatsapp": { "label": "WhatsApp", "hint": "Resposta rápida" },
+      "linkedin": { "label": "LinkedIn", "hint": "Perfil profissional" },
+      "github": { "label": "GitHub", "hint": "Repositórios & código" },
+      "email": { "label": "Email", "hint": "Propostas e briefing" },
+      "instagram": { "label": "Instagram", "hint": "Bastidores & conteúdo" }
+    },
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Seu nome"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "voce@exemplo.com"
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Conte rapidamente sobre o projeto, objetivos e prazos."
+      }
+    },
+    "cta": {
+      "sending": "Enviando...",
+      "send": "Enviar mensagem"
+    },
+    "validation": {
+      "fillAll": "Por favor, preencha Nome, Email e uma mensagem mais detalhada."
+    },
+    "errors": {
+      "sendFailed": "Falha ao enviar mensagem.",
+      "generic": "Erro ao enviar mensagem."
+    },
+    "success": {
+      "sent": "Mensagem enviada com sucesso!"
+    }
+  },
+  "Footer": {
+    "copyright": "Felipe Gabriel Web Developer © 2026",
+    "whatsappPrefill": "Olá Felipe, vi seu portfólio e gostaria de conversar sobre um projeto."
+  }
+}
+

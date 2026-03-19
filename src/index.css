@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base */
+    --background: 210 20% 98%;
+    --foreground: 222 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 10%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 65%;
+
+    --secondary: 215 20% 93%;
+    --secondary-foreground: 222 30% 20%;
+
+    --muted: 214 20% 90%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 87%;
+    --input: 214 20% 87%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Glassmorphism tokens - Light Mode */
+    --glass-bg: 0 0% 100% / 0.55;
+    --glass-bg-strong: 0 0% 100% / 0.75;
+    --glass-border: 214 20% 87% / 0.6;
+    --glass-shadow: 0 8px 32px -4px hsl(221 83% 53% / 0.08), 0 2px 8px -2px hsl(0 0% 0% / 0.06);
+    --glass-nav-bg: 0 0% 100% / 0.7;
+
+    /* Blob colors - Light Mode */
+    --blob-1: 221 83% 70%;
+    --blob-2: 262 83% 75%;
+    --blob-3: 190 83% 70%;
+
+    /* Typography */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 25% 7%;
+    --foreground: 214 20% 93%;
+
+    --card: 224 22% 10%;
+    --card-foreground: 214 20% 93%;
+
+    --popover: 224 22% 10%;
+    --popover-foreground: 214 20% 93%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 224 25% 7%;
+    --primary-glow: 221 83% 75%;
+
+    --secondary: 224 20% 16%;
+    --secondary-foreground: 214 20% 80%;
+
+    --muted: 224 20% 14%;
+    --muted-foreground: 215 16% 55%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 20% 18%;
+    --input: 224 20% 18%;
+    --ring: 217 91% 65%;
+
+    /* Glassmorphism tokens - Dark Mode */
+    --glass-bg: 224 22% 12% / 0.5;
+    --glass-bg-strong: 224 22% 14% / 0.75;
+    --glass-border: 224 20% 28% / 0.5;
+    --glass-shadow: 0 8px 32px -4px hsl(221 83% 20% / 0.3), 0 2px 8px -2px hsl(0 0% 0% / 0.4);
+    --glass-nav-bg: 224 22% 10% / 0.65;
+
+    /* Blob colors - Dark Mode */
+    --blob-1: 221 83% 55%;
+    --blob-2: 262 83% 60%;
+    --blob-3: 190 83% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  /* Glass effect utility */
+  .glass {
+    background: hsl(var(--glass-bg));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-strong {
+    background: hsl(var(--glass-bg-strong));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-nav {
+    background: hsl(var(--glass-nav-bg));
+    border-bottom: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+}
+
+@layer utilities {
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated gradient blob */
+  .blob {
+    filter: blur(80px);
+    border-radius: 9999px;
+    animation: blob-float 8s ease-in-out infinite;
+    opacity: 0.45;
+  }
+
+  .blob-2 {
+    animation-delay: -2.5s;
+    animation-duration: 11s;
+  }
+
+  .blob-3 {
+    animation-delay: -5s;
+    animation-duration: 9.5s;
+  }
+
+  @keyframes blob-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -25px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+
+  /* Typing cursor blink */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+}
