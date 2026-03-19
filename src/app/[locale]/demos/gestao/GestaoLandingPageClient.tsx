@@ -142,7 +142,146 @@ function SalesWidget() {
   );
 }
 
-// Modal de Filtro
+// Cadastro Rápido de Produto - Interativo
+function QuickProductForm() {
+  const [product, setProduct] = useState({ name: "", price: "", stock: "" });
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (product.name && product.price) {
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        setProduct({ name: "", price: "", stock: "" });
+      }, 2000);
+    }
+  };
+
+  if (showSuccess) {
+    return (
+      <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center animate-in fade-in">
+        <div className="w-12 h-12 mx-auto rounded-full bg-emerald-500/20 flex items-center justify-center mb-2">
+          <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+        </div>
+        <p className="text-emerald-400 font-semibold text-sm">Produto cadastrado!</p>
+        <p className="text-slate-400 text-xs mt-1">{product.name} adicionado</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-2">
+      <input 
+        type="text" 
+        placeholder="Nome do produto"
+        value={product.name}
+        onChange={(e) => setProduct({...product, name: e.target.value})}
+        className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
+      />
+      <div className="flex gap-2">
+        <input 
+          type="number" 
+          placeholder="Preço"
+          value={product.price}
+          onChange={(e) => setProduct({...product, price: e.target.value})}
+          className="flex-1 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
+        />
+        <input 
+          type="number" 
+          placeholder="Qtd"
+          value={product.stock}
+          onChange={(e) => setProduct({...product, stock: e.target.value})}
+          className="w-20 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
+        />
+      </div>
+      <button 
+        type="submit"
+        className="w-full py-2 rounded-lg bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2"
+      >
+        <Package className="w-4 h-4" /> Cadastrar
+      </button>
+    </form>
+  );
+}
+
+// Simulador de Meta de Vendas
+function SalesGoalSimulator() {
+  const [goal, setGoal] = useState(50000);
+  const [current, setCurrent] = useState(32500);
+  const percentage = Math.round((current / goal) * 100);
+
+  return (
+    <div className="space-y-3">
+      <div className="flex justify-between text-sm">
+        <span className="text-slate-400">Progresso</span>
+        <span className="text-indigo-400 font-semibold">{percentage}%</span>
+      </div>
+      <div className="h-3 rounded-full bg-slate-800 overflow-hidden">
+        <div 
+          className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
+          style={{ width: `${Math.min(percentage, 100)}%` }}
+        />
+      </div>
+      <div className="flex justify-between text-xs text-slate-500">
+        <span>R$ {current.toLocaleString()}</span>
+        <span>Meta: R$ {goal.toLocaleString()}</span>
+      </div>
+      <div className="flex gap-2 pt-2">
+        <button 
+          onClick={() => setCurrent(prev => Math.min(prev + 2500, goal * 1.2))}
+          className="flex-1 py-2 rounded-lg bg-indigo-500/20 text-indigo-400 text-xs font-semibold hover:bg-indigo-500/30 transition-colors"
+        >
+          + Venda R$ 2.500
+        </button>
+        <button 
+          onClick={() => setCurrent(32500)}
+          className="px-3 py-2 rounded-lg bg-slate-800 text-slate-400 text-xs hover:bg-slate-700 transition-colors"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// Calculadora de ROI
+function ROICalculator() {
+  const [investment, setInvestment] = useState(1000);
+  const [returnValue, setReturnValue] = useState(1500);
+  const roi = ((returnValue - investment) / investment * 100).toFixed(1);
+
+  return (
+    <div className="space-y-3">
+      <div className="grid grid-cols-2 gap-2">
+        <div>
+          <label className="text-xs text-slate-500 block mb-1">Investimento</label>
+          <input 
+            type="number"
+            value={investment}
+            onChange={(e) => setInvestment(Number(e.target.value))}
+            className="w-full px-2 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm"
+          />
+        </div>
+        <div>
+          <label className="text-xs text-slate-500 block mb-1">Retorno</label>
+          <input 
+            type="number"
+            value={returnValue}
+            onChange={(e) => setReturnValue(Number(e.target.value))}
+            className="w-full px-2 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm"
+          />
+        </div>
+      </div>
+      <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/30 text-center">
+        <p className="text-xs text-slate-400">ROI</p>
+        <p className={`text-2xl font-bold ${Number(roi) >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+          {roi}%
+        </p>
+      </div>
+    </div>
+  );
+}
 function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: { 
   isOpen: boolean; 
   onClose: () => void; 
@@ -339,6 +478,85 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
   );
 }
 
+// Modal de Vendas - Mostra todas as vendas fake
+function SalesModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  if (!isOpen) return null;
+
+  const allSales = [
+    { id: "#1234", client: "Empresa ABC", value: 12450, status: "completed", time: "2 min", products: "Notebook Dell XPS, Mouse Logitech" },
+    { id: "#1233", client: "Tech Solutions", value: 8320, status: "processing", time: "5 min", products: "Monitor 27\" 4K" },
+    { id: "#1232", client: "Consultoria XYZ", value: 15780, status: "completed", time: "12 min", products: "Cadeira Ergonômica, Mesa Digital" },
+    { id: "#1231", client: "Startup Inno", value: 4590, status: "pending", time: "18 min", products: "Webcam HD" },
+    { id: "#1230", client: "Grupo Martins", value: 23400, status: "completed", time: "25 min", products: "5x Notebook Dell XPS" },
+    { id: "#1229", client: "Comercial Silva", value: 6780, status: "processing", time: "32 min", products: "Teclado Mecânico, Mouse Logitech" },
+    { id: "#1228", client: "Indústria Beta", value: 45600, status: "completed", time: "45 min", products: "20x Monitor 27\" 4K" },
+    { id: "#1227", client: "Escritório Central", value: 12300, status: "pending", time: "1h 10min", products: "3x Cadeira Ergonômica" },
+  ];
+
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case "completed":
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs"><CheckCircle2 className="w-3 h-3" /> Concluído</span>;
+      case "processing":
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs"><Clock className="w-3 h-3" /> Processando</span>;
+      case "pending":
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-500/10 text-slate-400 text-xs"><AlertCircle className="w-3 h-3" /> Pendente</span>;
+      default:
+        return null;
+    }
+  };
+
+  const totalValue = allSales.reduce((acc, sale) => acc + sale.value, 0);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4" onClick={onClose}>
+      <div className="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden shadow-2xl" onClick={e => e.stopPropagation()}>
+        <div className="p-6 border-b border-slate-800">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="font-semibold text-slate-100 text-lg">Todas as Vendas</h3>
+              <p className="text-sm text-slate-400">{allSales.length} vendas • Total: R$ {totalValue.toLocaleString()}</p>
+            </div>
+            <button onClick={onClose} className="text-slate-400 hover:text-slate-200 p-2">
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+        <div className="overflow-y-auto max-h-[50vh] p-4">
+          <div className="space-y-3">
+            {allSales.map((sale) => (
+              <div key={sale.id} className="flex items-center justify-between p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition-colors">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                    <ShoppingCart className="w-6 h-6 text-indigo-400" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-slate-200">{sale.client}</p>
+                    <p className="text-xs text-slate-500">{sale.id} • {sale.time}</p>
+                    <p className="text-xs text-slate-400 mt-1">{sale.products}</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="font-bold text-slate-100">R$ {sale.value.toLocaleString()}</p>
+                  <div className="mt-1">{getStatusBadge(sale.status)}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="p-4 border-t border-slate-800 bg-slate-900/50">
+          <button 
+            onClick={onClose}
+            className="w-full py-3 rounded-xl bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition-colors"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function GestaoLandingPageClient() {
   const t = useTranslations("Demos.gestao");
   const common = useTranslations("Demos.common");
@@ -347,6 +565,7 @@ export default function GestaoLandingPageClient() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const [isRatingOpen, setIsRatingOpen] = useState(false);
+  const [isSalesModalOpen, setIsSalesModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -366,50 +585,54 @@ export default function GestaoLandingPageClient() {
         onClose={() => setIsDownloadOpen(false)}
         filter={filter}
       />
+      <SalesModal 
+        isOpen={isSalesModalOpen} 
+        onClose={() => setIsSalesModalOpen(false)}
+      />
 
       {/* Botão Voltar */}
-      <div className="fixed top-24 left-6 z-50">
+      <div className="fixed top-20 md:top-24 left-3 md:left-6 z-50">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/30 text-sm font-semibold text-primary hover:bg-primary/10 transition-all duration-300 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-indigo-500/30 text-xs md:text-sm font-semibold text-indigo-400 hover:bg-indigo-500/10 transition-all"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
           {common("backToPortfolio")}
         </Link>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-12">
+      <section className="relative overflow-hidden pt-20 md:pt-32 pb-8 md:pb-12">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 left-1/2 w-[58rem] h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-500/20 via-purple-500/10 to-transparent blur-3xl" />
+          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-500/20 via-purple-500/10 to-transparent blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 mb-6 text-sm font-semibold text-indigo-400">
-              <BarChart3 className="w-4 h-4" />
+            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-indigo-400">
+              <BarChart3 className="w-3 h-3 md:w-4 md:h-4" />
               {t("badge")}
             </span>
             
-            <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6">
+            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 md:mb-6">
               {t("title")}
             </h1>
             
-            <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl">
               {t("hero_desc")}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
               <Link 
                 href="#dashboard" 
-                className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 text-white font-semibold px-6 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/25"
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-indigo-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/25 text-xs md:text-base"
               >
                 {t("cta_primary")}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
               </Link>
               <Link 
                 href="#features" 
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-6 py-3 font-semibold text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-600"
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base"
               >
                 {t("cta_secondary")}
               </Link>
@@ -419,9 +642,9 @@ export default function GestaoLandingPageClient() {
       </section>
 
       {/* Dashboard Stats */}
-      <section id="dashboard" className="py-8">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <section id="dashboard" className="py-4 md:py-8">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4 md:mb-8">
             <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
@@ -476,21 +699,23 @@ export default function GestaoLandingPageClient() {
           </div>
 
           {/* Dashboard Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Revenue Chart */}
-            <div className="lg:col-span-2 p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-display text-lg font-bold text-slate-100">{t("chart_title")}</h3>
+            <div className="lg:col-span-2 p-4 md:p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 md:mb-6">
+                <h3 className="font-display text-base md:text-lg font-bold text-slate-100">
+                  {period === "month" ? "Faturamento Mensal" : "Faturamento Anual"}
+                </h3>
                 <div className="flex items-center gap-2 bg-slate-800/50 rounded-lg p-1">
                   <button 
                     onClick={() => setPeriod("month")}
-                    className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "month" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
+                    className={`px-2 md:px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "month" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
                   >
                     Mensal
                   </button>
                   <button 
                     onClick={() => setPeriod("year")}
-                    className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "year" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
+                    className={`px-2 md:px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "year" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
                   >
                     Anual
                   </button>
@@ -500,10 +725,13 @@ export default function GestaoLandingPageClient() {
             </div>
 
             {/* Recent Sales */}
-            <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-display text-lg font-bold text-slate-100">{t("sales_widget")}</h3>
-                <button className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+            <div className="p-4 md:p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+              <div className="flex items-center justify-between mb-4 md:mb-6">
+                <h3 className="font-display text-base md:text-lg font-bold text-slate-100">{t("sales_widget")}</h3>
+                <button 
+                  onClick={() => setIsSalesModalOpen(true)}
+                  className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                >
                   Ver todas <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
@@ -512,13 +740,13 @@ export default function GestaoLandingPageClient() {
           </div>
 
           {/* Stock Table */}
-          <div className="mt-6 p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-display text-lg font-bold text-slate-100">{t("stock_table")}</h3>
+          <div className="mt-4 md:mt-6 p-4 md:p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 md:mb-6">
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100">{t("stock_table")}</h3>
               <div className="flex items-center gap-2">
                 <button 
                   onClick={() => setIsFilterOpen(true)}
-                  className={`px-3 py-2 rounded-lg text-xs font-medium border transition-colors flex items-center gap-1 ${filter !== "all" ? "bg-indigo-500/20 text-indigo-400 border-indigo-500/50" : "text-slate-400 border-slate-700 hover:border-slate-600 hover:text-slate-200"}`}
+                  className={`px-2 md:px-3 py-1.5 md:py-2 rounded-lg text-xs font-medium border transition-colors flex items-center gap-1 ${filter !== "all" ? "bg-indigo-500/20 text-indigo-400 border-indigo-500/50" : "text-slate-400 border-slate-700 hover:border-slate-600 hover:text-slate-200"}`}
                 >
                   <Filter className="w-3 h-3" /> 
                   Filtrar
@@ -526,67 +754,69 @@ export default function GestaoLandingPageClient() {
                 </button>
                 <button 
                   onClick={() => setIsDownloadOpen(true)}
-                  className="px-3 py-2 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 border border-slate-700 hover:border-slate-600 transition-colors flex items-center gap-1"
+                  className="px-2 md:px-3 py-1.5 md:py-2 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 border border-slate-700 hover:border-slate-600 transition-colors flex items-center gap-1"
                 >
                   <Download className="w-3 h-3" /> Exportar
                 </button>
               </div>
             </div>
-            <StockTable filter={filter} />
+            <div className="overflow-x-auto">
+              <StockTable filter={filter} />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section id="features" className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">{t("cta_secondary")}</h2>
-            <p className="text-slate-400">Tudo que você precisa para gerenciar seu negócio</p>
+      <section id="features" className="py-8 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("cta_secondary")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">Tudo que você precisa para gerenciar seu negócio</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-6">
-                <BarChart3 className="w-7 h-7 text-indigo-400" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
+                <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-indigo-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_1")}</h3>
-              <p className="text-slate-400">{t("feature_1_desc")}</p>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Simular Metas</h3>
+              <SalesGoalSimulator />
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                <Package className="w-7 h-7 text-emerald-400" />
+            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4">
+                <Package className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_2")}</h3>
-              <p className="text-slate-400">{t("feature_2_desc")}</p>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Cadastrar Produto</h3>
+              <QuickProductForm />
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6">
-                <TrendingUp className="w-7 h-7 text-purple-400" />
+            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-purple-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_3")}</h3>
-              <p className="text-slate-400">{t("feature_3_desc")}</p>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Calcular ROI</h3>
+              <ROICalculator />
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 py-10 mt-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-            <p className="text-sm text-slate-500">{common("footer")}</p>
-            <div className="flex items-center gap-3">
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
-                <Linkedin className="w-5 h-5" />
+      <footer className="border-t border-slate-800 py-6 md:py-10 mt-8 md:mt-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
+            <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
+            <div className="flex items-center gap-2 md:gap-3">
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
+                <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
-                <Github className="w-5 h-5" />
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
+                <Github className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
-                <Mail className="w-5 h-5" />
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors text-slate-400 hover:text-indigo-400">
+                <Mail className="w-4 h-4 md:w-5 md:h-5" />
               </a>
             </div>
           </div>

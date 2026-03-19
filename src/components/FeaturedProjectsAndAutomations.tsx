@@ -18,48 +18,54 @@ type FeaturedProject = {
 
 const featuredProjects: FeaturedProject[] = [
   {
-    id: "portal-gestao-integrada",
-    titleKey: "projects.hubEcommerce.title",
-    descriptionKey: "projects.hubEcommerce.description",
-    tags: ["Next.js", "Node.js", "n8n", "API Integration", "PostgreSQL"],
+    id: "erp-gestao-pro",
+    titleKey: "ERP Gestão Pro",
+    descriptionKey: "Sistema completo de gestão empresarial com dashboard em tempo real, controle de estoque inteligente e relatórios automatizados.",
+    tags: ["Next.js 15", "PostgreSQL", "Analytics", "Gestão"],
     demoUrl: "/demos/gestao",
-    gradient:
-      "linear-gradient(135deg, hsl(221 83% 35%) 0%, hsl(262 83% 40%) 60%, hsl(190 83% 30%) 100%)",
-    patternOpacity: 0.12,
+    gradient: "linear-gradient(135deg, hsl(225 85% 45%) 0%, hsl(250 70% 50%) 50%, hsl(190 80% 35%) 100%)",
+    patternOpacity: 0.08,
     icon: LayoutDashboard,
   },
   {
-    id: "sistema-clinicas-alta-performance",
-    titleKey: "projects.pwaClinics.title",
-    descriptionKey: "projects.pwaClinics.description",
-    tags: ["React", "Tailwind", "Vite", "PWA", "SEO Técnico"],
+    id: "healthcare-connect",
+    titleKey: "Healthcare Connect",
+    descriptionKey: "Plataforma completa para clínicas e consultórios com agendamento online, prontuário digital e telemedicina integrada.",
+    tags: ["React", "PWA", "Telemedicina", "Saúde"],
     demoUrl: "/demos/clinica",
-    gradient:
-      "linear-gradient(135deg, hsl(240 60% 28%) 0%, hsl(262 83% 35%) 55%, hsl(221 83% 28%) 100%)",
-    patternOpacity: 0.12,
+    gradient: "linear-gradient(135deg, hsl(160 85% 35%) 0%, hsl(140 70% 40%) 50%, hsl(180 75% 30%) 100%)",
+    patternOpacity: 0.08,
     icon: Stethoscope,
   },
   {
-    id: "funil-lancamento-estrategico",
-    titleKey: "projects.onboardingAiCrm.title",
-    descriptionKey: "projects.onboardingAiCrm.description",
-    tags: ["n8n", "OpenAI API", "HubSpot", "Automatização", "Python"],
-    demoUrl: "/demos/lancamento",
-    gradient:
-      "linear-gradient(135deg, hsl(16 100% 35%) 0%, hsl(32 95% 32%) 55%, hsl(291 64% 30%) 100%)",
-    patternOpacity: 0.12,
+    id: "agencia-digital-plus",
+    titleKey: "Agência Digital Plus",
+    descriptionKey: "Sistema de gestão para agências de marketing com acompanhamento de campanhas, relatórios de resultados e gestão de clientes.",
+    tags: ["Next.js", "Analytics", "Marketing", "CRM"],
+    demoUrl: "/demos/agencia",
+    gradient: "linear-gradient(135deg, hsl(280 75% 45%) 0%, hsl(320 70% 50%) 50%, hsl(260 80% 40%) 100%)",
+    patternOpacity: 0.08,
     icon: Rocket,
   },
   {
-    id: "infraestrutura-juridica-premium",
-    titleKey: "projects.cicdAws.title",
-    descriptionKey: "projects.cicdAws.description",
-    tags: ["AWS", "Kubernetes", "Terraform", "GitHub Actions", "Docker"],
+    id: "legal-suite-premium",
+    titleKey: "Legal Suite Premium",
+    descriptionKey: "Sistema jurídico completo com gestão de processos, agendamento de audiências, contratos digitais e compliance LGPD.",
+    tags: ["Next.js 15", "Segurança", "LGPD", "Jurídico"],
     demoUrl: "/demos/escritorio",
-    gradient:
-      "linear-gradient(135deg, hsl(145 63% 22%) 0%, hsl(213 95% 30%) 60%, hsl(217 75% 22%) 100%)",
-    patternOpacity: 0.12,
+    gradient: "linear-gradient(135deg, hsl(210 85% 35%) 0%, hsl(225 70% 45%) 50%, hsl(195 75% 30%) 100%)",
+    patternOpacity: 0.08,
     icon: Scale,
+  },
+  {
+    id: "launch-academy-pro",
+    titleKey: "Launch Academy Pro",
+    descriptionKey: "Plataforma de lançamento de cursos online com countdown, área de membros, pagamentos e funil de vendas completo.",
+    tags: ["React", "Stripe", "Vídeo", "Educação"],
+    demoUrl: "/demos/lancamento",
+    gradient: "linear-gradient(135deg, hsl(25 90% 50%) 0%, hsl(35 85% 55%) 50%, hsl(15 80% 45%) 100%)",
+    patternOpacity: 0.08,
+    icon: Rocket,
   },
 ];
 
@@ -150,10 +156,10 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
       </div>
 
       <div className="flex flex-col flex-1 p-6 gap-4">
-        <h3 className="font-display text-xl font-bold text-foreground leading-tight">{t(project.titleKey)}</h3>
+        <h3 className="font-display text-xl font-bold text-foreground leading-tight">{project.titleKey}</h3>
 
         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
-          {t(project.descriptionKey)}
+          {project.descriptionKey}
         </p>
 
         {/* Tags line */}
@@ -171,7 +177,7 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
             href={project.demoUrl}
             prefetch={true}
             className="group relative inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-bold text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-            aria-label={`${t("aria.tryDemo")} - ${t(project.titleKey)}`}
+            aria-label={`${project.id === "launch-academy-pro" ? "Ver perguntas frequentes" : "Ver demo"} - ${project.titleKey}`}
           >
             {/* Animated background effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
@@ -180,7 +186,7 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
               <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm">
                 <ExternalLink className="w-4 h-4" />
               </span>
-              <span>{t("aria.tryDemo")}</span>
+              <span>{project.id === "launch-academy-pro" ? "Perguntas Frequentes" : "Ver Demo Interativa"}</span>
             </span>
             
             {/* Pulse animation dot */}

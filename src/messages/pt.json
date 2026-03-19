@@ -105,6 +105,14 @@
     "copyright": "Felipe Gabriel Web Developer © 2026",
     "whatsappPrefill": "Olá Felipe, vi seu portfólio e gostaria de conversar sobre um projeto."
   },
+  "Metadata": {
+    "home": {
+      "title": "Felipe Gabriel | Desenvolvedor Full Stack & DevOps",
+      "description": "Portfólio profissional de Felipe Gabriel - Desenvolvedor Full Stack especializado em Next.js, React, Node.js, DevOps e automações inteligentes.",
+      "ogTitle": "Felipe Gabriel | Full Stack Developer & DevOps",
+      "ogDescription": "Portfólio profissional com foco em web, DevOps e automações inteligentes. Especialista em Next.js, React e arquiteturas escaláveis."
+    }
+  },
   "Demos": {
     "common": {
       "backToPortfolio": "Voltar para o Portfólio",
@@ -142,10 +150,10 @@
       "feature_2_desc": "Portfólio de marcas que confiam em nosso trabalho",
       "feature_3": "Equipe Criativa",
       "feature_3_desc": "Especialistas em SEO, Ads, Design e Copywriting",
-      "cta_primary": "Explorar Solução Completa",
-      "cta_secondary": "Ver Cases de Sucesso",
-      "cases_title": "Resultados que Falam",
-      "clients_title": "Marcas que Confiam",
+      "cta_primary": "Ver Cases de Sucesso",
+      "cta_secondary": "Conhecer Nossos Serviços",
+      "cases_title": "Resultados que Superam Expectativas",
+      "clients_title": "Empresas que Transformamos",
       "team_title": "Nossa Equipe"
     },
     "clinica": {

@@ -99,6 +99,14 @@
     "copyright": "Felipe Gabriel Web Developer © 2026",
     "whatsappPrefill": "Hi Felipe, I saw your portfolio and would like to talk about a project."
   },
+  "Metadata": {
+    "home": {
+      "title": "Felipe Gabriel | Full Stack Developer & DevOps",
+      "description": "Felipe Gabriel's professional portfolio - Full Stack Developer specialized in Next.js, React, Node.js, DevOps and intelligent automations.",
+      "ogTitle": "Felipe Gabriel | Full Stack Developer & DevOps",
+      "ogDescription": "Professional portfolio focused on web, DevOps and intelligent automations. Specialist in Next.js, React and scalable architectures."
+    }
+  },
   "Demos": {
     "common": {
       "backToPortfolio": "Back to Portfolio",

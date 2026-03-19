@@ -199,84 +199,84 @@ export default function LancamentoLandingPageClient() {
               <Flame className="w-4 h-4" />{t("urgency")}<Flame className="w-4 h-4" />
             </div>
           </div>
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 mb-6 text-sm font-semibold text-orange-400"><Sparkles className="w-4 h-4" />{t("badge")}</span>
-            <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6">{t("title")}</h1>
-            <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">{t("hero_desc")}</p>
-            <div className="mb-8">
-              <p className="text-lg text-slate-300 mb-4 flex items-center justify-center gap-2"><ZapIcon className="w-5 h-5 text-amber-400" />{t("countdown_title")}<ZapIcon className="w-5 h-5 text-amber-400" /></p>
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
+            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-orange-400"><Sparkles className="w-3 h-3 md:w-4 md:h-4" />{t("badge")}</span>
+            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 md:mb-6">{t("title")}</h1>
+            <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl mx-auto">{t("hero_desc")}</p>
+            <div className="mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-slate-300 mb-3 md:mb-4 flex items-center justify-center gap-2"><ZapIcon className="w-4 h-4 md:w-5 md:h-5 text-amber-400" />{t("countdown_title")}<ZapIcon className="w-4 h-4 md:w-5 md:h-5 text-amber-400" /></p>
               <CountdownTimer />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#precos" className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/30 overflow-hidden">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              <Link href="#precos" className="group relative inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-4 py-2 md:px-8 md:py-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/30 overflow-hidden text-sm md:text-base">
                 <span className="absolute inset-0 bg-gradient-to-r from-orange-400/0 via-white/20 to-orange-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                <Gift className="w-5 h-5 relative z-10" /><span className="relative z-10">{t("cta_primary")}</span>
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping" />
+                <Gift className="w-4 h-4 md:w-5 md:h-5 relative z-10" /><span className="relative z-10">{t("cta_primary")}</span>
+                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-400 rounded-full animate-ping" />
               </Link>
-              <Link href="#faq" className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-8 py-4 font-semibold text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-slate-600">{t("cta_secondary")}</Link>
+              <Link href="#faq" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-4 py-2 md:px-8 md:py-4 font-semibold text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-slate-600 text-sm md:text-base">{t("cta_secondary")}</Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-orange-500/20 flex items-center justify-center mb-6"><Timer className="w-7 h-7 text-orange-400" /></div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_1")}</h3><p className="text-slate-400">{t("feature_1_desc")}</p>
+      <section className="py-8 md:py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4 md:mb-6"><Timer className="w-5 h-5 md:w-7 md:h-7 text-orange-400" /></div>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_1")}</h3><p className="text-slate-400 text-sm md:text-base">{t("feature_1_desc")}</p>
             </div>
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-amber-500/20 flex items-center justify-center mb-6"><MessageCircle className="w-7 h-7 text-amber-400" /></div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_2")}</h3><p className="text-slate-400">{t("feature_2_desc")}</p>
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4 md:mb-6"><MessageCircle className="w-5 h-5 md:w-7 md:h-7 text-amber-400" /></div>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_2")}</h3><p className="text-slate-400 text-sm md:text-base">{t("feature_2_desc")}</p>
             </div>
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-red-500/20 flex items-center justify-center mb-6"><Zap className="w-7 h-7 text-red-400" /></div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_3")}</h3><p className="text-slate-400">{t("feature_3_desc")}</p>
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-red-500/20 flex items-center justify-center mb-4 md:mb-6"><Zap className="w-5 h-5 md:w-7 md:h-7 text-red-400" /></div>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_3")}</h3><p className="text-slate-400 text-sm md:text-base">{t("feature_3_desc")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="precos" className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">Escolha Seu Plano</h2>
-            <p className="text-slate-400">Investimento único - Acesso vitalício</p>
+      <section id="precos" className="py-8 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">Escolha Seu Plano</h2>
+            <p className="text-slate-400 text-xs md:text-base">Investimento único - Acesso vitalício</p>
           </div>
           <PricingSection />
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-b from-slate-900/80 to-slate-950">
-        <div className="container mx-auto px-6">
+      <section className="py-8 md:py-16 bg-gradient-to-b from-slate-900/80 to-slate-950">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">O Que Dizem Nossos Alunos</h2>
-              <p className="text-slate-400">Resultados reais de pessoas que transformaram suas vidas</p>
+            <div className="text-center mb-6 md:mb-12">
+              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">O Que Dizem Nossos Alunos</h2>
+              <p className="text-slate-400 text-xs md:text-base">Resultados reais de pessoas que transformaram suas vidas</p>
             </div>
             <CommentsSection />
           </div>
         </div>
       </section>
 
-      <section id="faq" className="py-16">
-        <div className="container mx-auto px-6">
+      <section id="faq" className="py-8 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">{t("faq_title")}</h2>
-              <p className="text-slate-400">{t("faq_subtitle")}</p>
+            <div className="text-center mb-6 md:mb-12">
+              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("faq_title")}</h2>
+              <p className="text-slate-400 text-xs md:text-base">{t("faq_subtitle")}</p>
             </div>
             <FAQAccordion />
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-slate-800 py-10 mt-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-            <p className="text-sm text-slate-500">{common("footer")}</p>
-            <div className="flex items-center gap-3">
+      <footer className="border-t border-slate-800 py-6 md:py-10 mt-8 md:mt-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
+            <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
+            <div className="flex items-center gap-2 md:gap-3">
               <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-orange-500/50 transition-colors text-slate-400 hover:text-orange-400"><Linkedin className="w-5 h-5" /></a>
               <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-orange-500/50 transition-colors text-slate-400 hover:text-orange-400"><Github className="w-5 h-5" /></a>
               <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-orange-500/50 transition-colors text-slate-400 hover:text-orange-400"><Mail className="w-5 h-5" /></a>

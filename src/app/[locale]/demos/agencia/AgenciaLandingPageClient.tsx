@@ -109,48 +109,48 @@ export default function AgenciaLandingPageClient() {
       />
 
       {/* Botão Voltar */}
-      <div className="fixed top-24 left-6 z-50">
+      <div className="fixed top-20 md:top-24 left-3 md:left-6 z-50">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-fuchsia-500/30 text-sm font-semibold text-fuchsia-400 hover:bg-fuchsia-500/10 transition-all duration-300 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-fuchsia-500/30 text-xs md:text-sm font-semibold text-fuchsia-400 hover:bg-fuchsia-500/10 transition-all"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
           {common("backToPortfolio")}
         </Link>
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-32 pb-16">
+      <section className="relative overflow-hidden pt-20 md:pt-32 pb-10 md:pb-16">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 left-1/2 w-[58rem] h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-fuchsia-500/20 via-purple-500/10 to-transparent blur-3xl" />
+          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-fuchsia-500/20 via-purple-500/10 to-transparent blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10 px-4 py-2 mb-6 text-sm font-semibold text-fuchsia-400">
-              <Megaphone className="w-4 h-4" />
+            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-fuchsia-400">
+              <Megaphone className="w-3 h-3 md:w-4 md:h-4" />
               {t("badge")}
             </span>
             
-            <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05] mb-6">
+            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 md:mb-6">
               {t("title")}
             </h1>
             
-            <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl">
+            <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl">
               {t("hero_desc")}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
               <Link 
                 href="#cases" 
-                className="inline-flex items-center gap-2 rounded-xl bg-fuchsia-500 text-white font-semibold px-6 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-fuchsia-500/25"
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-fuchsia-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-fuchsia-500/25 text-xs md:text-base"
               >
                 {t("cta_primary")}
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
               </Link>
               <Link 
                 href="#clientes" 
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-6 py-3 font-semibold text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-600"
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base"
               >
                 {t("cta_secondary")}
               </Link>
@@ -160,42 +160,42 @@ export default function AgenciaLandingPageClient() {
       </section>
 
       {/* Cases de Sucesso */}
-      <section id="cases" className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">{t("cases_title")}</h2>
-            <p className="text-slate-400">Resultados reais de campanhas que geraram crescimento</p>
+      <section id="cases" className="py-8 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("cases_title")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">Resultados reais de campanhas</p>
           </div>
           <SuccessCases />
         </div>
       </section>
 
       {/* Clientes */}
-      <section id="clientes" className="py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">{t("clients_title")}</h2>
-            <p className="text-slate-400">Empresas que confiam em nosso trabalho</p>
+      <section id="clientes" className="py-8 md:py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("clients_title")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">Empresas que confiam em nosso trabalho</p>
           </div>
           <ClientsGrid />
         </div>
       </section>
 
       {/* Equipe */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-slate-100 mb-4">{t("team_title")}</h2>
-            <p className="text-slate-400">Profissionais especializados em cada área do marketing digital</p>
+      <section className="py-8 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("team_title")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">Profissionais especializados em marketing</p>
           </div>
           <CreativeTeam />
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="py-8 md:py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-fuchsia-500/10 to-transparent border border-fuchsia-500/20 hover:border-fuchsia-500/40 transition-all duration-300 hover:-translate-y-1">
               <div className="w-14 h-14 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-fuchsia-400" />
@@ -204,39 +204,39 @@ export default function AgenciaLandingPageClient() {
               <p className="text-slate-400">{t("feature_1_desc")}</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-blue-400" />
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 md:mb-6">
+                <Users className="w-5 h-5 md:w-7 md:h-7 text-blue-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_2")}</h3>
-              <p className="text-slate-400">{t("feature_2_desc")}</p>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_2")}</h3>
+              <p className="text-slate-400 text-sm md:text-base">{t("feature_2_desc")}</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6">
-                <Palette className="w-7 h-7 text-purple-400" />
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4 md:mb-6">
+                <Palette className="w-5 h-5 md:w-7 md:h-7 text-purple-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_3")}</h3>
-              <p className="text-slate-400">{t("feature_3_desc")}</p>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_3")}</h3>
+              <p className="text-slate-400 text-sm md:text-base">{t("feature_3_desc")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 py-10 mt-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-            <p className="text-sm text-slate-500">{common("footer")}</p>
-            <div className="flex items-center gap-3">
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
-                <Linkedin className="w-5 h-5" />
+      <footer className="border-t border-slate-800 py-6 md:py-10 mt-8 md:mt-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
+            <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
+            <div className="flex items-center gap-2 md:gap-3">
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
+                <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
-                <Github className="w-5 h-5" />
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
+                <Github className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
-                <Mail className="w-5 h-5" />
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-fuchsia-500/50 transition-colors text-slate-400 hover:text-fuchsia-400">
+                <Mail className="w-4 h-4 md:w-5 md:h-5" />
               </a>
             </div>
           </div>
