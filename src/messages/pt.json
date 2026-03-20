@@ -50,19 +50,23 @@
     "projects": {
       "hubEcommerce": {
         "title": "Portal de Gestão Integrada (SaaS)",
-        "description": "Plataforma completa de gestão financeira com dashboard em tempo real, conciliação automática de transações e controle de estoque. Centralize todas as operações do seu negócio em uma interface intuitiva."
+        "description": "Sistema completo de gestão empresarial com dashboard em tempo real, controle de estoque inteligente e relatórios automatizados. Centralize todas as operações do seu negócio em uma interface intuitiva."
       },
       "pwaClinics": {
-        "title": "Plataforma HealthTech de Alta Performance",
-        "description": "Plataforma completa para clínicas médicas com agendamento inteligente, gestão de pacientes, depoimentos e especialidades. Interface moderna com PWA e otimização para conversão."
+        "title": "HealthTech de Alta Performance",
+        "description": "Plataforma completa para clínicas e consultórios com agendamento online, prontuário digital e telemedicina integrada. Sua saúde na palma da mão."
       },
       "onboardingAiCrm": {
-        "title": "Ecossistema de Vendas Estratégicas",
-        "description": "Sistema completo de lançamento de produtos digitais com IA, countdown dinâmico, FAQ interativo e automação de nutrição de leads. Transforme visitantes em clientes com alta conversão."
+        "title": "Funil de Lançamento Estratégico",
+        "description": "Plataforma de lançamento de cursos online com countdown, área de membros, pagamentos e funil de vendas completo. Transforme visitantes em alunos."
       },
       "cicdAws": {
-        "title": "Sistema de Gestão Legal Inteligente",
-        "description": "Sistema de alta disponibilidade para escritórios de advocacia com automação de processos, gestão de casos e compliance. Infraestrutura cloud-native com zero downtime e escalabilidade automática."
+        "title": "Sistema Jurídico Premium",
+        "description": "Sistema jurídico completo com gestão de processos, agendamento de audiências, contratos digitais e compliance LGPD. Segurança jurídica garantida."
+      },
+      "agencia": {
+        "title": "Agência Digital Plus",
+        "description": "Sistema de gestão para agências de marketing com acompanhamento de campanhas, relatórios de resultados e gestão de clientes. Resultados que você enxerga."
       }
     }
   },
@@ -119,17 +123,17 @@
       "footer": "Felipe Gabriel WebDeveloper © 2026"
     },
     "gestao": {
-      "badge": "ERP Inteligente",
-      "title": "Portal de Gestão Integrada",
-      "hero_desc": "Sistema ERP completo que unifica finanças, estoque e vendas em uma única plataforma. Tomada de decisões baseada em dados reais.",
+      "badge": "Controle Total do Seu Dinheiro",
+      "title": "Pare de Perder Dinheiro. Controle Seu Caixa Hoje.",
+      "hero_desc": "Sistema ERP que unifica finanças, estoque e vendas em tempo real. Tome decisões baseadas em dados, reduza perdas e aumente seu lucro imediatamente.",
       "feature_1": "Dashboard Executivo",
       "feature_1_desc": "Visualize faturamento, despesas e lucratividade em tempo real com gráficos interativos",
       "feature_2": "Controle de Estoque",
       "feature_2_desc": "Gestão inteligente com alertas automáticos de reposição e análise de giro",
       "feature_3": "Últimas Vendas",
       "feature_3_desc": "Acompanhe pedidos em tempo real com status atualizado e notificações",
-      "cta_primary": "Explorar Solução Completa",
-      "cta_secondary": "Conhecer Funcionalidades",
+      "cta_primary": "Aproveitar Agora - Teste Grátis",
+      "cta_secondary": "Ver Demonstração",
       "chart_title": "Faturamento Mensal",
       "stock_table": "Status de Estoque",
       "sales_widget": "Últimas Vendas",
@@ -138,73 +142,80 @@
         "orders": "Pedidos",
         "products": "Produtos",
         "clients": "Clientes"
-      }
+      },
+      "feature_card_1": "Simular Metas",
+      "feature_card_2": "Cadastrar Produto",
+      "feature_card_3": "Calcular ROI"
     },
     "agencia": {
-      "badge": "Marketing Performance",
-      "title": "Agência de Marketing Digital",
-      "hero_desc": "Estratégias data-driven que geram resultados reais. Aumente sua presença digital e converta mais clientes.",
+      "badge": "Resultados que Você Enxerga",
+      "title": "Sua Marca no Próximo Nível. ROI Garantido.",
+      "hero_desc": "Estratégias data-driven que transformam visitantes em clientes. Aumente sua autoridade digital e veja resultados reais em 30 dias.",
       "feature_1": "Cases de Sucesso",
-      "feature_1_desc": "Resultados comprovados: +300% em tráfego, +150% em conversão",
+      "feature_1_desc": "Resultados comprovados: +320% em tráfego, +150% em conversão",
       "feature_2": "Clientes Atendidos",
-      "feature_2_desc": "Portfólio de marcas que confiam em nosso trabalho",
-      "feature_3": "Equipe Criativa",
-      "feature_3_desc": "Especialistas em SEO, Ads, Design e Copywriting",
-      "cta_primary": "Ver Cases de Sucesso",
-      "cta_secondary": "Conhecer Nossos Serviços",
+      "feature_2_desc": "Marcas que confiam em nosso trabalho e crescem todos os dias",
+      "feature_3": "Equipe Especializada",
+      "feature_3_desc": "Experts em SEO, Ads, Design e Copywriting focados em resultados",
+      "cta_primary": "Aproveitar - Diagnóstico Grátis",
+      "cta_secondary": "Ver Cases de Sucesso",
       "cases_title": "Resultados que Superam Expectativas",
-      "clients_title": "Empresas que Transformamos",
-      "team_title": "Nossa Equipe"
+      "clients_title": "Quem Confia em Nós",
+      "team_title": "Nossa Equipe de Experts"
     },
     "clinica": {
-      "badge": "HealthTech Premium",
-      "title": "Plataforma HealthTech de Alta Performance",
-      "hero_desc": "Sistema completo para clínicas e consultórios com agendamento inteligente, prontuário eletrônico e telemedicina integrada.",
+      "badge": "Sua Saúde Não Pode Esperar",
+      "title": "Agende Sua Consulta em Segundos. Cuidado Imediato.",
+      "hero_desc": "Plataforma completa para clínicas com agendamento 24/7, prontuário eletrônico e telemedicina. Sua saúde na palma da mão, sem filas, sem espera.",
       "feature_1": "Especialidades Médicas",
       "feature_1_desc": "Cardiologia, Dermatologia, Ortopedia, Neurologia e mais 20 especialidades",
       "feature_2": "Depoimentos de Pacientes",
       "feature_2_desc": "Avaliações reais com sistema de estrelas e feedbacks verificados",
       "feature_3": "Agendamento Inteligente",
       "feature_3_desc": "Marque consultas 24/7 com confirmação automática via WhatsApp",
-      "cta_primary": "Solicitar Diagnóstico Gratuito",
-      "cta_secondary": "Conhecer Especialidades",
-      "specialties_title": "Nossas Especialidades",
+      "cta_primary": "Chame Já - Agendar Agora",
+      "cta_secondary": "Ver Especialidades",
+      "specialties_title": "Tudo que Você Precisa",
       "testimonials_title": "O que dizem nossos pacientes",
       "booking_title": "Agende sua Consulta",
-      "booking_desc": "Preencha o formulário e entraremos em contato em minutos"
+      "booking_desc": "Escolha especialidade, data e horário em poucos cliques"
     },
     "escritorio": {
-      "badge": "Gestão Legal",
-      "title": "Sistema de Gestão Legal Inteligente",
-      "hero_desc": "Plataforma jurídica completa para advogados e escritórios. Gestão de casos, documentos e relacionamento com clientes.",
-      "feature_1": "Certificações e Badges",
-      "feature_1_desc": "OAB, Compliance LGPD, ISO 27001 - sua segurança garantida",
+      "badge": "Segurança Jurídica Garantida",
+      "title": "Tudo que Você Precisa para sua Segurança Jurídica.",
+      "hero_desc": "Sistema jurídico completo para advogados e escritórios. Gestão de casos, documentos, prazos e compliance. Sua prática elevada ao próximo nível.",
+      "feature_1": "Credenciais e Certificações",
+      "feature_1_desc": "OAB Ativa, Compliance LGPD, ISO 27001 - sua segurança garantida",
       "feature_2": "Áreas de Atuação",
       "feature_2_desc": "Direito Civil, Trabalhista, Empresarial, Tributário e mais",
       "feature_3": "Artigos e Publicações",
       "feature_3_desc": "Conteúdo jurídico de alta qualidade para seus clientes",
-      "cta_primary": "Solicitar Demonstração",
-      "cta_secondary": "Ver Funcionalidades",
+      "cta_primary": "Chame Já - Consultoria Grátis",
+      "cta_secondary": "Ver Áreas de Atuação",
       "badges_title": "Credenciais e Certificações",
       "areas_title": "Áreas de Atuação",
-      "articles_title": "Publicações Recentes"
+      "articles_title": "Publicações Recentes",
+      "booking_title": "Agende sua Consulta",
+      "booking_desc": "Escolha área e agende com o especialista adequado",
+      "testimonials_title": "O que dizem nossos clientes",
+      "testimonials_subtitle": "Experiências reais de quem confia em nosso trabalho"
     },
     "lancamento": {
-      "badge": "Infoprodutos",
-      "title": "Ecossistema de Vendas Estratégicas",
-      "hero_desc": "Plataforma completa para lançamento de cursos e produtos digitais. Countdown, automações e página de alta conversão.",
-      "feature_1": "Contador Progressivo",
-      "feature_1_desc": "Urgência escassez que aumenta a taxa de conversão em até 40%",
+      "badge": "Oferta Única e Limitada",
+      "title": "Últimas Vagas! Aproveite o Desconto de Lançamento Já.",
+      "hero_desc": "Plataforma completa para lançar produtos digitais com alta conversão. Countdown dinâmico, automações e página otimizada para vendas.",
+      "feature_1": "Urgência que Converte",
+      "feature_1_desc": "Contador regressivo que aumenta taxa de conversão em até 40%",
       "feature_2": "FAQ Interativo",
-      "feature_2_desc": "Respostas automáticas para as principais objeções dos leads",
+      "feature_2_desc": "Elimine objeções automaticamente com respostas instantâneas",
       "feature_3": "Automação Completa",
       "feature_3_desc": "Nutrição de leads via email, SMS e WhatsApp integrados",
-      "cta_primary": "Iniciar Estratégia de Lançamento",
+      "cta_primary": "Garantir Minha Vaga Agora",
       "cta_secondary": "Ver Planos e Preços",
       "countdown_title": "Oferta Termina em:",
-      "faq_title": "Perguntas Frequentes",
-      "faq_subtitle": "Tire suas dúvidas antes de comprar",
-      "urgency": "Vagas Limitadas - Últimas 17 unidades"
+      "faq_title": "Tire Suas Dúvidas",
+      "faq_subtitle": "Respostas rápidas para decidir agora",
+      "urgency": "Últimas 17 Vagas - Acaba em Breve"
     }
   }
 }

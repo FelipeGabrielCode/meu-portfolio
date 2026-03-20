@@ -12,10 +12,10 @@ import RatingModal from "@/components/RatingModal";
 // Cases de Sucesso
 function SuccessCases() {
   const cases = [
-    { client: "TechCorp", metric: "+320%", label: "Aumento em Tráfego", icon: TrendingUp, color: "emerald" },
-    { client: "FashionStore", metric: "+150%", label: "Crescimento em Vendas", icon: BarChart3, color: "purple" },
-    { client: "Consultoria Pro", metric: "85%", label: "Taxa de Conversão", icon: MousePointerClick, color: "amber" },
-    { client: "StartupX", metric: "2M+", label: "Impressões/Ano", icon: Globe, color: "blue" },
+    { client: "TechCorp", metric: "+320%", label: "Aumento em Tráfego", icon: TrendingUp, color: "violet" },
+    { client: "FashionStore", metric: "+150%", label: "Crescimento em Vendas", icon: BarChart3, color: "amber" },
+    { client: "Consultoria Pro", metric: "85%", label: "Taxa de Conversão", icon: MousePointerClick, color: "violet" },
+    { client: "StartupX", metric: "2M+", label: "Impressões/Ano", icon: Globe, color: "amber" },
   ];
   
   return (
@@ -61,9 +61,9 @@ function ClientsGrid() {
 // Equipe Criativa
 function CreativeTeam() {
   const team = [
-    { role: "SEO Specialist", name: "Ana Silva", skill: "SEO Técnico", color: "emerald" },
-    { role: "Ads Manager", name: "Carlos Santos", skill: "Google & Meta Ads", color: "blue" },
-    { role: "Designer", name: "Maria Oliveira", skill: "UI/UX Design", color: "purple" },
+    { role: "SEO Specialist", name: "Ana Silva", skill: "SEO Técnico", color: "violet" },
+    { role: "Ads Manager", name: "Carlos Santos", skill: "Google & Meta Ads", color: "amber" },
+    { role: "Designer", name: "Maria Oliveira", skill: "UI/UX Design", color: "violet" },
     { role: "Copywriter", name: "João Lima", skill: "Copy Persuasivo", color: "amber" },
   ];
   
@@ -196,25 +196,25 @@ export default function AgenciaLandingPageClient() {
       <section className="py-8 md:py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-fuchsia-500/10 to-transparent border border-fuchsia-500/20 hover:border-fuchsia-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 rounded-xl bg-fuchsia-500/20 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-fuchsia-400" />
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-violet-500/10 to-transparent border border-violet-500/20 hover:border-violet-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-violet-500/20 flex items-center justify-center mb-4 md:mb-6">
+                <Target className="w-5 h-5 md:w-7 md:h-7 text-violet-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-slate-100 mb-3">{t("feature_1")}</h3>
-              <p className="text-slate-400">{t("feature_1_desc")}</p>
+              <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_1")}</h3>
+              <p className="text-slate-400 text-sm md:text-base">{t("feature_1_desc")}</p>
             </div>
 
-            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 md:mb-6">
-                <Users className="w-5 h-5 md:w-7 md:h-7 text-blue-400" />
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4 md:mb-6">
+                <Users className="w-5 h-5 md:w-7 md:h-7 text-amber-400" />
               </div>
               <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_2")}</h3>
               <p className="text-slate-400 text-sm md:text-base">{t("feature_2_desc")}</p>
             </div>
 
-            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4 md:mb-6">
-                <Palette className="w-5 h-5 md:w-7 md:h-7 text-purple-400" />
+            <div className="p-4 md:p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-violet-500/10 to-transparent border border-violet-500/20 hover:border-violet-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-violet-500/20 flex items-center justify-center mb-4 md:mb-6">
+                <Palette className="w-5 h-5 md:w-7 md:h-7 text-violet-400" />
               </div>
               <h3 className="font-display text-lg md:text-xl font-bold text-slate-100 mb-2 md:mb-3">{t("feature_3")}</h3>
               <p className="text-slate-400 text-sm md:text-base">{t("feature_3_desc")}</p>

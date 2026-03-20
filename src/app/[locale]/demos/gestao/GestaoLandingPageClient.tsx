@@ -771,8 +771,8 @@ export default function GestaoLandingPageClient() {
       <section id="features" className="py-8 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-6 md:mb-12">
-            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("cta_secondary")}</h2>
-            <p className="text-slate-400 text-xs md:text-base">Tudo que você precisa para gerenciar seu negócio</p>
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("feature_1")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">{t("feature_1_desc")}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -780,7 +780,7 @@ export default function GestaoLandingPageClient() {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
                 <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-indigo-400" />
               </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Simular Metas</h3>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_1")}</h3>
               <SalesGoalSimulator />
             </div>
 
@@ -788,15 +788,15 @@ export default function GestaoLandingPageClient() {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4">
                 <Package className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
               </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Cadastrar Produto</h3>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_2")}</h3>
               <QuickProductForm />
             </div>
 
-            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
-                <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-purple-400" />
+            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-indigo-400" />
               </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">Calcular ROI</h3>
+              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_3")}</h3>
               <ROICalculator />
             </div>
           </div>

@@ -354,20 +354,20 @@ export default function ClinicaLandingPageClient() {
               
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-3 text-slate-300">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-teal-400" />
                   </div>
                   <span className="text-sm md:text-base">Agendamento 24/7 online</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-teal-400" />
                   </div>
                   <span className="text-sm md:text-base">Múltiplas unidades</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 md:w-5 md:h-5 text-teal-400" />
                   </div>
                   <span className="text-sm md:text-base">Confirmação via WhatsApp</span>
                 </div>
@@ -385,13 +385,13 @@ export default function ClinicaLandingPageClient() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
             <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
             <div className="flex items-center gap-2 md:gap-3">
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-colors text-slate-400 hover:text-emerald-400">
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-teal-500/50 transition-colors text-slate-400 hover:text-teal-400">
                 <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-colors text-slate-400 hover:text-emerald-400">
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-teal-500/50 transition-colors text-slate-400 hover:text-teal-400">
                 <Github className="w-4 h-4 md:w-5 md:h-5" />
               </a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-emerald-500/50 transition-colors text-slate-400 hover:text-emerald-400">
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-teal-500/50 transition-colors text-slate-400 hover:text-teal-400">
                 <Mail className="w-4 h-4 md:w-5 md:h-5" />
               </a>
             </div>

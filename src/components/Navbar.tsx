@@ -1,20 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Moon, Sun, Globe, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Globe, Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
+import { ModeToggle } from "@/components/ModeToggle";
 
-interface NavbarProps {
-  darkMode: boolean;
-  onToggleDark: () => void;
-  // Props are kept optional for compatibility with older Vite residual pages.
-  language?: "EN" | "PT" | string;
-  onToggleLang?: () => void;
-}
-
-export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
+export default function Navbar() {
   const t = useTranslations("Navbar");
   const locale = useLocale();
   const router = useRouter();
@@ -58,15 +50,15 @@ export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass-nav py-3" : "py-5 bg-transparent"
+        scrolled ? "glass-nav py-2 md:py-3" : "py-3 md:py-5 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between max-w-6xl">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between max-w-6xl">
         {/* Logo */}
         <a
           href="#home"
           onClick={() => handleNavClick("#home")}
-          className="font-display font-black text-2xl tracking-tight gradient-text-premium"
+          className="font-display font-black text-xl md:text-2xl tracking-tight gradient-text-premium"
         >
           FG.
         </a>
@@ -95,37 +87,33 @@ export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
           ))}
         </nav>
 
-        {/* Controls */}
-        <div className="hidden md:flex items-center gap-2">
-          {/* Language toggle */}
+        {/* Controls - Always visible on both mobile and desktop */}
+        <div className="flex items-center gap-2">
+          {/* Language toggle - Visible on all screen sizes */}
           <button
             onClick={handleToggleLang}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-muted-foreground border border-border/60 hover:border-primary/50 hover:text-primary transition-all duration-200 glass"
+            className="flex items-center gap-1 px-2.5 py-2 rounded-lg text-xs md:text-sm font-semibold text-muted-foreground border border-border/60 hover:border-primary/50 hover:text-primary transition-all duration-200 glass"
           >
             <Globe className="w-3.5 h-3.5" />
-            {locale.toUpperCase()}
+            <span className="hidden sm:inline">{locale.toUpperCase()}</span>
+            <span className="sm:hidden">{locale.toUpperCase().slice(0, 2)}</span>
           </button>
 
-          {/* Dark mode toggle */}
+          {/* Theme toggle - Visible on all screen sizes */}
+          <ModeToggle />
+
+          {/* Mobile menu button */}
           <button
-            onClick={onToggleDark}
-            className="p-2 rounded-lg text-muted-foreground hover:text-primary border border-border/60 hover:border-primary/50 transition-all duration-200 glass"
-            aria-label="Toggle dark mode"
+            className="md:hidden p-2 rounded-lg glass text-muted-foreground hover:text-primary ml-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 rounded-lg glass text-muted-foreground hover:text-primary"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - Only navigation links, no theme/lang toggles */}
       {menuOpen && (
         <div className="md:hidden glass-nav mt-2 mx-4 rounded-xl overflow-hidden animate-fade-in">
           <nav className="flex flex-col p-4 gap-1">
@@ -144,21 +132,6 @@ export default function Navbar({ darkMode, onToggleDark }: NavbarProps) {
                 {link.label}
               </a>
             ))}
-            <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border/50">
-              <button
-                onClick={handleToggleLang}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-muted-foreground border border-border/60 hover:text-primary transition-all duration-200"
-              >
-                <Globe className="w-3.5 h-3.5" />
-                {locale.toUpperCase()}
-              </button>
-              <button
-                onClick={onToggleDark}
-                className="p-2 rounded-lg text-muted-foreground hover:text-primary border border-border/60 transition-all duration-200"
-              >
-                {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-              </button>
-            </div>
           </nav>
         </div>
       )}

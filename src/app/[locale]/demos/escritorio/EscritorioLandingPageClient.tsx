@@ -284,7 +284,7 @@ export default function EscritorioLandingPageClient() {
       
       {/* Botão Voltar */}
       <div className="fixed top-20 md:top-24 left-3 md:left-6 z-50">
-        <Link href="/#projects" className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-blue-500/30 text-xs md:text-sm font-semibold text-blue-400 hover:bg-blue-500/10 transition-all">
+        <Link href="/#projects" className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-sky-500/30 text-xs md:text-sm font-semibold text-sky-400 hover:bg-sky-500/10 transition-all">
           <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />{common("backToPortfolio")}
         </Link>
       </div>
@@ -292,7 +292,7 @@ export default function EscritorioLandingPageClient() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-20 md:pt-32 pb-10 md:pb-16">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-blue-600/20 via-indigo-500/15 to-transparent blur-3xl" />
+          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-sky-600/20 via-slate-500/15 to-transparent blur-3xl" />
           <div className="absolute top-20 right-0 w-[20rem] md:w-[34rem] h-[20rem] md:h-[34rem] opacity-50">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-600/10 to-transparent blur-3xl" />
           </div>
@@ -300,7 +300,7 @@ export default function EscritorioLandingPageClient() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-blue-400">
+            <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-sky-400">
               <Scale className="w-3 h-3 md:w-4 md:h-4" />{t("badge")}
             </span>
             
@@ -308,7 +308,7 @@ export default function EscritorioLandingPageClient() {
             <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl">{t("hero_desc")}</p>
 
             <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
-              <Link href="#agendamento" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-blue-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25 text-xs md:text-base">
+              <Link href="#agendamento" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-sky-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-500/25 text-xs md:text-base">
                 {t("cta_primary")}<ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
               </Link>
               <Link href="#areas" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base">
@@ -346,13 +346,13 @@ export default function EscritorioLandingPageClient() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
             <div>
-              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">Agende sua Consulta</h2>
-              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">Escolha a área e agende com o especialista adequado.</p>
+              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("booking_title")}</h2>
+              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">{t("booking_desc")}</p>
               <LegalBookingSystem />
             </div>
             <div>
-              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">O que dizem nossos clientes</h2>
-              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">Experiências reais de quem confia em nosso trabalho.</p>
+              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("testimonials_title")}</h2>
+              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">{t("testimonials_subtitle")}</p>
               <ClientTestimonials />
             </div>
           </div>
@@ -378,9 +378,9 @@ export default function EscritorioLandingPageClient() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
             <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
             <div className="flex items-center gap-2 md:gap-3">
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-blue-500/50 transition-colors text-slate-400 hover:text-blue-400"><Linkedin className="w-4 h-4 md:w-5 md:h-5" /></a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-blue-500/50 transition-colors text-slate-400 hover:text-blue-400"><Github className="w-4 h-4 md:w-5 md:h-5" /></a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-blue-500/50 transition-colors text-slate-400 hover:text-blue-400"><Mail className="w-4 h-4 md:w-5 md:h-5" /></a>
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Linkedin className="w-4 h-4 md:w-5 md:h-5" /></a>
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Github className="w-4 h-4 md:w-5 md:h-5" /></a>
+              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Mail className="w-4 h-4 md:w-5 md:h-5" /></a>
             </div>
           </div>
         </div>
