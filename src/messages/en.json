@@ -10,30 +10,26 @@
   "Hero": {
     "badge": "Available for new projects",
     "name": "Felipe Gabriel",
-    "roles": [
-      "Full Stack Developer",
-      "DevOps Engineer",
-      "Automation Creator"
-    ],
-    "description": "Building scalable web applications, robust DevOps pipelines, and intelligent automations that turn ideas into products — from code to cloud.",
+    "roles": ["Full Stack Developer", "DevOps Engineer", "Automation Creator"],
+    "description": "Building scalable web applications, robust DevOps pipelines, and intelligent automations that transform ideas into products—from code to cloud.",
     "cta": {
       "primary": "View my projects",
-      "secondary": "Let's talk"
+      "secondary": "Get in touch"
     },
     "scrollHint": "Scroll to explore"
   },
   "Expertise": {
     "badge": "What I deliver",
     "title": "Expertise & Stack",
-    "description": "Three pillars that guide every delivery — from concept to production.",
+    "description": "Three pillars that guide every delivery—from concept to production.",
     "cards": {
       "fullstack": {
         "title": "Full Stack Web Development",
-        "description": "End-to-end product engineering — from pixel-perfect interfaces to scalable architectures and APIs."
+        "description": "End-to-end product engineering—from pixel-perfect interfaces to scalable architectures and APIs."
       },
       "devops": {
         "title": "DevOps & Infrastructure",
-        "description": "Cloud-native deployments, container orchestration, and zero-downtime CI/CD pipelines."
+        "description": "Cloud-native deploys, container orchestration, and CI/CD pipelines with zero downtime."
       },
       "automations": {
         "title": "Automations & Workflows",
@@ -53,25 +49,454 @@
     },
     "projects": {
       "hubEcommerce": {
-        "title": "Integrated Management Portal (SaaS)",
-        "description": "Complete business management system with real-time dashboard, intelligent inventory control and automated reports. Centralize all your business operations in an intuitive interface."
+        "title": "Integrated Management Portal SaaS",
+        "description": "Complete business management system with real-time dashboard, intelligent inventory control, and automated reports. Centralize all your business operations in one intuitive interface."
       },
       "pwaClinics": {
-        "title": "High-Performance Clinic System",
-        "description": "Complete platform for clinics and medical offices with online scheduling, digital medical records and integrated telemedicine. Your health at your fingertips."
+        "title": "Digital Health Platform",
+        "description": "Complete system for clinics and medical offices with online scheduling, digital medical records, and integrated telemedicine. Your health at your fingertips, no lines, no waiting."
       },
       "onboardingAiCrm": {
-        "title": "Strategic Launch Funnel",
-        "description": "Online course launch platform with countdown, member area, payments and complete sales funnel. Transform visitors into students."
+        "title": "High-Conversion Sales Page",
+        "description": "Digital product launch platform with dynamic countdown, integrated checkout, and complete sales funnel. Transform visitors into customers with optimized conversion rates."
       },
       "cicdAws": {
-        "title": "Premium Legal Infrastructure",
-        "description": "Complete legal system with process management, hearing scheduling, digital contracts and GDPR compliance. Legal security guaranteed."
+        "title": "Premium Legal System",
+        "description": "Complete legal system with process management, consulting scheduling, digital contracts, and GDPR compliance. Legal security guaranteed for law firms and lawyers."
       },
       "agencia": {
-        "title": "Digital Agency Plus",
-        "description": "Management system for marketing agencies with campaign tracking, performance reports and client management. Results you can see."
+        "title": "Digital Marketing Agency",
+        "description": "Management system for marketing agencies with free diagnosis, campaign tracking, ROI reports, and client management. Results you can see in real time."
       }
+    }
+  },
+  "Pricing": {
+    "badge": "Enterprise Plans",
+    "title": "Choose the perfect plan for your business",
+    "subtitle": "Scale without limits with professional tools and dedicated support",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save 20%",
+      "perMonth": "month",
+      "billedAnnually": "Billed annually: {amount}"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small teams",
+        "features": [
+          "Up to 5 users",
+          "10GB storage",
+          "Email support",
+          "Basic features",
+          "Limited API"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For growing teams",
+        "badge": "Most Popular",
+        "features": [
+          "Up to 25 users",
+          "100GB storage",
+          "Priority 24/7 support",
+          "Advanced features",
+          "Full API access",
+          "Unlimited integrations",
+          "Custom reports"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large corporations",
+        "features": [
+          "Unlimited users",
+          "Unlimited storage",
+          "Dedicated account manager",
+          "Custom SLA",
+          "Exclusive features",
+          "White-label API",
+          "On-premise available",
+          "Training included"
+        ]
+      }
+    },
+    "cta": "Start Free Trial",
+    "guarantee": "30-day satisfaction guarantee or your money back",
+    "moneyBack": "100% refund no questions asked"
+  },
+  "Features": {
+    "badge": "Smart Modules",
+    "title": "Complete system for business management",
+    "subtitle": "All the tools you need in one integrated and secure platform",
+    "cta": "Explore Features",
+    "tabs": {
+      "financial": {
+        "title": "Financial & Payment Hub",
+        "description": "Automatic bank reconciliation and invoice generation",
+        "benefits": [
+          "Automatic bank reconciliation with 98.5% accuracy",
+          "Integrated NFe and NFSe issuance with city halls",
+          "Real-time cash flow with projections",
+          "Customizable and exportable financial reports"
+        ]
+      },
+      "inventory": {
+        "title": "Intelligent Inventory Management",
+        "description": "Stockout alerts and inventory turnover control",
+        "benefits": [
+          "Real-time low stock alerts",
+          "Inventory turnover analysis with purchase suggestions",
+          "Multi-warehouse control with full tracking",
+          "Supplier integration for automatic replenishment"
+        ]
+      },
+      "crm": {
+        "title": "CRM & Sales",
+        "description": "Customer funnel and complete interaction history",
+        "benefits": [
+          "Visual sales funnel with conversion rates",
+          "Complete customer interaction history",
+          "Smart email automation and follow-ups",
+          "Sales team performance reports"
+        ]
+      },
+      "rbac": {
+        "title": "Access Control (RBAC)",
+        "description": "Granular permissions and security auditing",
+        "benefits": [
+          "Role-based access control (RBAC)",
+          "Complete and traceable audit logs",
+          "Mandatory two-factor authentication",
+          "Customizable security policies by department"
+        ]
+      }
+    }
+  },
+  "Demos": {
+    "gestao": {
+      "title": "Business Management System",
+      "description": "Complete business management platform with real-time dashboard, financial control, and process automation.",
+      "hero_desc": "Transform your management with our SaaS Enterprise platform. Executive dashboard, financial automation, and complete business control.",
+      "cta_primary": "Start Free Trial",
+      "cta_secondary": "View Demo",
+      "badge": "Executive Dashboard",
+      "stats": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "products": "Products",
+        "clients": "Clients"
+      },
+      "revenue_monthly": "Monthly Revenue",
+      "revenue_annual": "Annual Revenue",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "sales_widget": "Recent Sales",
+      "view_all": "View All",
+      "stock_table": "Stock Control",
+      "filter": "Filter",
+      "export": "Export",
+      "completed": "Completed",
+      "processing": "Processing",
+      "pending": "Pending",
+      "product": "Product",
+      "sku": "SKU",
+      "stock": "Stock",
+      "status": "Status",
+      "status_ok": "OK",
+      "status_low": "Low",
+      "status_critical": "Critical",
+      "all_sales": "All Sales",
+      "sales": "sales",
+      "total": "Total",
+      "close": "Close",
+      "progress": "Progress",
+      "sale_amount": "Sell ${amount}",
+      "reset": "Reset",
+      "view_reports": "View Reports",
+      "analytics": "Detailed analytics",
+      "register": "Register Product",
+      "product_registered": "Product registered successfully!",
+      "product_added": "added to stock",
+      "product_name": "Product name",
+      "price": "Price",
+      "quantity": "Quantity",
+      "goal": "Goal",
+      "investment": "Investment",
+      "return": "Return",
+      "filter_stock": "Filter Stock",
+      "all_products": "All Products",
+      "stock_ok": "Stock OK",
+      "stock_low": "Low Stock",
+      "stock_critical": "Critical Stock",
+      "export_report": "Export Report",
+      "current_filter": "Current filter",
+      "all": "all",
+      "items_exported": "items exported",
+      "download_pdf": "Download PDF",
+      "download_csv": "Download CSV"
+    },
+    "common": {
+      "footer": "© 2024 Felipe Gabriel. All rights reserved.",
+      "loading": "Loading...",
+      "error": "An error occurred",
+      "retry": "Try again",
+      "backToPortfolio": "Back to Portfolio"
+    },
+    "agencia": {
+      "title": "Digital Marketing Agency",
+      "description": "Complete system for agencies with free diagnosis and campaign management."
+    },
+    "clinica": {
+      "title": "Digital Health Enterprise Platform",
+      "description": "Complete medical system with smart scheduling, electronic records, and telemedicine.",
+      "hero_desc": "Transform your clinic with our SaaS Enterprise platform. Smart scheduling, unified records, and 40% reduction in no-shows via WhatsApp.",
+      "badge": "Medical SaaS Enterprise",
+      "cta_primary": "Schedule Demo",
+      "cta_secondary": "View Features",
+      
+      "hero_booking": {
+        "title": "Schedule Your Online Consultation",
+        "subtitle": "Experience smart scheduling that reduces no-shows by 40%",
+        "select_specialty": "Choose specialty",
+        "select_date": "Choose date",
+        "select_time": "Choose time",
+        "confirm": "Confirm Appointment"
+      },
+      
+      "features": {
+        "title": "Complete Medical System",
+        "subtitle": "All modules your clinic needs in one integrated platform",
+        "tabs": {
+          "schedule": {
+            "title": "Schedule & WhatsApp",
+            "subtitle": "Reduce no-shows and automate reminders",
+            "benefits": "Smart schedule with time optimization, Automatic WhatsApp reminders, 40% reduction in patient no-shows, Automatic appointment confirmation, Multiple clinic management"
+          },
+          "records": {
+            "title": "Electronic Health Records (EHR)",
+            "subtitle": "Unified history and data security",
+            "benefits": "Complete and unified electronic records, Integrated medical history across consultations, Exam attachments and digital prescriptions, Automatic backup and data encryption, GDPR and health standards compliance"
+          },
+          "telemedicine": {
+            "title": "Telemedicine & Prescription",
+            "subtitle": "Remote consultations and digital prescriptions",
+            "benefits": "Secure virtual waiting room, Encrypted HD video calls, Digital prescription with electronic signature, Secure exam sharing, Digital pharmacy integration"
+          },
+          "billing": {
+            "title": "Billing & Plans",
+            "subtitle": "TISS/TUSS forms and cash flow",
+            "benefits": "Automatic TISS/TUSS form generation, Insurance and private patient control, Real-time cash flow, Custom billing reports, Payment system integration"
+          }
+        }
+      },
+      
+      "doctors": {
+        "title": "Specialist Doctors",
+        "subtitle": "Qualified professionals to care for your health"
+      },
+      
+      "testimonials": {
+        "title": "What Our Patients Say",
+        "subtitle": "Real experiences with our platform",
+        "patient1": "John Smith",
+        "review1": "Online scheduling changed my experience. Fast, practical, and WhatsApp reminders help me never miss an appointment.",
+        "date1": "2 weeks ago",
+        "patient2": "Mary Johnson",
+        "review2": "Telemedicine is fantastic! I can have quality remote consultations without leaving home. The platform is very intuitive.",
+        "date2": "1 month ago", 
+        "patient3": "Robert Davis",
+        "review3": "Unified records make everything so much easier. All my exams and consultations in one place. Highly recommend!",
+        "date3": "3 months ago"
+      },
+      
+      "booking": {
+        "title": "Smart Scheduling",
+        "subtitle": "Complete online scheduling system with automatic confirmation",
+        "specialty": "Specialty",
+        "date": "Date",
+        "time": "Time",
+        "select_specialty": "Select specialty:",
+        "select_date_for": "Select date for {specialty}:",
+        "times_for": "Available times for {date}:",
+        "back": "Back",
+        "booked_successfully": "Appointment Pre-booked!",
+        "whatsapp_confirmation": "You will receive confirmation via WhatsApp shortly.",
+        "main_unit_address": "Main Unit - Av. Paulista, 1000",
+        "book_new_appointment": "Book New Appointment",
+        "online_booking_247": "24/7 online booking",
+        "multiple_units": "Multiple units",
+        "whatsapp_confirm": "WhatsApp confirmation",
+        
+        "specialties": {
+          "cardiology": "Cardiology",
+          "cardiology_desc": "Heart and vessels care",
+          "neurology": "Neurology",
+          "neurology_desc": "Nervous system and brain",
+          "orthopedics": "Orthopedics",
+          "orthopedics_desc": "Bones, joints and muscles",
+          "ophthalmology": "Ophthalmology",
+          "ophthalmology_desc": "Eye health and vision",
+          "pediatrics": "Pediatrics",
+          "pediatrics_desc": "Complete child care",
+          "general_practice": "General Practice",
+          "general_practice_desc": "General medical care"
+        },
+        
+        "dates": {
+          "date1": "Today - 03/25",
+          "date2": "Tomorrow - 03/26",
+          "date3": "Wednesday - 03/27",
+          "date4": "Thursday - 03/28",
+          "date5": "Friday - 03/29"
+        }
+      }
+    },
+    "escritorio": {
+      "title": "Premium Legal System",
+      "description": "Complete legal system with process management and consulting."
+    },
+    "lancamento": {
+      "title": "Launch Platform",
+      "description": "Complete platform for launches with checkout and sales funnel."
+    }
+  },
+  "Checkout": {
+    "title": "Complete Purchase",
+    "subtitle": "Choose your plan and start transforming your management",
+    "personalInfo": "Personal Information",
+    "paymentInfo": "Payment Information",
+    "cardNumber": "Card Number",
+    "expiry": "Expiry",
+    "cvv": "CVV",
+    "agreeTerms": "I agree to the terms of service and privacy policy",
+    "securePayment": "100% secure and encrypted payment",
+    "processing": "Processing...",
+    "payWith": "Pay with",
+    "success": {
+      "title": "Payment Approved!",
+      "message": "Your subscription has been activated successfully.",
+      "plan": "Plan:",
+      "nextBilling": "Next billing:",
+      "today": "Today",
+      "goToDashboard": "Go to Dashboard"
+    }
+  },
+  "Trial": {
+    "title": "Start Your Free Trial",
+    "subtitle": "Test all our system features for 14 days, no commitment.",
+    "benefits": {
+      "fullAccess": "Full Access",
+      "fullAccessDesc": "All features available during trial",
+      "14Days": "14 Days Free",
+      "14DaysDesc": "Enough time to explore everything",
+      "noCard": "No Card Required",
+      "noCardDesc": "No payment details needed"
+    },
+    "personalInfo": "Personal Information",
+    "companyInfo": "Company Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "company": "Company",
+    "companySize": "Company Size",
+    "industry": "Industry",
+    "agreeTerms": "I agree to receive trial communications and accept the terms of service and privacy policy",
+    "startTrial": "Start Free Trial",
+    "processing": "Processing...",
+    "success": {
+      "title": "Trial Requested Successfully!",
+      "message": "Your 14-day free trial has been activated. You will receive an email with access instructions shortly.",
+      "email": "Email:",
+      "company": "Company:",
+      "duration": "Duration:",
+      "14Days": "14 days",
+      "goToDashboard": "Go to Dashboard"
+    }
+  },
+  "Enterprise": {
+    "title": "Personalized Enterprise Demo",
+    "subtitle": "Schedule a 1-on-1 demo with our specialists and see how our platform can transform your operations.",
+    "duration": "45 minutes",
+    "personalized": "Personalized",
+    "online": "Online",
+    "whatYouWillSee": "What you will see in the demo:",
+    "dashboard": "Executive Dashboard",
+    "dashboardDesc": "Complete visualization of KPIs and real-time metrics",
+    "financial": "Financial Automation",
+    "financialDesc": "Bank reconciliation and automatic invoice generation",
+    "stock": "Stock Management",
+    "stockDesc": "Smart control with alerts and automatic replenishment",
+    "crm": "CRM & Sales",
+    "crmDesc": "Complete funnel with follow-up automation",
+    "access": "Access Control",
+    "accessDesc": "Granular permissions and security auditing",
+    "testimonials": "What our customers say:",
+    "bookDemo": "Book Demo",
+    "personalInfo": "Personal Information",
+    "companyInfo": "Company Information",
+    "phone": "Phone",
+    "role": "Role",
+    "preferredDate": "Preferred Date",
+    "preferredTime": "Preferred Time",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Tell us about your specific needs...",
+    "scheduling": "Scheduling",
+    "processing": "Scheduling...",
+    "success": {
+      "title": "Appointment Confirmed!",
+      "message": "Your personalized demo has been scheduled. One of our specialists will contact you to confirm the details.",
+      "date": "Date:",
+      "time": "Time:",
+      "email": "Email:",
+      "goToDashboard": "Go to Dashboard"
+    }
+  },
+  "Dashboard": {
+    "title": "Executive Dashboard",
+    "subtitle": "Real-time overview of your business",
+    "metrics": {
+      "monthlyRevenue": "Monthly Revenue",
+      "netMargin": "Net Margin",
+      "cashFlow": "Cash Flow",
+      "runway": "Runway"
+    },
+    "transactions": {
+      "title": "Recent Transactions",
+      "subtitle": "Real-time financial movements",
+      "searchPlaceholder": "Search transaction...",
+      "filters": {
+        "all": "All",
+        "thisMonth": "This Month",
+        "last7Days": "Last 7 Days"
+      },
+      "status": {
+        "completed": "Completed",
+        "pending": "Pending"
+      },
+      "actions": {
+        "receipt": "Receipt",
+        "details": "Details"
+      }
+    },
+    "stockStatus": {
+      "title": "Stock Status",
+      "subtitle": "Real-time inventory control",
+      "min": "Min",
+      "normal": "Normal",
+      "low": "Low",
+      "critical": "Critical",
+      "alerts": "alerts",
+      "noAlerts": "no alerts"
+    }
+  },
+  "Metadata": {
+    "home": {
+      "title": "Felipe Gabriel | Full Stack Developer & DevOps Engineer",
+      "description": "Building scalable web applications, robust DevOps pipelines, and intelligent automations that transform ideas into products—from code to cloud.",
+      "ogTitle": "Felipe Gabriel | Full Stack Developer & DevOps Engineer",
+      "ogDescription": "Building scalable web applications, robust DevOps pipelines, and intelligent automations that transform ideas into products—from code to cloud."
     }
   },
   "Contact": {
@@ -92,125 +517,23 @@
     "fields": {
       "name": { "label": "Name", "placeholder": "Your name" },
       "email": { "label": "Email", "placeholder": "you@example.com" },
-      "message": { "label": "Message", "placeholder": "Briefly tell me about the project, goals, and deadlines." }
+      "message": { "label": "Message", "placeholder": "Briefly tell me about the project, goals, and timeline." }
     },
-    "cta": { "sending": "Sending...", "send": "Send message" },
-    "validation": { "fillAll": "Please fill in your Name, Email, and a more detailed message." },
-    "errors": { "sendFailed": "Failed to send message.", "generic": "Error sending message." },
-    "success": { "sent": "Message sent successfully!" }
+    "cta": {
+      "sending": "Sending...",
+      "send": "Send message"
+    },
+    "validation": {
+      "fillAll": "Please fill in Name, Email, and a more detailed message."
+    }
   },
   "Footer": {
-    "copyright": "Felipe Gabriel Web Developer © 2026",
-    "whatsappPrefill": "Hi Felipe, I saw your portfolio and would like to talk about a project."
-  },
-  "Metadata": {
-    "home": {
-      "title": "Felipe Gabriel | Full Stack Developer & DevOps",
-      "description": "Felipe Gabriel's professional portfolio - Full Stack Developer specialized in Next.js, React, Node.js, DevOps and intelligent automations.",
-      "ogTitle": "Felipe Gabriel | Full Stack Developer & DevOps",
-      "ogDescription": "Professional portfolio focused on web, DevOps and intelligent automations. Specialist in Next.js, React and scalable architectures."
+    "whatsappPrefill": "Hi Felipe! I saw your portfolio and would like to talk about a project.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub", 
+      "instagram": "Instagram"
     }
   },
-  "Demos": {
-    "common": {
-      "backToPortfolio": "Back to Portfolio",
-      "footer": "Felipe Gabriel WebDeveloper © 2026"
-    },
-    "gestao": {
-      "badge": "Total Control of Your Money",
-      "title": "Stop Losing Money. Control Your Cash Flow Today.",
-      "hero_desc": "ERP system that unifies finance, inventory and sales in real-time. Make data-driven decisions, reduce losses and increase your profit immediately.",
-      "feature_1": "Executive Dashboard",
-      "feature_1_desc": "View revenue, expenses and profitability in real-time with interactive charts",
-      "feature_2": "Inventory Control",
-      "feature_2_desc": "Smart management with automatic restock alerts and turnover analysis",
-      "feature_3": "Latest Sales",
-      "feature_3_desc": "Track orders in real-time with updated status and notifications",
-      "cta_primary": "Get Started Now - Free Trial",
-      "cta_secondary": "View Demo",
-      "chart_title": "Monthly Revenue",
-      "stock_table": "Stock Status",
-      "sales_widget": "Recent Sales",
-      "stats": {
-        "revenue": "Revenue",
-        "orders": "Orders",
-        "products": "Products",
-        "clients": "Clients"
-      },
-      "feature_card_1": "Simulate Goals",
-      "feature_card_2": "Add Product",
-      "feature_card_3": "Calculate ROI"
-    },
-    "agencia": {
-      "badge": "Results You Can See",
-      "title": "Take Your Brand to the Next Level. Guaranteed ROI.",
-      "hero_desc": "Data-driven strategies that turn visitors into customers. Increase your digital authority and see real results in 30 days.",
-      "feature_1": "Success Cases",
-      "feature_1_desc": "Proven results: +320% traffic, +150% conversion",
-      "feature_2": "Clients Served",
-      "feature_2_desc": "Brands that trust our work and grow every day",
-      "feature_3": "Specialized Team",
-      "feature_3_desc": "Experts in SEO, Ads, Design and Copywriting focused on results",
-      "cta_primary": "Get Free Diagnosis Now",
-      "cta_secondary": "View Success Cases",
-      "cases_title": "Results That Exceed Expectations",
-      "clients_title": "Who Trusts Us",
-      "team_title": "Our Team of Experts"
-    },
-    "clinica": {
-      "badge": "Your Health Can't Wait",
-      "title": "Book Your Appointment in Seconds. Immediate Care.",
-      "hero_desc": "Complete platform for clinics with 24/7 scheduling, electronic medical records and telemedicine. Your health at your fingertips, no lines, no waiting.",
-      "feature_1": "Medical Specialties",
-      "feature_1_desc": "Cardiology, Dermatology, Orthopedics, Neurology and 20+ more specialties",
-      "feature_2": "Patient Testimonials",
-      "feature_2_desc": "Real reviews with star rating system and verified feedback",
-      "feature_3": "Smart Scheduling",
-      "feature_3_desc": "Book appointments 24/7 with automatic WhatsApp confirmation",
-      "cta_primary": "Call Now - Book Today",
-      "cta_secondary": "View Specialties",
-      "specialties_title": "Everything You Need",
-      "testimonials_title": "What Our Patients Say",
-      "booking_title": "Schedule Your Appointment",
-      "booking_desc": "Choose specialty, date and time in just a few clicks"
-    },
-    "escritorio": {
-      "badge": "Legal Security Guaranteed",
-      "title": "Everything You Need for Your Legal Security.",
-      "hero_desc": "Complete legal system for lawyers and law firms. Case management, documents, deadlines and compliance. Your practice taken to the next level.",
-      "feature_1": "Credentials & Certifications",
-      "feature_1_desc": "Active Bar Association, GDPR Compliance, ISO 27001 - your security guaranteed",
-      "feature_2": "Practice Areas",
-      "feature_2_desc": "Civil Law, Labor Law, Corporate Law, Tax Law and more",
-      "feature_3": "Articles & Publications",
-      "feature_3_desc": "High-quality legal content for your clients",
-      "cta_primary": "Call Now - Free Consultation",
-      "cta_secondary": "View Practice Areas",
-      "badges_title": "Credentials & Certifications",
-      "areas_title": "Practice Areas",
-      "articles_title": "Recent Publications",
-      "booking_title": "Schedule Your Consultation",
-      "booking_desc": "Choose area and book with the right specialist",
-      "testimonials_title": "What Our Clients Say",
-      "testimonials_subtitle": "Real experiences from those who trust our work"
-    },
-    "lancamento": {
-      "badge": "Unique & Limited Offer",
-      "title": "Last Spots! Get Your Launch Discount Now.",
-      "hero_desc": "Complete platform to launch digital products with high conversion. Dynamic countdown, automations and sales-optimized page.",
-      "feature_1": "Urgency That Converts",
-      "feature_1_desc": "Countdown timer that increases conversion rate by up to 40%",
-      "feature_2": "Interactive FAQ",
-      "feature_2_desc": "Automatically eliminate objections with instant answers",
-      "feature_3": "Complete Automation",
-      "feature_3_desc": "Lead nurturing via integrated email, SMS and WhatsApp",
-      "cta_primary": "Secure My Spot Now",
-      "cta_secondary": "View Plans & Pricing",
-      "countdown_title": "Offer Ends In:",
-      "faq_title": "Get Your Questions Answered",
-      "faq_subtitle": "Quick answers to decide now",
-      "urgency": "Last 17 Spots - Ends Soon"
-    }
-  }
+  "footer": "© 2024 Felipe Gabriel. All rights reserved."
 }
-

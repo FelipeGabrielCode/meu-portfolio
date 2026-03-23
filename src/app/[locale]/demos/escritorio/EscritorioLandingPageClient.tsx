@@ -7,7 +7,8 @@ import {
   Briefcase, Building2, Calculator, Home, Car, ArrowRight, Linkedin, Github, Mail,
   Gavel, FileText, Calendar, Clock, CheckCircle2, Phone, X, Star,
   TrendingUp, UserCircle, PhoneCall, MapPin, FileSearch, Scale as ScaleIcon,
-  Building, ScrollText, HandshakeIcon, ArrowUpRight, Clock3
+  Building, ScrollText, HandshakeIcon, ArrowUpRight, Clock3, CheckCircle,
+  Target, Zap, Trophy, Eye, BarChart3
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import RatingModal from "@/components/RatingModal";
@@ -83,8 +84,8 @@ function PracticeAreas() {
   );
 }
 
-// Agendamento Jurídico Completo
-function LegalBookingSystem() {
+// Consultoria Jurídica Completa
+function LegalConsultingSystem({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const [step, setStep] = useState(1);
   const [area, setArea] = useState("");
   const [causa, setCausa] = useState("");
@@ -98,170 +99,181 @@ function LegalBookingSystem() {
     { name: "Direito Trabalhista", icon: Users, causas: ["Reclamação Trabalhista", "Defesa em Processo", "Acordo Extrajudicial", "Assédio Moral"] },
     { name: "Direito Civil", icon: Home, causas: ["Divórcio", "Inventário", "Usucapião", "Indenização"] },
     { name: "Direito Tributário", icon: Calculator, causas: ["Planejamento Tributário", "Defesa em Autuação", "Recuperação de Crédito"] },
+    { name: "Direito Imobiliário", icon: Building2, causas: ["Incorporação", "Regularização", "Usucapião", "Contratos de Locação"] },
+    { name: "Direito de Família", icon: Users, causas: ["Guarda Compartilhada", "Pensão Alimentícia", "Investigação de Paternidade", "Partilha de Bens"] },
   ];
 
-  const dates = ["Seg, 20 Jan", "Ter, 21 Jan", "Qua, 22 Jan", "Qui, 23 Jan"];
+  const dates = ["Seg, 20 Jan", "Ter, 21 Jan", "Qua, 22 Jan", "Qui, 23 Jan", "Sex, 24 Jan"];
   const times = ["09:00", "10:30", "14:00", "15:30", "17:00"];
 
-  const handleConfirm = () => {
-    if (step === 4 && userData.name && userData.phone) {
-      setShowConfirmation(true);
-    }
+  const handleTimeSelection = (time: string) => {
+    setTime(time);
+    setShowConfirmation(true);
   };
 
-  const reset = () => {
-    setStep(1); setArea(""); setCausa(""); setDate(""); setTime("");
-    setUserData({ name: "", phone: "", email: "" });
+  const resetConsulting = () => {
+    setStep(1);
+    setArea("");
+    setCausa("");
+    setDate("");
+    setTime("");
     setShowConfirmation(false);
+    setUserData({ name: "", phone: "", email: "" });
   };
 
   if (showConfirmation) {
     return (
-      <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-blue-600/30 to-slate-900/50 border border-blue-500/50 text-center animate-in fade-in zoom-in">
-        <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
-          <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10 text-blue-400" />
+      <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-sky-600/30 to-slate-600/20 border border-sky-500/50 animate-in fade-in zoom-in duration-300">
+        <div className="text-center">
+          <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-sky-500/20 flex items-center justify-center mb-4 animate-bounce">
+            <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-sky-400" />
+          </div>
+          
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3 flex items-center justify-center gap-2 flex-wrap">
+            <Trophy className="w-5 h-5 md:w-6 md:h-6 text-amber-400" />
+            <span>{t("consulting_booked_successfully")}</span>
+            <Trophy className="w-5 h-5 md:w-6 md:h-6 text-amber-400" />
+          </h3>
+          
+          <div className="bg-slate-900/50 rounded-xl p-3 md:p-4 mb-4 border border-sky-500/30 text-left">
+            <p className="text-base md:text-lg text-slate-200 mb-2">
+              <span className="font-bold text-sky-400">{area}</span>
+            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-slate-300 text-sm">
+              <span className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 md:w-5 md:h-5 text-sky-400 flex-shrink-0" />
+                {date}
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock3 className="w-4 h-4 md:w-5 md:h-5 text-sky-400 flex-shrink-0" />
+                {time}
+              </span>
+            </div>
+          </div>
+          
+          <p className="text-xs md:text-sm text-slate-400 mb-4">
+            {t("consulting_whatsapp_confirmation")}
+          </p>
+          
+          <div className="flex items-center justify-center gap-2 text-xs text-slate-500 mb-4">
+            <MapPin className="w-4 h-4 flex-shrink-0" />
+            <span>{t("main_unit_address")}</span>
+          </div>
+          
+          <button 
+            onClick={resetConsulting}
+            className="w-full sm:w-auto px-4 md:px-6 py-2 rounded-xl bg-sky-500 text-white font-semibold hover:bg-sky-600 transition-colors text-sm"
+          >
+            {t("book_new_consulting")}
+          </button>
         </div>
-        <h3 className="text-lg md:text-xl font-bold text-white mb-2">Consulta Agendada!</h3>
-        <div className="bg-slate-900/50 rounded-lg p-3 md:p-4 mb-4 text-left text-sm">
-          <p className="text-slate-300 mb-1"><span className="font-semibold text-blue-400">Cliente:</span> {userData.name}</p>
-          <p className="text-slate-300 mb-1"><span className="font-semibold text-blue-400">Área:</span> {area}</p>
-          <p className="text-slate-300 mb-1"><span className="font-semibold text-blue-400">Causa:</span> {causa}</p>
-          <p className="text-slate-300"><span className="font-semibold text-blue-400">Data:</span> {date} às {time}</p>
-        </div>
-        <p className="text-xs md:text-sm text-slate-400 mb-4">Você receberá um SMS de confirmação em instantes.</p>
-        <button onClick={reset} className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm md:text-base">Novo Agendamento</button>
       </div>
     );
   }
 
   return (
-    <div className="p-4 md:p-6 rounded-2xl bg-slate-800/50 border border-slate-700">
-      <div className="flex items-center gap-1 md:gap-2 mb-4 md:mb-6 text-xs md:text-sm overflow-x-auto">
-        {[1, 2, 3, 4].map((s) => (
-          <div key={s} className="flex items-center gap-1 md:gap-2 flex-shrink-0">
-            <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-xs md:text-sm ${step >= s ? "bg-blue-500 text-white" : "bg-slate-700 text-slate-500"}`}>{s}</div>
-            {s < 4 && <div className="w-4 md:w-8 h-px bg-slate-700" />}
-          </div>
-        ))}
+    <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-slate-900/30 to-sky-900/20 border border-sky-500/30">
+      <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 text-xs md:text-sm overflow-x-auto pb-2">
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold ${step >= 1 ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-400"}`}>1</div>
+          <span className="text-slate-300 hidden sm:inline">{t("area")}</span>
+        </div>
+        <div className="h-px w-4 md:w-8 bg-slate-800 flex-shrink-0" />
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold ${step >= 2 ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-400"}`}>2</div>
+          <span className="text-slate-300 hidden sm:inline">{t("case")}</span>
+        </div>
+        <div className="h-px w-4 md:w-8 bg-slate-800 flex-shrink-0" />
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold ${step >= 3 ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-400"}`}>3</div>
+          <span className="text-slate-300 hidden sm:inline">{t("date")}</span>
+        </div>
+        <div className="h-px w-4 md:w-8 bg-slate-800 flex-shrink-0" />
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold ${step >= 4 ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-400"}`}>4</div>
+          <span className="text-slate-300 hidden sm:inline">{t("time")}</span>
+        </div>
       </div>
-
+      
       {step === 1 && (
-        <div className="space-y-2 md:space-y-3">
-          <p className="text-slate-400 text-sm">Selecione a área:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="space-y-3">
+          <p className="text-slate-400 text-sm">{t("select_area")}:</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {areas.map((a) => (
-              <button key={a.name} onClick={() => { setArea(a.name); setStep(2); }} className={`p-3 rounded-lg text-left text-sm transition-all ${area === a.name ? "bg-blue-500 text-white" : "bg-slate-700 text-slate-300 hover:bg-slate-600"}`}>
-                <a.icon className="w-4 h-4 inline mr-2" />{a.name}
+              <button
+                key={a.name}
+                onClick={() => { setArea(a.name); setStep(2); }}
+                className={`p-2 md:p-3 rounded-xl text-xs md:text-sm font-medium transition-all ${area === a.name ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-300 hover:bg-slate-700"}`}
+              >
+                <a.icon className="w-4 h-4 inline mr-1" />
+                {a.name.split(' ')[1] || a.name}
               </button>
             ))}
           </div>
         </div>
       )}
-
+      
       {step === 2 && (
-        <div className="space-y-2 md:space-y-3">
-          <p className="text-slate-400 text-sm">Tipo de causa:</p>
+        <div className="space-y-3">
+          <p className="text-slate-400 text-sm">{t("select_case_for", { area: area.split(' ')[1] || area })}:</p>
           <div className="space-y-2">
             {areas.find(a => a.name === area)?.causas.map((c) => (
-              <button key={c} onClick={() => { setCausa(c); setStep(3); }} className={`w-full p-3 rounded-lg text-left text-sm transition-all ${causa === c ? "bg-blue-500 text-white" : "bg-slate-700 text-slate-300 hover:bg-slate-600"}`}>
-                <FileText className="w-4 h-4 inline mr-2" />{c}
+              <button
+                key={c}
+                onClick={() => { setCausa(c); setStep(3); }}
+                className={`w-full text-left p-2 md:p-3 rounded-xl text-xs md:text-sm font-medium transition-all ${causa === c ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-300 hover:bg-slate-700"}`}
+              >
+                <Gavel className="w-4 h-4 inline mr-2" />
+                {c}
               </button>
             ))}
           </div>
-          <button onClick={() => setStep(1)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← Voltar</button>
+          <button onClick={() => setStep(1)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← {t("back")}</button>
         </div>
       )}
-
+      
       {step === 3 && (
-        <div className="space-y-2 md:space-y-3">
-          <p className="text-slate-400 text-sm">Escolha a data:</p>
+        <div className="space-y-3">
+          <p className="text-slate-400 text-sm">{t("select_date_for", { area: area.split(' ')[1] || area })}:</p>
           <div className="grid grid-cols-2 gap-2">
             {dates.map((d) => (
-              <button key={d} onClick={() => { setDate(d); setStep(4); }} className={`p-3 rounded-lg text-sm transition-all ${date === d ? "bg-blue-500 text-white" : "bg-slate-700 text-slate-300 hover:bg-slate-600"}`}>
-                <Calendar className="w-4 h-4 inline mr-1" />{d}
+              <button
+                key={d}
+                onClick={() => { setDate(d); setStep(4); }}
+                className={`p-2 md:p-3 rounded-xl text-xs md:text-sm font-medium transition-all ${date === d ? "bg-sky-500 text-white" : "bg-slate-800 text-slate-300 hover:bg-slate-700"}`}
+              >
+                <Calendar className="w-4 h-4 inline mr-1" />
+                {d}
               </button>
             ))}
           </div>
-          <button onClick={() => setStep(2)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← Voltar</button>
+          <button onClick={() => setStep(2)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← {t("back")}</button>
         </div>
       )}
-
+      
       {step === 4 && (
-        <div className="space-y-3 md:space-y-4">
-          <p className="text-slate-400 text-sm">Seus dados:</p>
-          <input type="text" placeholder="Nome completo" value={userData.name} onChange={(e) => setUserData({...userData, name: e.target.value})} className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-200 text-sm focus:border-blue-500 focus:outline-none" />
-          <input type="tel" placeholder="Telefone" value={userData.phone} onChange={(e) => setUserData({...userData, phone: e.target.value})} className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-200 text-sm focus:border-blue-500 focus:outline-none" />
-          <input type="email" placeholder="Email (opcional)" value={userData.email} onChange={(e) => setUserData({...userData, email: e.target.value})} className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-200 text-sm focus:border-blue-500 focus:outline-none" />
-          <button onClick={handleConfirm} disabled={!userData.name || !userData.phone} className="w-full py-2 md:py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors disabled:bg-slate-700 disabled:text-slate-500 text-sm md:text-base">Confirmar Agendamento</button>
-          <button onClick={() => setStep(3)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← Voltar</button>
+        <div className="space-y-3">
+          <p className="text-slate-400 text-sm">{t("times_for", { date: date })}:</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {times.map((t) => (
+              <button
+                key={t}
+                onClick={() => handleTimeSelection(t)}
+                className="p-2 md:p-3 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-sky-500 hover:text-white transition-all"
+              >
+                <Clock className="w-4 h-4 inline mr-1" />
+                {t}
+              </button>
+            ))}
+          </div>
+          <button onClick={() => setStep(3)} className="text-xs md:text-sm text-slate-500 hover:text-slate-300">← {t("back")}</button>
         </div>
       )}
     </div>
   );
 }
 
-// Depoimentos de Clientes
-function ClientTestimonials() {
-  const testimonials = [
-    { name: "Carlos Silva", role: "CEO", company: "TechCorp", text: "Resolveram nossa fusão empresarial em tempo recorde. Excelente trabalho!", rating: 5 },
-    { name: "Maria Santos", role: "Diretora RH", company: "Indústria XYZ", text: "Defenderam nossa empresa em uma reclamação trabalhista complexa.", rating: 5 },
-    { name: "João Pereira", role: "Proprietário", company: "Imobiliária ABC", text: "Regularização de imóveis feita com maestria. Recomendo!", rating: 4 },
-  ];
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {testimonials.map((t, i) => (
-        <div key={i} className="p-4 rounded-xl bg-slate-800/50 border border-slate-700">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-              <UserCircle className="w-5 h-5 text-blue-400" />
-            </div>
-            <div>
-              <p className="font-semibold text-slate-200 text-sm">{t.name}</p>
-              <p className="text-xs text-slate-500">{t.role} - {t.company}</p>
-            </div>
-          </div>
-          <StarRating rating={t.rating} size="sm" />
-          <p className="text-slate-400 text-sm mt-3">&ldquo;{t.text}&rdquo;</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// Públicações Jurídicas
-function LegalPublications() {
-  const [expanded, setExpanded] = useState<number | null>(null);
-  
-  const articles = [
-    { id: 1, title: "Reforma Tributária 2024: Impactos para Empresas", category: "Tributário", date: "15 Jan 2024", readTime: "5 min", summary: "Análise detalhada das mudanças na reforma tributária...", content: "A reforma tributária traz mudanças significativas para o cenário empresarial brasileiro. Neste artigo, analisamos os novos impostos sobre consumo, a unificação de tributos e as estratégias de adaptação." },
-    { id: 2, title: "LGPD: Guia de Compliance para Pequenas Empresas", category: "Compliance", date: "10 Jan 2024", readTime: "4 min", summary: "Passos essenciais para adequação à LGPD...", content: "A LGPD afeta empresas de todos os tamanhos. Aprenda os passos essenciais para adequar sua empresa, desde a nomeação do DPO até políticas de privacidade." },
-    { id: 3, title: "Contratos Digitais: Força Jurídica no Brasil", category: "Empresarial", date: "05 Jan 2024", readTime: "6 min", summary: "Validade e requisitos dos contratos eletrônicos...", content: "Com a digitalização, os contratos digitais ganharam destaque. Este artigo explora a validade jurídica, requisitos de assinatura digital e melhores práticas." },
-  ];
-
-  return (
-    <div className="space-y-3">
-      {articles.map((a) => (
-        <div key={a.id} className="p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 transition-all cursor-pointer" onClick={() => setExpanded(expanded === a.id ? null : a.id)}>
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              <span className="inline-block px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 text-xs mb-2">{a.category}</span>
-              <h4 className="font-semibold text-slate-200 text-sm md:text-base mb-1">{a.title}</h4>
-              <p className="text-xs text-slate-500">{a.date} • {a.readTime}</p>
-              {expanded === a.id && (
-                <div className="mt-3 p-3 rounded-lg bg-slate-900/50 text-slate-400 text-sm animate-in fade-in">
-                  {a.content}
-                </div>
-              )}
-            </div>
-            <ChevronRight className={`w-5 h-5 text-slate-600 transition-transform ${expanded === a.id ? "rotate-90" : ""}`} />
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
+// Componente Principal
 export default function EscritorioLandingPageClient() {
   const t = useTranslations("Demos.escritorio");
   const common = useTranslations("Demos.common");
@@ -280,38 +292,56 @@ export default function EscritorioLandingPageClient() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <RatingModal isOpen={isRatingOpen} onClose={() => setIsRatingOpen(false)} demoName="Sistema de Gestão Legal" />
-      
+      <RatingModal
+        isOpen={isRatingOpen}
+        onClose={() => setIsRatingOpen(false)}
+        demoName="Escritório de Advocacia"
+      />
+
       {/* Botão Voltar */}
       <div className="fixed top-20 md:top-24 left-3 md:left-6 z-50">
-        <Link href="/#projects" className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-sky-500/30 text-xs md:text-sm font-semibold text-sky-400 hover:bg-sky-500/10 transition-all">
-          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />{common("backToPortfolio")}
+        <Link
+          href="/#projects"
+          className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-sky-500/30 text-xs md:text-sm font-semibold text-sky-400 hover:bg-sky-500/10 transition-all"
+        >
+          <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
+          {common("backToPortfolio")}
         </Link>
       </div>
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-20 md:pt-32 pb-10 md:pb-16">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-sky-600/20 via-slate-500/15 to-transparent blur-3xl" />
-          <div className="absolute top-20 right-0 w-[20rem] md:w-[34rem] h-[20rem] md:h-[34rem] opacity-50">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-600/10 to-transparent blur-3xl" />
-          </div>
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-24 left-1/2 w-[30rem] md:w-[58rem] h-[30rem] md:h-[58rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-sky-500/20 via-slate-500/10 to-transparent blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl">
             <span className="inline-flex items-center gap-1.5 md:gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-2.5 py-1 md:px-4 md:py-2 mb-3 md:mb-6 text-xs md:text-sm font-semibold text-sky-400">
-              <Scale className="w-3 h-3 md:w-4 md:h-4" />{t("badge")}
+              <Scale className="w-3 h-3 md:w-4 md:h-4" />
+              {t("badge")}
             </span>
             
-            <h1 className="font-display text-2xl md:text-5xl font-extrabold tracking-tight leading-tight mb-3 md:mb-6">{t("title")}</h1>
-            <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl">{t("hero_desc")}</p>
+            <h1 className="font-display text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 md:mb-6">
+              {t("title")}
+            </h1>
+            
+            <p className="text-sm md:text-lg text-slate-400 leading-relaxed mb-4 md:mb-8 max-w-2xl">
+              {t("hero_desc")}
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
-              <Link href="#agendamento" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-sky-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-500/25 text-xs md:text-base">
-                {t("cta_primary")}<ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+              <Link 
+                href="#consultoria" 
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-sky-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-500/25 text-xs md:text-base"
+              >
+                {t("cta_primary")}
+                <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
               </Link>
-              <Link href="#areas" className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base">
+              <Link 
+                href="#areas" 
+                className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base"
+              >
                 {t("cta_secondary")}
               </Link>
             </div>
@@ -319,68 +349,48 @@ export default function EscritorioLandingPageClient() {
         </div>
       </section>
 
-      {/* Certificações */}
-      <section className="py-8 md:py-16">
+      {/* Badges de Certificação */}
+      <section id="badges" className="py-8 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("badges_title")}</h2>
-            <p className="text-slate-400 text-xs md:text-base">Credibilidade garantida por certificações reconhecidas</p>
+            <p className="text-slate-400 text-xs md:text-base">Credenciais que garantem sua segurança</p>
           </div>
           <CertificationBadges />
         </div>
       </section>
 
       {/* Áreas de Atuação */}
-      <section id="areas" className="py-8 md:py-16 bg-slate-900/50">
+      <section id="areas" className="py-8 md:py-16 bg-gradient-to-b from-slate-900/50 to-slate-950">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("areas_title")}</h2>
-            <p className="text-slate-400 text-xs md:text-base">Atuação multidisciplinar para todas as suas necessidades jurídicas</p>
+            <p className="text-slate-400 text-xs md:text-base">Atuação especializada em diversas áreas do direito</p>
           </div>
           <PracticeAreas />
         </div>
       </section>
 
-      {/* Agendamento + Depoimentos */}
-      <section id="agendamento" className="py-8 md:py-16">
+      {/* Consultoria Jurídica */}
+      <section id="consultoria" className="py-8 md:py-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
-            <div>
-              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("booking_title")}</h2>
-              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">{t("booking_desc")}</p>
-              <LegalBookingSystem />
-            </div>
-            <div>
-              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("testimonials_title")}</h2>
-              <p className="text-slate-400 text-xs md:text-base mb-4 md:mb-6">{t("testimonials_subtitle")}</p>
-              <ClientTestimonials />
-            </div>
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("booking_title")}</h2>
+            <p className="text-slate-400 text-xs md:text-base">{t("booking_desc")}</p>
           </div>
-        </div>
-      </section>
-
-      {/* Publicações */}
-      <section className="py-8 md:py-16 bg-slate-900/50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-6 md:mb-10">
-              <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-3">Publicações Jurídicas</h2>
-              <p className="text-slate-400 text-xs md:text-base">Conteúdo de qualidade para manter você informado</p>
-            </div>
-            <LegalPublications />
-          </div>
+          <LegalConsultingSystem t={t} />
         </div>
       </section>
 
       {/* Footer */}
       <footer className="border-t border-slate-800 py-6 md:py-10 mt-8 md:mt-16">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
             <p className="text-xs md:text-sm text-slate-500">{common("footer")}</p>
             <div className="flex items-center gap-2 md:gap-3">
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Linkedin className="w-4 h-4 md:w-5 md:h-5" /></a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Github className="w-4 h-4 md:w-5 md:h-5" /></a>
-              <a href="#" className="p-1.5 md:p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Mail className="w-4 h-4 md:w-5 md:h-5" /></a>
+              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Linkedin className="w-5 h-5" /></a>
+              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Github className="w-5 h-5" /></a>
+              <a href="#" className="p-2 rounded-lg border border-slate-800 hover:border-sky-500/50 transition-colors text-slate-400 hover:text-sky-400"><Mail className="w-5 h-5" /></a>
             </div>
           </div>
         </div>

@@ -9,9 +9,12 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import RatingModal from "@/components/RatingModal";
+import PricingPlans from "@/components/saas/PricingPlans";
+import FeatureShowcase from "@/components/saas/FeatureShowcase";
+import { smoothScroll } from "@/utils/smoothScroll";
 
 // Simple Bar Chart Component com dados dinâmicos
-function RevenueChart({ period }: { period: "month" | "year" }) {
+function RevenueChart({ period, t }: { period: "month" | "year"; t: (key: string, params?: Record<string, string | number>) => string }) {
   const monthData = [
     { month: "Jan", value: 45 },
     { month: "Fev", value: 52 },
@@ -48,7 +51,7 @@ function RevenueChart({ period }: { period: "month" | "year" }) {
 }
 
 // Stock Status Table com filtro
-function StockTable({ filter }: { filter: string }) {
+function StockTable({ filter, t }: { filter: string; t: (key: string, params?: Record<string, string | number>) => string }) {
   const items = [
     { name: "Notebook Dell XPS", sku: "NB-DEL-001", stock: 45, min: 20, status: "ok", category: "eletronicos" },
     { name: "Mouse Logitech MX", sku: "MOUSE-LOG-002", stock: 8, min: 15, status: "low", category: "perifericos" },
@@ -66,10 +69,10 @@ function StockTable({ filter }: { filter: string }) {
       <table className="w-full">
         <thead>
           <tr className="border-b border-slate-700/50">
-            <th className="text-left py-3 px-4 text-xs font-semibold text-slate-400 uppercase">Produto</th>
-            <th className="text-left py-3 px-4 text-xs font-semibold text-slate-400 uppercase">SKU</th>
-            <th className="text-center py-3 px-4 text-xs font-semibold text-slate-400 uppercase">Estoque</th>
-            <th className="text-center py-3 px-4 text-xs font-semibold text-slate-400 uppercase">Status</th>
+            <th className="text-left py-3 px-4 text-xs font-semibold text-slate-400 uppercase">{t("product")}</th>
+            <th className="text-left py-3 px-4 text-xs font-semibold text-slate-400 uppercase">{t("sku")}</th>
+            <th className="text-center py-3 px-4 text-xs font-semibold text-slate-400 uppercase">{t("stock")}</th>
+            <th className="text-center py-3 px-4 text-xs font-semibold text-slate-400 uppercase">{t("status")}</th>
           </tr>
         </thead>
         <tbody className="text-sm">
@@ -86,17 +89,17 @@ function StockTable({ filter }: { filter: string }) {
               <td className="py-3 px-4 text-center">
                 {item.status === "ok" && (
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs">
-                    <CheckCircle2 className="w-3 h-3" /> OK
+                    <CheckCircle2 className="w-3 h-3" /> {t("status_ok")}
                   </span>
                 )}
                 {item.status === "low" && (
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs">
-                    <AlertCircle className="w-3 h-3" /> Baixo
+                    <AlertCircle className="w-3 h-3" /> {t("status_low")}
                   </span>
                 )}
                 {item.status === "critical" && (
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-red-500/10 text-red-400 text-xs">
-                    <AlertCircle className="w-3 h-3" /> Crítico
+                    <AlertCircle className="w-3 h-3" /> {t("status_critical")}
                   </span>
                 )}
               </td>
@@ -109,7 +112,7 @@ function StockTable({ filter }: { filter: string }) {
 }
 
 // Recent Sales Widget
-function SalesWidget() {
+function SalesWidget({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const sales = [
     { id: "#1234", client: "Empresa ABC", value: "R$ 12.450", status: "completed", time: "2 min" },
     { id: "#1233", client: "Tech Solutions", value: "R$ 8.320", status: "processing", time: "5 min" },
@@ -132,9 +135,9 @@ function SalesWidget() {
           </div>
           <div className="text-right">
             <p className="font-semibold text-slate-200 text-sm">{sale.value}</p>
-            {sale.status === "completed" && <span className="text-xs text-emerald-400">Concluído</span>}
-            {sale.status === "processing" && <span className="text-xs text-amber-400">Processando</span>}
-            {sale.status === "pending" && <span className="text-xs text-slate-400">Pendente</span>}
+            {sale.status === "completed" && <span className="text-xs text-emerald-400">{t("completed")}</span>}
+            {sale.status === "processing" && <span className="text-xs text-amber-400">{t("processing")}</span>}
+            {sale.status === "pending" && <span className="text-xs text-slate-400">{t("pending")}</span>}
           </div>
         </div>
       ))}
@@ -143,7 +146,7 @@ function SalesWidget() {
 }
 
 // Cadastro Rápido de Produto - Interativo
-function QuickProductForm() {
+function QuickProductForm({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const [product, setProduct] = useState({ name: "", price: "", stock: "" });
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -164,8 +167,8 @@ function QuickProductForm() {
         <div className="w-12 h-12 mx-auto rounded-full bg-emerald-500/20 flex items-center justify-center mb-2">
           <CheckCircle2 className="w-6 h-6 text-emerald-400" />
         </div>
-        <p className="text-emerald-400 font-semibold text-sm">Produto cadastrado!</p>
-        <p className="text-slate-400 text-xs mt-1">{product.name} adicionado</p>
+        <p className="text-emerald-400 font-semibold text-sm">{t("product_registered")}</p>
+        <p className="text-slate-400 text-xs mt-1">{product.name} {t("product_added")}</p>
       </div>
     );
   }
@@ -174,7 +177,7 @@ function QuickProductForm() {
     <form onSubmit={handleSubmit} className="space-y-2">
       <input 
         type="text" 
-        placeholder="Nome do produto"
+        placeholder={t("product_name")}
         value={product.name}
         onChange={(e) => setProduct({...product, name: e.target.value})}
         className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
@@ -182,14 +185,14 @@ function QuickProductForm() {
       <div className="flex gap-2">
         <input 
           type="number" 
-          placeholder="Preço"
+          placeholder={t("price")}
           value={product.price}
           onChange={(e) => setProduct({...product, price: e.target.value})}
           className="flex-1 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
         />
         <input 
           type="number" 
-          placeholder="Qtd"
+          placeholder={t("quantity")}
           value={product.stock}
           onChange={(e) => setProduct({...product, stock: e.target.value})}
           className="w-20 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm focus:border-emerald-500 focus:outline-none"
@@ -199,14 +202,14 @@ function QuickProductForm() {
         type="submit"
         className="w-full py-2 rounded-lg bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2"
       >
-        <Package className="w-4 h-4" /> Cadastrar
+        <Package className="w-4 h-4" /> {t("register")}
       </button>
     </form>
   );
 }
 
 // Simulador de Meta de Vendas
-function SalesGoalSimulator() {
+function SalesGoalSimulator({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const [goal, setGoal] = useState(50000);
   const [current, setCurrent] = useState(32500);
   const percentage = Math.round((current / goal) * 100);
@@ -214,7 +217,7 @@ function SalesGoalSimulator() {
   return (
     <div className="space-y-3">
       <div className="flex justify-between text-sm">
-        <span className="text-slate-400">Progresso</span>
+        <span className="text-slate-400">{t("progress")}</span>
         <span className="text-indigo-400 font-semibold">{percentage}%</span>
       </div>
       <div className="h-3 rounded-full bg-slate-800 overflow-hidden">
@@ -225,20 +228,20 @@ function SalesGoalSimulator() {
       </div>
       <div className="flex justify-between text-xs text-slate-500">
         <span>R$ {current.toLocaleString()}</span>
-        <span>Meta: R$ {goal.toLocaleString()}</span>
+        <span>{t("goal")}: R$ {goal.toLocaleString()}</span>
       </div>
       <div className="flex gap-2 pt-2">
         <button 
           onClick={() => setCurrent(prev => Math.min(prev + 2500, goal * 1.2))}
           className="flex-1 py-2 rounded-lg bg-indigo-500/20 text-indigo-400 text-xs font-semibold hover:bg-indigo-500/30 transition-colors"
         >
-          + Venda R$ 2.500
+          {t("sale_amount", { amount: "2.500" })}
         </button>
         <button 
           onClick={() => setCurrent(32500)}
           className="px-3 py-2 rounded-lg bg-slate-800 text-slate-400 text-xs hover:bg-slate-700 transition-colors"
         >
-          Reset
+          {t("reset")}
         </button>
       </div>
     </div>
@@ -246,7 +249,7 @@ function SalesGoalSimulator() {
 }
 
 // Calculadora de ROI
-function ROICalculator() {
+function ROICalculator({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const [investment, setInvestment] = useState(1000);
   const [returnValue, setReturnValue] = useState(1500);
   const roi = ((returnValue - investment) / investment * 100).toFixed(1);
@@ -255,7 +258,7 @@ function ROICalculator() {
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-2">
         <div>
-          <label className="text-xs text-slate-500 block mb-1">Investimento</label>
+          <label className="text-xs text-slate-500 block mb-1">{t("investment")}</label>
           <input 
             type="number"
             value={investment}
@@ -264,7 +267,7 @@ function ROICalculator() {
           />
         </div>
         <div>
-          <label className="text-xs text-slate-500 block mb-1">Retorno</label>
+          <label className="text-xs text-slate-500 block mb-1">{t("return")}</label>
           <input 
             type="number"
             value={returnValue}
@@ -282,11 +285,12 @@ function ROICalculator() {
     </div>
   );
 }
-function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: { 
+function FilterModal({ isOpen, onClose, currentFilter, onFilterChange, t }: { 
   isOpen: boolean; 
   onClose: () => void; 
   currentFilter: string;
   onFilterChange: (filter: string) => void;
+  t: (key: string, params?: Record<string, string | number>) => string;
 }) {
   if (!isOpen) return null;
   
@@ -294,7 +298,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 w-80 shadow-2xl" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-slate-100">Filtrar Estoque</h3>
+          <h3 className="font-semibold text-slate-100">{t("filter_stock")}</h3>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-200">
             <X className="w-5 h-5" />
           </button>
@@ -304,7 +308,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
             onClick={() => { onFilterChange("all"); onClose(); }}
             className={`w-full text-left px-4 py-3 rounded-xl transition-colors ${currentFilter === "all" ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30" : "text-slate-300 hover:bg-slate-800"}`}
           >
-            Todos os Produtos
+            {t("all_products")}
           </button>
           <button 
             onClick={() => { onFilterChange("ok"); onClose(); }}
@@ -312,7 +316,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
           >
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              Estoque OK
+              {t("stock_ok")}
             </span>
           </button>
           <button 
@@ -321,7 +325,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
           >
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400" />
-              Estoque Baixo
+              {t("stock_low")}
             </span>
           </button>
           <button 
@@ -330,7 +334,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
           >
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-red-400" />
-              Estoque Crítico
+              {t("stock_critical")}
             </span>
           </button>
         </div>
@@ -340,7 +344,7 @@ function FilterModal({ isOpen, onClose, currentFilter, onFilterChange }: {
 }
 
 // Modal de Download - Gera arquivos reais
-function DownloadModal({ isOpen, onClose, filter }: { isOpen: boolean; onClose: () => void; filter: string }) {
+function DownloadModal({ isOpen, onClose, filter, t }: { isOpen: boolean; onClose: () => void; filter: string; t: (key: string, params?: Record<string, string | number>) => string }) {
   if (!isOpen) return null;
 
   const items = [
@@ -450,27 +454,27 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 w-80 shadow-2xl" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-slate-100">Exportar Relatório</h3>
+          <h3 className="font-semibold text-slate-100">{t("export_report")}</h3>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-200">
             <X className="w-5 h-5" />
           </button>
         </div>
-        <p className="text-sm text-slate-400 mb-2">Filtro atual: <span className="text-indigo-400 font-medium">{filter === "all" ? "Todos" : filter}</span></p>
-        <p className="text-sm text-slate-500 mb-4">{filteredItems.length} itens serão exportados</p>
+        <p className="text-sm text-slate-400 mb-2">{t("current_filter")}: <span className="text-indigo-400 font-medium">{filter === "all" ? t("all") : filter}</span></p>
+        <p className="text-sm text-slate-500 mb-4">{filteredItems.length} {t("items_exported")}</p>
         <div className="space-y-2">
           <button 
             onClick={generatePDF}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition-colors"
           >
             <FileText className="w-5 h-5" />
-            <span className="font-medium">Download PDF</span>
+            <span className="font-medium">{t("download_pdf")}</span>
           </button>
           <button 
             onClick={generateCSV}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition-colors"
           >
             <FileSpreadsheet className="w-5 h-5" />
-            <span className="font-medium">Download CSV</span>
+            <span className="font-medium">{t("download_csv")}</span>
           </button>
         </div>
       </div>
@@ -479,7 +483,7 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
 }
 
 // Modal de Vendas - Mostra todas as vendas fake
-function SalesModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+function SalesModal({ isOpen, onClose, t }: { isOpen: boolean; onClose: () => void; t: (key: string, params?: Record<string, string | number>) => string }) {
   if (!isOpen) return null;
 
   const allSales = [
@@ -496,11 +500,11 @@ function SalesModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "completed":
-        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs"><CheckCircle2 className="w-3 h-3" /> Concluído</span>;
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs"><CheckCircle2 className="w-3 h-3" /> {t("completed")}</span>;
       case "processing":
-        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs"><Clock className="w-3 h-3" /> Processando</span>;
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs"><Clock className="w-3 h-3" /> {t("processing")}</span>;
       case "pending":
-        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-500/10 text-slate-400 text-xs"><AlertCircle className="w-3 h-3" /> Pendente</span>;
+        return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-500/10 text-slate-400 text-xs"><AlertCircle className="w-3 h-3" /> {t("pending")}</span>;
       default:
         return null;
     }
@@ -514,8 +518,8 @@ function SalesModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
         <div className="p-6 border-b border-slate-800">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-semibold text-slate-100 text-lg">Todas as Vendas</h3>
-              <p className="text-sm text-slate-400">{allSales.length} vendas • Total: R$ {totalValue.toLocaleString()}</p>
+              <h3 className="font-semibold text-slate-100 text-lg">{t("all_sales")}</h3>
+              <p className="text-sm text-slate-400">{allSales.length} {t("sales")} • {t("total")}: R$ {totalValue.toLocaleString()}</p>
             </div>
             <button onClick={onClose} className="text-slate-400 hover:text-slate-200 p-2">
               <X className="w-5 h-5" />
@@ -549,7 +553,7 @@ function SalesModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             onClick={onClose}
             className="w-full py-3 rounded-xl bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition-colors"
           >
-            Fechar
+            {t("close")}
           </button>
         </div>
       </div>
@@ -579,21 +583,24 @@ export default function GestaoLandingPageClient() {
         onClose={() => setIsFilterOpen(false)} 
         currentFilter={filter}
         onFilterChange={setFilter}
+        t={t}
       />
       <DownloadModal 
         isOpen={isDownloadOpen} 
         onClose={() => setIsDownloadOpen(false)}
         filter={filter}
+        t={t}
       />
       <SalesModal 
         isOpen={isSalesModalOpen} 
         onClose={() => setIsSalesModalOpen(false)}
+        t={t}
       />
 
       {/* Botão Voltar */}
       <div className="fixed top-20 md:top-24 left-3 md:left-6 z-50">
         <Link
-          href="/#projects"
+          href="/"
           className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass border border-indigo-500/30 text-xs md:text-sm font-semibold text-indigo-400 hover:bg-indigo-500/10 transition-all"
         >
           <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
@@ -623,19 +630,19 @@ export default function GestaoLandingPageClient() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
-              <Link 
-                href="#dashboard" 
+              <button 
+                onClick={() => smoothScroll('pricing')}
                 className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-indigo-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/25 text-xs md:text-base"
               >
                 {t("cta_primary")}
                 <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-              </Link>
-              <Link 
-                href="#features" 
+              </button>
+              <button 
+                onClick={() => smoothScroll('features')}
                 className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base"
               >
                 {t("cta_secondary")}
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -645,17 +652,17 @@ export default function GestaoLandingPageClient() {
       <section id="dashboard" className="py-4 md:py-8">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4 md:mb-8">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 text-emerald-400" />
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-emerald-600" />
                 </div>
-                <span className="flex items-center gap-1 text-xs text-emerald-400">
+                <span className="flex items-center gap-1 text-xs text-emerald-600">
                   <ArrowUpRight className="w-3 h-3" /> +12.5%
                 </span>
               </div>
-              <p className="text-slate-400 text-sm">{t("stats.revenue")}</p>
-              <p className="text-2xl font-bold text-slate-100">R$ 128.450</p>
+              <p className="text-slate-600 text-sm">{t("stats.revenue")}</p>
+              <p className="text-2xl font-bold text-slate-900">R$ 128.450</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 border border-indigo-500/20">
@@ -704,24 +711,24 @@ export default function GestaoLandingPageClient() {
             <div className="lg:col-span-2 p-4 md:p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 md:mb-6">
                 <h3 className="font-display text-base md:text-lg font-bold text-slate-100">
-                  {period === "month" ? "Faturamento Mensal" : "Faturamento Anual"}
+                  {period === "month" ? t("revenue_monthly") : t("revenue_annual")}
                 </h3>
                 <div className="flex items-center gap-2 bg-slate-800/50 rounded-lg p-1">
                   <button 
                     onClick={() => setPeriod("month")}
                     className={`px-2 md:px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "month" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
                   >
-                    Mensal
+                    {t("monthly")}
                   </button>
                   <button 
                     onClick={() => setPeriod("year")}
                     className={`px-2 md:px-3 py-1.5 rounded-md text-xs font-medium transition-all ${period === "year" ? "bg-indigo-500 text-white shadow-lg" : "text-slate-400 hover:text-slate-200"}`}
                   >
-                    Anual
+                    {t("annual")}
                   </button>
                 </div>
               </div>
-              <RevenueChart period={period} />
+              <RevenueChart period={period} t={t} />
             </div>
 
             {/* Recent Sales */}
@@ -732,10 +739,10 @@ export default function GestaoLandingPageClient() {
                   onClick={() => setIsSalesModalOpen(true)}
                   className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
                 >
-                  Ver todas <ArrowRight className="w-3 h-3" />
+                  {t("view_all")} <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
-              <SalesWidget />
+              <SalesWidget t={t} />
             </div>
           </div>
 
@@ -749,59 +756,29 @@ export default function GestaoLandingPageClient() {
                   className={`px-2 md:px-3 py-1.5 md:py-2 rounded-lg text-xs font-medium border transition-colors flex items-center gap-1 ${filter !== "all" ? "bg-indigo-500/20 text-indigo-400 border-indigo-500/50" : "text-slate-400 border-slate-700 hover:border-slate-600 hover:text-slate-200"}`}
                 >
                   <Filter className="w-3 h-3" /> 
-                  Filtrar
+                  {t("filter")}
                   {filter !== "all" && <span className="ml-1 w-2 h-2 rounded-full bg-indigo-400" />}
                 </button>
                 <button 
                   onClick={() => setIsDownloadOpen(true)}
                   className="px-2 md:px-3 py-1.5 md:py-2 rounded-lg text-xs font-medium text-slate-400 hover:text-slate-200 border border-slate-700 hover:border-slate-600 transition-colors flex items-center gap-1"
                 >
-                  <Download className="w-3 h-3" /> Exportar
+                  <Download className="w-3 h-3" /> {t("export")}
                 </button>
               </div>
             </div>
             <div className="overflow-x-auto">
-              <StockTable filter={filter} />
+              <StockTable filter={filter} t={t} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-8 md:py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-6 md:mb-12">
-            <h2 className="font-display text-xl md:text-3xl font-bold text-slate-100 mb-2 md:mb-4">{t("feature_1")}</h2>
-            <p className="text-slate-400 text-xs md:text-base">{t("feature_1_desc")}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
-                <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-indigo-400" />
-              </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_1")}</h3>
-              <SalesGoalSimulator />
-            </div>
+      {/* Feature Showcase */}
+      <FeatureShowcase />
 
-            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4">
-                <Package className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
-              </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_2")}</h3>
-              <QuickProductForm />
-            </div>
-
-            <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
-                <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-indigo-400" />
-              </div>
-              <h3 className="font-display text-base md:text-lg font-bold text-slate-100 mb-3">{t("feature_card_3")}</h3>
-              <ROICalculator />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Pricing Section */}
+      <PricingPlans />
 
       {/* Footer */}
       <footer className="border-t border-slate-800 py-6 md:py-10 mt-8 md:mt-16">

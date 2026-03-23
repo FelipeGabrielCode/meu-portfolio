@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink, Github, ArrowUpRight, type LucideIcon, LayoutDashboard, Stethoscope, Rocket, Scale } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, BarChart3, Activity, Users, Calendar, DollarSign, Heart, Brain, Stethoscope, TrendingUp, Target, Zap, Scale, Clock, Star, ChevronRight, Menu, X, Search, Filter } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -12,7 +12,7 @@ type FeaturedProject = {
   demoUrl: string;
   gradient: string;
   patternOpacity: number;
-  icon: LucideIcon;
+  screenshotType: 'dashboard' | 'healthcare' | 'marketing' | 'legal' | 'launch';
 };
 
 const featuredProjects: FeaturedProject[] = [
@@ -23,7 +23,7 @@ const featuredProjects: FeaturedProject[] = [
     demoUrl: "/demos/gestao",
     gradient: "linear-gradient(135deg, hsl(225 85% 45%) 0%, hsl(250 70% 50%) 50%, hsl(190 80% 35%) 100%)",
     patternOpacity: 0.08,
-    icon: LayoutDashboard,
+    screenshotType: 'dashboard',
   },
   {
     id: "healthcare-connect",
@@ -32,7 +32,7 @@ const featuredProjects: FeaturedProject[] = [
     demoUrl: "/demos/clinica",
     gradient: "linear-gradient(135deg, hsl(160 85% 35%) 0%, hsl(140 70% 40%) 50%, hsl(180 75% 30%) 100%)",
     patternOpacity: 0.08,
-    icon: Stethoscope,
+    screenshotType: 'healthcare',
   },
   {
     id: "agencia-digital-plus",
@@ -41,7 +41,7 @@ const featuredProjects: FeaturedProject[] = [
     demoUrl: "/demos/agencia",
     gradient: "linear-gradient(135deg, hsl(280 75% 45%) 0%, hsl(320 70% 50%) 50%, hsl(260 80% 40%) 100%)",
     patternOpacity: 0.08,
-    icon: Rocket,
+    screenshotType: 'marketing',
   },
   {
     id: "legal-suite-premium",
@@ -50,7 +50,7 @@ const featuredProjects: FeaturedProject[] = [
     demoUrl: "/demos/escritorio",
     gradient: "linear-gradient(135deg, hsl(210 85% 35%) 0%, hsl(225 70% 45%) 50%, hsl(195 75% 30%) 100%)",
     patternOpacity: 0.08,
-    icon: Scale,
+    screenshotType: 'legal',
   },
   {
     id: "launch-academy-pro",
@@ -59,7 +59,7 @@ const featuredProjects: FeaturedProject[] = [
     demoUrl: "/demos/lancamento",
     gradient: "linear-gradient(135deg, hsl(25 90% 50%) 0%, hsl(35 85% 55%) 50%, hsl(15 80% 45%) 100%)",
     patternOpacity: 0.08,
-    icon: Rocket,
+    screenshotType: 'launch',
   },
 ];
 
@@ -88,6 +88,252 @@ function useFadeIn(threshold = 0.12) {
   return { ref, visible };
 }
 
+// Componente que simula screenshot de site
+function WebsiteScreenshot({ type }: { type: 'dashboard' | 'healthcare' | 'marketing' | 'legal' | 'launch' }) {
+  const renderScreenshot = () => {
+    switch (type) {
+      case 'dashboard':
+        return (
+          <div className="w-full h-full bg-slate-900 rounded-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-slate-800 px-3 py-2 border-b border-slate-700 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-blue-500 rounded-sm" />
+                <span className="text-xs text-slate-300 font-medium">Gestão Pro</span>
+              </div>
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+              </div>
+            </div>
+            {/* Navigation */}
+            <div className="bg-slate-800 px-3 py-1 border-b border-slate-700 flex gap-3">
+              <div className="w-8 h-1 bg-blue-400 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+            </div>
+            {/* Dashboard Content */}
+            <div className="p-3 space-y-2">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="bg-slate-800 rounded p-2">
+                  <div className="w-3 h-3 bg-green-400 rounded-full mb-1" />
+                  <div className="w-full h-1 bg-slate-700 rounded" />
+                  <div className="text-xs text-slate-400 mt-1">+24%</div>
+                </div>
+                <div className="bg-slate-800 rounded p-2">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full mb-1" />
+                  <div className="w-full h-1 bg-slate-700 rounded" />
+                  <div className="text-xs text-slate-400 mt-1">R$ 12k</div>
+                </div>
+                <div className="bg-slate-800 rounded p-2">
+                  <div className="w-3 h-3 bg-amber-400 rounded-full mb-1" />
+                  <div className="w-full h-1 bg-slate-700 rounded" />
+                  <div className="text-xs text-slate-400 mt-1">142</div>
+                </div>
+              </div>
+              <div className="bg-slate-800 rounded p-2">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-slate-400">Vendas</span>
+                  <BarChart3 className="w-3 h-3 text-green-400" />
+                </div>
+                <div className="space-y-1">
+                  <div className="w-full h-1 bg-slate-700 rounded" />
+                  <div className="w-3/4 h-1 bg-green-500 rounded" />
+                  <div className="w-1/2 h-1 bg-slate-700 rounded" />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'healthcare':
+        return (
+          <div className="w-full h-full bg-slate-900 rounded-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-emerald-900/20 px-3 py-2 border-b border-emerald-800/30 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-emerald-400" />
+                <span className="text-xs text-slate-300 font-medium">Clínica Plus</span>
+              </div>
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+              </div>
+            </div>
+            {/* Navigation */}
+            <div className="bg-slate-800 px-3 py-1 border-b border-slate-700 flex gap-3">
+              <div className="w-8 h-1 bg-emerald-400 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+            </div>
+            {/* Healthcare Content */}
+            <div className="p-3 space-y-2">
+              <div className="bg-emerald-900/20 rounded p-2 border border-emerald-800/30">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-emerald-400">Próxima Consulta</span>
+                  <Clock className="w-3 h-3 text-emerald-400" />
+                </div>
+                <div className="text-xs text-slate-300">Dra. Ana - 14:30</div>
+                <div className="text-xs text-slate-500">Cardiologia</div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-slate-800 rounded p-2">
+                  <Stethoscope className="w-3 h-3 text-emerald-400 mb-1" />
+                  <div className="text-xs text-slate-400">Especialidades</div>
+                </div>
+                <div className="bg-slate-800 rounded p-2">
+                  <Calendar className="w-3 h-3 text-emerald-400 mb-1" />
+                  <div className="text-xs text-slate-400">Agendar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'marketing':
+        return (
+          <div className="w-full h-full bg-slate-900 rounded-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-violet-900/20 px-3 py-2 border-b border-violet-800/30 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Target className="w-4 h-4 text-violet-400" />
+                <span className="text-xs text-slate-300 font-medium">Marketing Pro</span>
+              </div>
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+              </div>
+            </div>
+            {/* Navigation */}
+            <div className="bg-slate-800 px-3 py-1 border-b border-slate-700 flex gap-3">
+              <div className="w-8 h-1 bg-violet-400 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+            </div>
+            {/* Marketing Content */}
+            <div className="p-3 space-y-2">
+              <div className="bg-violet-900/20 rounded p-2 border border-violet-800/30">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-violet-400">ROI Atual</span>
+                  <TrendingUp className="w-3 h-3 text-violet-400" />
+                </div>
+                <div className="text-lg font-bold text-white">3.2x</div>
+                <div className="text-xs text-slate-400">+180% este mês</div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-slate-800 rounded p-2">
+                  <Users className="w-3 h-3 text-violet-400 mb-1" />
+                  <div className="text-xs text-slate-400">Leads</div>
+                </div>
+                <div className="bg-slate-800 rounded p-2">
+                  <DollarSign className="w-3 h-3 text-violet-400 mb-1" />
+                  <div className="text-xs text-slate-400">Conversão</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'legal':
+        return (
+          <div className="w-full h-full bg-slate-900 rounded-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-sky-900/20 px-3 py-2 border-b border-sky-800/30 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Scale className="w-4 h-4 text-sky-400" />
+                <span className="text-xs text-slate-300 font-medium">Legal Suite</span>
+              </div>
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+              </div>
+            </div>
+            {/* Navigation */}
+            <div className="bg-slate-800 px-3 py-1 border-b border-slate-700 flex gap-3">
+              <div className="w-8 h-1 bg-sky-400 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+            </div>
+            {/* Legal Content */}
+            <div className="p-3 space-y-2">
+              <div className="bg-sky-900/20 rounded p-2 border border-sky-800/30">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-sky-400">Próxima Consultoria</span>
+                  <Clock className="w-3 h-3 text-sky-400" />
+                </div>
+                <div className="text-xs text-slate-300">Dr. Silva - 16:00</div>
+                <div className="text-xs text-slate-500">Direito Empresarial</div>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-slate-800 rounded p-2">
+                  <Scale className="w-3 h-3 text-sky-400 mb-1" />
+                  <div className="text-xs text-slate-400">Processos</div>
+                </div>
+                <div className="bg-slate-800 rounded p-2">
+                  <Star className="w-3 h-3 text-sky-400 mb-1" />
+                  <div className="text-xs text-slate-400">Certificações</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      
+      case 'launch':
+        return (
+          <div className="w-full h-full bg-slate-900 rounded-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-rose-900/20 px-3 py-2 border-b border-rose-800/30 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-rose-400" />
+                <span className="text-xs text-slate-300 font-medium">Launch Pro</span>
+              </div>
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+                <div className="w-2 h-2 bg-slate-600 rounded-full" />
+              </div>
+            </div>
+            {/* Navigation */}
+            <div className="bg-slate-800 px-3 py-1 border-b border-slate-700 flex gap-3">
+              <div className="w-8 h-1 bg-rose-400 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+              <div className="w-8 h-1 bg-slate-600 rounded" />
+            </div>
+            {/* Launch Content */}
+            <div className="p-3 space-y-2">
+              <div className="bg-rose-900/20 rounded p-2 border border-rose-800/30">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-rose-400">Oferta Termina</span>
+                  <Clock className="w-3 h-3 text-rose-400" />
+                </div>
+                <div className="text-lg font-bold text-white">23:45:12</div>
+                <div className="text-xs text-slate-400">Últimas 17 vagas</div>
+              </div>
+              <div className="bg-slate-800 rounded p-2">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-slate-400">Plano Professional</span>
+                  <ChevronRight className="w-3 h-3 text-rose-400" />
+                </div>
+                <div className="text-lg font-bold text-white">R$ 497</div>
+                <div className="text-xs text-slate-500 line-through">R$ 997</div>
+              </div>
+            </div>
+          </div>
+        );
+      
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="w-full h-full flex items-center justify-center p-2">
+      <div className="w-full h-full max-w-full max-h-full transform scale-90 origin-center">
+        {renderScreenshot()}
+      </div>
+    </div>
+  );
+}
+
 function TagPill({ label }: { label: string }) {
   return (
     <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium text-muted-foreground bg-muted/60 border border-border/50 hover:text-primary hover:border-primary/40 transition-colors duration-200">
@@ -95,10 +341,8 @@ function TagPill({ label }: { label: string }) {
     </span>
   );
 }
-
 function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject; delay?: number }) {
   const { ref, visible } = useFadeIn();
-  const Icon = project.icon;
   const t = useTranslations("Projects");
 
   const title = t(`projects.${project.translationKey}.title`);
@@ -137,13 +381,9 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
           aria-hidden="true"
         />
 
-        {/* Technical icon (replaces image placeholder) */}
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <div
-            className="glass rounded-2xl p-4 border border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:rotate-[0.5deg] will-change-transform"
-          >
-            <Icon className="w-7 h-7 text-primary" />
-          </div>
+        {/* Website screenshot area */}
+        <div className="absolute inset-0 flex items-center justify-center p-3">
+          <WebsiteScreenshot type={project.screenshotType} />
         </div>
 
         {/* Bottom gradient fade into card */}

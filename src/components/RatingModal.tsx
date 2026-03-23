@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Star, Send, CheckCircle2, Sparkles } from "lucide-react";
 
 interface RatingModalProps {
@@ -17,6 +17,15 @@ export default function RatingModal({ isOpen, onClose, demoName }: RatingModalPr
   const [comment, setComment] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  // Check if user has refused rating before
+  useEffect(() => {
+    const hasRefusedReview = localStorage.getItem('hasRefusedReview');
+    if (hasRefusedReview === 'true') {
+      // If user has refused, don't show the modal at all
+      onClose();
+    }
+  }, [onClose]);
 
   if (!isOpen) return null;
 
@@ -40,6 +49,12 @@ export default function RatingModal({ isOpen, onClose, demoName }: RatingModalPr
     setComment("");
     setSubmitted(false);
     onClose();
+  };
+
+  const handleRefuseReview = () => {
+    // Store refusal in localStorage
+    localStorage.setItem('hasRefusedReview', 'true');
+    handleClose();
   };
 
   return (
@@ -150,10 +165,10 @@ export default function RatingModal({ isOpen, onClose, demoName }: RatingModalPr
             {/* Botão não avaliar */}
             <button
               type="button"
-              onClick={handleClose}
+              onClick={handleRefuseReview}
               className="w-full py-2 text-sm text-slate-500 hover:text-slate-300 transition-colors"
             >
-              Não quero avaliar agora
+              Não quero avaliar
             </button>
           </form>
         ) : (

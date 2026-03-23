@@ -49,25 +49,454 @@
     },
     "projects": {
       "hubEcommerce": {
-        "title": "Portal de Gestão Integrada (SaaS)",
+        "title": "Portal de Gestão Integrada SaaS",
         "description": "Sistema completo de gestão empresarial com dashboard em tempo real, controle de estoque inteligente e relatórios automatizados. Centralize todas as operações do seu negócio em uma interface intuitiva."
       },
       "pwaClinics": {
-        "title": "HealthTech de Alta Performance",
-        "description": "Plataforma completa para clínicas e consultórios com agendamento online, prontuário digital e telemedicina integrada. Sua saúde na palma da mão."
+        "title": "Plataforma de Saúde Digital",
+        "description": "Sistema completo para clínicas e consultórios com agendamento online, prontuário digital e telemedicina integrada. Sua saúde na palma da mão, sem filas, sem espera."
       },
       "onboardingAiCrm": {
-        "title": "Funil de Lançamento Estratégico",
-        "description": "Plataforma de lançamento de cursos online com countdown, área de membros, pagamentos e funil de vendas completo. Transforme visitantes em alunos."
+        "title": "Página de Vendas de Alta Conversão",
+        "description": "Plataforma de lançamento de produtos digitais com countdown dinâmico, checkout integrado e funil de vendas completo. Transforme visitantes em clientes com taxa de conversão otimizada."
       },
       "cicdAws": {
         "title": "Sistema Jurídico Premium",
-        "description": "Sistema jurídico completo com gestão de processos, agendamento de audiências, contratos digitais e compliance LGPD. Segurança jurídica garantida."
+        "description": "Sistema jurídico completo com gestão de processos, agendamento de consultorias, contratos digitais e compliance LGPD. Segurança jurídica garantida para escritórios e advogados."
       },
       "agencia": {
-        "title": "Agência Digital Plus",
-        "description": "Sistema de gestão para agências de marketing com acompanhamento de campanhas, relatórios de resultados e gestão de clientes. Resultados que você enxerga."
+        "title": "Agência de Marketing Digital",
+        "description": "Sistema de gestão para agências de marketing com diagnóstico gratuito, acompanhamento de campanhas, relatórios de ROI e gestão de clientes. Resultados que você enxerga em tempo real."
       }
+    }
+  },
+  "Pricing": {
+    "badge": "Planos Empresariais",
+    "title": "Escolha o plano ideal para seu negócio",
+    "subtitle": "Cresça sem limites com ferramentas profissionais e suporte dedicado",
+    "billing": {
+      "monthly": "Mensal",
+      "yearly": "Anual",
+      "save": "Economize 20%",
+      "perMonth": "mês",
+      "billedAnnually": "Cobrado anualmente: {amount}"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Ideal para pequenas equipes",
+        "features": [
+          "Até 5 usuários",
+          "10GB de armazenamento",
+          "Suporte por email",
+          "Recursos básicos",
+          "API limitada"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Para equipes em crescimento",
+        "badge": "Mais Popular",
+        "features": [
+          "Até 25 usuários",
+          "100GB de armazenamento",
+          "Suporte prioritário 24/7",
+          "Recursos avançados",
+          "API completa",
+          "Integrações ilimitadas",
+          "Relatórios personalizados"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Para grandes corporações",
+        "features": [
+          "Usuários ilimitados",
+          "Armazenamento ilimitado",
+          "Gerente de conta dedicado",
+          "SLA personalizado",
+          "Recursos exclusivos",
+          "API white-label",
+          "On-premise disponível",
+          "Treinamento incluído"
+        ]
+      }
+    },
+    "cta": "Começar Teste Grátis",
+    "guarantee": "Garantia de satisfação de 30 dias ou seu dinheiro de volta",
+    "moneyBack": "Reembolso 100% sem perguntas"
+  },
+  "Features": {
+    "badge": "Módulos Inteligentes",
+    "title": "Sistema completo para gestão empresarial",
+    "subtitle": "Todas as ferramentas que você precisa em uma plataforma integrada e segura",
+    "cta": "Explorar Recursos",
+    "tabs": {
+      "financial": {
+        "title": "Financeiro & Hub de Pagamentos",
+        "description": "Conciliação bancária automática e emissão de notas fiscais",
+        "benefits": [
+          "Conciliação bancária automática com 98.5% de precisão",
+          "Emissão de NFe e NFSe integrada com prefeituras",
+          "Fluxo de caixa em tempo real com projeções",
+          "Relatórios financeiros personalizados e exportáveis"
+        ]
+      },
+      "inventory": {
+        "title": "Gestão de Estoque Inteligente",
+        "description": "Alertas de ruptura e controle de giro de estoque",
+        "benefits": [
+          "Alertas automáticos de estoque baixo em tempo real",
+          "Análise de giro de estoque com sugestões de compra",
+          "Controle multi-armazém com rastreamento completo",
+          "Integração com fornecedores para reposição automática"
+        ]
+      },
+      "crm": {
+        "title": "CRM & Vendas",
+        "description": "Funil de clientes e histórico completo de interações",
+        "benefits": [
+          "Funil de vendas visual com taxas de conversão",
+          "Histórico completo de interações com clientes",
+          "Automação de e-mails e follow-ups inteligentes",
+          "Relatórios de performance da equipe de vendas"
+        ]
+      },
+      "rbac": {
+        "title": "Controle de Acesso (RBAC)",
+        "description": "Permissões granulares e auditoria de segurança",
+        "benefits": [
+          "Controle de acesso baseado em funções (RBAC)",
+          "Logs de auditoria completos e rastreáveis",
+          "Autenticação de dois fatores obrigatória",
+          "Políticas de segurança personalizáveis por departamento"
+        ]
+      }
+    }
+  },
+  "Demos": {
+    "gestao": {
+      "title": "Sistema de Gestão Empresarial",
+      "description": "Plataforma completa para gestão empresarial com dashboard em tempo real, controle financeiro e automação de processos.",
+      "hero_desc": "Transforme sua gestão com nossa plataforma SaaS Enterprise. Dashboard executivo, automação financeira e controle total do seu negócio.",
+      "cta_primary": "Teste Grátis",
+      "cta_secondary": "Ver Demonstração",
+      "badge": "Dashboard Executivo",
+      "stats": {
+        "revenue": "Receita",
+        "orders": "Pedidos",
+        "products": "Produtos",
+        "clients": "Clientes"
+      },
+      "revenue_monthly": "Receita Mensal",
+      "revenue_annual": "Receita Anual",
+      "monthly": "Mensal",
+      "annual": "Anual",
+      "sales_widget": "Vendas Recentes",
+      "view_all": "Ver Todas",
+      "stock_table": "Controle de Estoque",
+      "filter": "Filtrar",
+      "export": "Exportar",
+      "completed": "Concluído",
+      "processing": "Processando",
+      "pending": "Pendente",
+      "product": "Produto",
+      "sku": "SKU",
+      "stock": "Estoque",
+      "status": "Status",
+      "status_ok": "OK",
+      "status_low": "Baixo",
+      "status_critical": "Crítico",
+      "all_sales": "Todas as Vendas",
+      "sales": "vendas",
+      "total": "Total",
+      "close": "Fechar",
+      "progress": "Progresso",
+      "sale_amount": "Vender R$ {amount}",
+      "reset": "Resetar",
+      "view_reports": "Ver Relatórios",
+      "analytics": "Análises detalhadas",
+      "register": "Cadastrar Produto",
+      "product_registered": "Produto cadastrado com sucesso!",
+      "product_added": "adicionado ao estoque",
+      "product_name": "Nome do produto",
+      "price": "Preço",
+      "quantity": "Quantidade",
+      "goal": "Meta",
+      "investment": "Investimento",
+      "return": "Retorno",
+      "filter_stock": "Filtrar Estoque",
+      "all_products": "Todos os Produtos",
+      "stock_ok": "Estoque OK",
+      "stock_low": "Estoque Baixo",
+      "stock_critical": "Estoque Crítico",
+      "export_report": "Exportar Relatório",
+      "current_filter": "Filtro atual",
+      "all": "todos",
+      "items_exported": "itens exportados",
+      "download_pdf": "Download PDF",
+      "download_csv": "Download CSV"
+    },
+    "common": {
+      "footer": "© 2024 Felipe Gabriel. Todos os direitos reservados.",
+      "loading": "Carregando...",
+      "error": "Ocorreu um erro",
+      "retry": "Tentar novamente",
+      "backToPortfolio": "Voltar ao Portfolio"
+    },
+    "agencia": {
+      "title": "Agência de Marketing Digital",
+      "description": "Sistema completo para agências com diagnóstico gratuito e gestão de campanhas."
+    },
+    "clinica": {
+      "title": "Plataforma de Saúde Digital Enterprise",
+      "description": "Sistema médico completo com agendamento inteligente, prontuário eletrônico e telemedicina.",
+      "hero_desc": "Transforme sua clínica com nossa plataforma SaaS Enterprise. Agendamento inteligente, prontuário unificado e redução de faltas por WhatsApp.",
+      "badge": "SaaS Médico Enterprise",
+      "cta_primary": "Agendar Demonstração",
+      "cta_secondary": "Ver Recursos",
+      
+      "hero_booking": {
+        "title": "Agende sua Consulta Online",
+        "subtitle": "Experimente o agendamento inteligente que reduz faltas em 40%",
+        "select_specialty": "Escolha a especialidade",
+        "select_date": "Escolha a data",
+        "select_time": "Escolha o horário",
+        "confirm": "Confirmar Agendamento"
+      },
+      
+      "features": {
+        "title": "Sistema Médico Completo",
+        "subtitle": "Todos os módulos que sua clínica precisa em uma plataforma integrada",
+        "tabs": {
+          "schedule": {
+            "title": "Agenda & WhatsApp",
+            "subtitle": "Reduza faltas e automatize lembretes",
+            "benefits": "Agenda inteligente com otimização de horários, Lembretes automáticos via WhatsApp, Redução de 40% nas faltas de pacientes, Confirmação automática de consultas, Gestão de múltiplas clínicas"
+          },
+          "records": {
+            "title": "Prontuário Eletrônico (PEP)",
+            "subtitle": "Histórico unificado e segurança de dados",
+            "benefits": "Prontuário eletrônico completo e unificado, Histórico médico integrado across consultas, Anexos de exames e prescrições digitais, Backup automático e criptografia de dados, Conformidade com LGPD e normas de saúde"
+          },
+          "telemedicine": {
+            "title": "Telemedicina & Prescrição",
+            "subtitle": "Consultas remotas e receitas digitais",
+            "benefits": "Sala de espera virtual segura, Vídeo chamadas criptografadas HD, Prescrição digital com assinatura eletrônica, Compartilhamento seguro de exames, Integração com farmácias digitais"
+          },
+          "billing": {
+            "title": "Faturamento & Planos",
+            "subtitle": "Guias TISS/TUSS e fluxo de caixa",
+            "benefits": "Geração automática de guias TISS/TUSS, Controle de convênios e particulares, Fluxo de caixa em tempo real, Relatórios de faturamento personalizados, Integração com sistemas de pagamento"
+          }
+        }
+      },
+      
+      "doctors": {
+        "title": "Médicos Especialistas",
+        "subtitle": "Profissionais qualificados para cuidar da sua saúde"
+      },
+      
+      "testimonials": {
+        "title": "O que dizem nossos pacientes",
+        "subtitle": "Experiências reais com nossa plataforma",
+        "patient1": "João Pereira",
+        "review1": "O agendamento online mudou minha experiência. Rápido, prático e os lembretes por WhatsApp me ajudam a nunca perder uma consulta.",
+        "date1": "Há 2 semanas",
+        "patient2": "Maria Fernandes", 
+        "review2": "A telemedicina é fantástica! Consigo consultas remotas de qualidade, sem sair de casa. A plataforma é muito intuitiva.",
+        "date2": "Há 1 mês",
+        "patient3": "Carlos Alberto",
+        "review3": "O prontuário unificado facilita muito. Todos os meus exames e consultas em um só lugar. Recomendo!",
+        "date3": "Há 3 meses"
+      },
+      
+      "booking": {
+        "title": "Agendamento Inteligente",
+        "subtitle": "Sistema completo de agendamento online com confirmação automática",
+        "specialty": "Especialidade",
+        "date": "Data",
+        "time": "Horário",
+        "select_specialty": "Selecione a especialidade:",
+        "select_date_for": "Selecione a data para {specialty}:",
+        "times_for": "Horários disponíveis para {date}:",
+        "back": "Voltar",
+        "booked_successfully": "Consulta Pré-agendada!",
+        "whatsapp_confirmation": "Você receberá a confirmação por WhatsApp em breve.",
+        "main_unit_address": "Unidade Principal - Av. Paulista, 1000",
+        "book_new_appointment": "Fazer Novo Agendamento",
+        "online_booking_247": "Agendamento online 24/7",
+        "multiple_units": "Múltiplas unidades",
+        "whatsapp_confirm": "Confirmação por WhatsApp",
+        
+        "specialties": {
+          "cardiology": "Cardiologia",
+          "cardiology_desc": "Cuidado do coração e vasos",
+          "neurology": "Neurologia",
+          "neurology_desc": "Sistema nervoso e cérebro",
+          "orthopedics": "Ortopedia",
+          "orthopedics_desc": "Ossos, articulações e músculos",
+          "ophthalmology": "Oftalmologia",
+          "ophthalmology_desc": "Saúde ocular e visão",
+          "pediatrics": "Pediatria",
+          "pediatrics_desc": "Cuidado infantil completo",
+          "general_practice": "Clínica Geral",
+          "general_practice_desc": "Atendimento médico geral"
+        },
+        
+        "dates": {
+          "date1": "Hoje - 25/03",
+          "date2": "Amanhã - 26/03",
+          "date3": "Quarta - 27/03",
+          "date4": "Quinta - 28/03",
+          "date5": "Sexta - 29/03"
+        }
+      }
+    },
+    "escritorio": {
+      "title": "Sistema Jurídico Premium",
+      "description": "Sistema jurídico completo com gestão de processos e consultorias."
+    },
+    "lancamento": {
+      "title": "Plataforma de Lançamento",
+      "description": "Plataforma completa para lançamentos com checkout e funil de vendas."
+    }
+  },
+  "Checkout": {
+    "title": "Finalizar Compra",
+    "subtitle": "Escolha seu plano e comece a transformar sua gestão",
+    "personalInfo": "Informações Pessoais",
+    "paymentInfo": "Informações de Pagamento",
+    "cardNumber": "Número do cartão",
+    "expiry": "Validade",
+    "cvv": "CVV",
+    "agreeTerms": "Eu concordo com os termos de serviço e política de privacidade",
+    "securePayment": "Pagamento 100% seguro e criptografado",
+    "processing": "Processando...",
+    "payWith": "Pagar com",
+    "success": {
+      "title": "Pagamento Aprovado!",
+      "message": "Sua assinatura foi ativada com sucesso.",
+      "plan": "Plano:",
+      "nextBilling": "Próxima cobrança:",
+      "today": "Hoje",
+      "goToDashboard": "Ir para Dashboard"
+    }
+  },
+  "Trial": {
+    "title": "Comece seu Trial Gratuito",
+    "subtitle": "Teste todas as funcionalidades do nosso sistema por 14 dias, sem compromisso.",
+    "benefits": {
+      "fullAccess": "Acesso Completo",
+      "fullAccessDesc": "Todos os recursos disponíveis durante o trial",
+      "14Days": "14 Dias Grátis",
+      "14DaysDesc": "Tempo suficiente para explorar tudo",
+      "noCard": "Sem Cartão",
+      "noCardDesc": "Não precisa de dados de pagamento"
+    },
+    "personalInfo": "Informações Pessoais",
+    "companyInfo": "Informações da Empresa",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "phone": "Telefone",
+    "company": "Empresa",
+    "companySize": "Tamanho da Empresa",
+    "industry": "Setor",
+    "agreeTerms": "Eu concordo em receber comunicações sobre o trial e aceito os termos de serviço e política de privacidade",
+    "startTrial": "Iniciar Trial Gratuito",
+    "processing": "Processando...",
+    "success": {
+      "title": "Trial Solicitado com Sucesso!",
+      "message": "Seu trial gratuito de 14 dias foi ativado. Você receberá um email com as instruções de acesso em breve.",
+      "email": "Email:",
+      "company": "Empresa:",
+      "duration": "Duração:",
+      "14Days": "14 dias",
+      "goToDashboard": "Ir para Dashboard"
+    }
+  },
+  "Enterprise": {
+    "title": "Demonstração Personalizada Enterprise",
+    "subtitle": "Agende uma demonstração 1-on-1 com nossos especialistas e veja como nossa plataforma pode transformar sua operação.",
+    "duration": "45 minutos",
+    "personalized": "Personalizada",
+    "online": "Online",
+    "whatYouWillSee": "O que você verá na demo:",
+    "dashboard": "Dashboard Executivo",
+    "dashboardDesc": "Visualização completa de KPIs e métricas em tempo real",
+    "financial": "Automação Financeira",
+    "financialDesc": "Conciliação bancária e emissão de notas automáticas",
+    "stock": "Gestão de Estoque",
+    "stockDesc": "Controle inteligente com alertas e reposição automática",
+    "crm": "CRM e Vendas",
+    "crmDesc": "Funil completo com automação de follow-up",
+    "access": "Controle de Acesso",
+    "accessDesc": "Permissões granulares e auditoria de segurança",
+    "testimonials": "O que dizem nossos clientes:",
+    "bookDemo": "Agendar Demonstração",
+    "personalInfo": "Informações Pessoais",
+    "companyInfo": "Informações da Empresa",
+    "phone": "Telefone",
+    "role": "Cargo",
+    "preferredDate": "Data preferida",
+    "preferredTime": "Horário preferido",
+    "message": "Mensagem (opcional)",
+    "messagePlaceholder": "Conte-nos sobre suas necessidades específicas...",
+    "scheduling": "Agendamento",
+    "processing": "Agendando...",
+    "success": {
+      "title": "Agendamento Confirmado!",
+      "message": "Sua demonstração personalizada foi agendada. Um de nossos especialistas entrará em contato para confirmar os detalhes.",
+      "date": "Data:",
+      "time": "Horário:",
+      "email": "Email:",
+      "goToDashboard": "Ir para Dashboard"
+    }
+  },
+  "Dashboard": {
+    "title": "Dashboard Executivo",
+    "subtitle": "Visão geral em tempo real do seu negócio",
+    "metrics": {
+      "monthlyRevenue": "Receita Mensal",
+      "netMargin": "Margem Líquida",
+      "cashFlow": "Cash Flow",
+      "runway": "Runway"
+    },
+    "transactions": {
+      "title": "Transações Recentes",
+      "subtitle": "Movimentações financeiras em tempo real",
+      "searchPlaceholder": "Buscar transação...",
+      "filters": {
+        "all": "Todos",
+        "thisMonth": "Este Mês",
+        "last7Days": "Últimos 7 dias"
+      },
+      "status": {
+        "completed": "Concluído",
+        "pending": "Pendente"
+      },
+      "actions": {
+        "receipt": "Recibo",
+        "details": "Detalhes"
+      }
+    },
+    "stockStatus": {
+      "title": "Status de Estoque",
+      "subtitle": "Controle de inventário em tempo real",
+      "min": "Mín",
+      "normal": "Normal",
+      "low": "Baixo",
+      "critical": "Crítico",
+      "alerts": "alertas",
+      "noAlerts": "sem alertas"
+    }
+  },
+  "Metadata": {
+    "home": {
+      "title": "Felipe Gabriel | Desenvolvedor Full Stack & Engenheiro DevOps",
+      "description": "Construindo aplicações web escaláveis, pipelines DevOps robustos e automações inteligentes que transformam ideias em produto — do código à nuvem.",
+      "ogTitle": "Felipe Gabriel | Desenvolvedor Full Stack & Engenheiro DevOps",
+      "ogDescription": "Construindo aplicações web escaláveis, pipelines DevOps robustos e automações inteligentes que transformam ideias em produto — do código à nuvem."
     }
   },
   "Contact": {
@@ -96,127 +525,16 @@
     },
     "validation": {
       "fillAll": "Por favor, preencha Nome, Email e uma mensagem mais detalhada."
-    },
-    "errors": {
-      "sendFailed": "Falha ao enviar mensagem.",
-      "generic": "Erro ao enviar mensagem."
-    },
-    "success": {
-      "sent": "Mensagem enviada com sucesso!"
     }
   },
   "Footer": {
-    "copyright": "Felipe Gabriel Web Developer © 2026",
-    "whatsappPrefill": "Olá Felipe, vi seu portfólio e gostaria de conversar sobre um projeto."
+    "whatsappPrefill": "Olá Felipe! Vi seu portfólio e gostaria de conversar sobre um projeto.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub", 
+      "instagram": "Instagram"
+    },
+    "copyright": "© 2024 Felipe Gabriel. Todos os direitos reservados."
   },
-  "Metadata": {
-    "home": {
-      "title": "Felipe Gabriel | Desenvolvedor Full Stack & DevOps",
-      "description": "Portfólio profissional de Felipe Gabriel - Desenvolvedor Full Stack especializado em Next.js, React, Node.js, DevOps e automações inteligentes.",
-      "ogTitle": "Felipe Gabriel | Full Stack Developer & DevOps",
-      "ogDescription": "Portfólio profissional com foco em web, DevOps e automações inteligentes. Especialista em Next.js, React e arquiteturas escaláveis."
-    }
-  },
-  "Demos": {
-    "common": {
-      "backToPortfolio": "Voltar para o Portfólio",
-      "footer": "Felipe Gabriel WebDeveloper © 2026"
-    },
-    "gestao": {
-      "badge": "Controle Total do Seu Dinheiro",
-      "title": "Pare de Perder Dinheiro. Controle Seu Caixa Hoje.",
-      "hero_desc": "Sistema ERP que unifica finanças, estoque e vendas em tempo real. Tome decisões baseadas em dados, reduza perdas e aumente seu lucro imediatamente.",
-      "feature_1": "Dashboard Executivo",
-      "feature_1_desc": "Visualize faturamento, despesas e lucratividade em tempo real com gráficos interativos",
-      "feature_2": "Controle de Estoque",
-      "feature_2_desc": "Gestão inteligente com alertas automáticos de reposição e análise de giro",
-      "feature_3": "Últimas Vendas",
-      "feature_3_desc": "Acompanhe pedidos em tempo real com status atualizado e notificações",
-      "cta_primary": "Aproveitar Agora - Teste Grátis",
-      "cta_secondary": "Ver Demonstração",
-      "chart_title": "Faturamento Mensal",
-      "stock_table": "Status de Estoque",
-      "sales_widget": "Últimas Vendas",
-      "stats": {
-        "revenue": "Faturamento",
-        "orders": "Pedidos",
-        "products": "Produtos",
-        "clients": "Clientes"
-      },
-      "feature_card_1": "Simular Metas",
-      "feature_card_2": "Cadastrar Produto",
-      "feature_card_3": "Calcular ROI"
-    },
-    "agencia": {
-      "badge": "Resultados que Você Enxerga",
-      "title": "Sua Marca no Próximo Nível. ROI Garantido.",
-      "hero_desc": "Estratégias data-driven que transformam visitantes em clientes. Aumente sua autoridade digital e veja resultados reais em 30 dias.",
-      "feature_1": "Cases de Sucesso",
-      "feature_1_desc": "Resultados comprovados: +320% em tráfego, +150% em conversão",
-      "feature_2": "Clientes Atendidos",
-      "feature_2_desc": "Marcas que confiam em nosso trabalho e crescem todos os dias",
-      "feature_3": "Equipe Especializada",
-      "feature_3_desc": "Experts em SEO, Ads, Design e Copywriting focados em resultados",
-      "cta_primary": "Aproveitar - Diagnóstico Grátis",
-      "cta_secondary": "Ver Cases de Sucesso",
-      "cases_title": "Resultados que Superam Expectativas",
-      "clients_title": "Quem Confia em Nós",
-      "team_title": "Nossa Equipe de Experts"
-    },
-    "clinica": {
-      "badge": "Sua Saúde Não Pode Esperar",
-      "title": "Agende Sua Consulta em Segundos. Cuidado Imediato.",
-      "hero_desc": "Plataforma completa para clínicas com agendamento 24/7, prontuário eletrônico e telemedicina. Sua saúde na palma da mão, sem filas, sem espera.",
-      "feature_1": "Especialidades Médicas",
-      "feature_1_desc": "Cardiologia, Dermatologia, Ortopedia, Neurologia e mais 20 especialidades",
-      "feature_2": "Depoimentos de Pacientes",
-      "feature_2_desc": "Avaliações reais com sistema de estrelas e feedbacks verificados",
-      "feature_3": "Agendamento Inteligente",
-      "feature_3_desc": "Marque consultas 24/7 com confirmação automática via WhatsApp",
-      "cta_primary": "Chame Já - Agendar Agora",
-      "cta_secondary": "Ver Especialidades",
-      "specialties_title": "Tudo que Você Precisa",
-      "testimonials_title": "O que dizem nossos pacientes",
-      "booking_title": "Agende sua Consulta",
-      "booking_desc": "Escolha especialidade, data e horário em poucos cliques"
-    },
-    "escritorio": {
-      "badge": "Segurança Jurídica Garantida",
-      "title": "Tudo que Você Precisa para sua Segurança Jurídica.",
-      "hero_desc": "Sistema jurídico completo para advogados e escritórios. Gestão de casos, documentos, prazos e compliance. Sua prática elevada ao próximo nível.",
-      "feature_1": "Credenciais e Certificações",
-      "feature_1_desc": "OAB Ativa, Compliance LGPD, ISO 27001 - sua segurança garantida",
-      "feature_2": "Áreas de Atuação",
-      "feature_2_desc": "Direito Civil, Trabalhista, Empresarial, Tributário e mais",
-      "feature_3": "Artigos e Publicações",
-      "feature_3_desc": "Conteúdo jurídico de alta qualidade para seus clientes",
-      "cta_primary": "Chame Já - Consultoria Grátis",
-      "cta_secondary": "Ver Áreas de Atuação",
-      "badges_title": "Credenciais e Certificações",
-      "areas_title": "Áreas de Atuação",
-      "articles_title": "Publicações Recentes",
-      "booking_title": "Agende sua Consulta",
-      "booking_desc": "Escolha área e agende com o especialista adequado",
-      "testimonials_title": "O que dizem nossos clientes",
-      "testimonials_subtitle": "Experiências reais de quem confia em nosso trabalho"
-    },
-    "lancamento": {
-      "badge": "Oferta Única e Limitada",
-      "title": "Últimas Vagas! Aproveite o Desconto de Lançamento Já.",
-      "hero_desc": "Plataforma completa para lançar produtos digitais com alta conversão. Countdown dinâmico, automações e página otimizada para vendas.",
-      "feature_1": "Urgência que Converte",
-      "feature_1_desc": "Contador regressivo que aumenta taxa de conversão em até 40%",
-      "feature_2": "FAQ Interativo",
-      "feature_2_desc": "Elimine objeções automaticamente com respostas instantâneas",
-      "feature_3": "Automação Completa",
-      "feature_3_desc": "Nutrição de leads via email, SMS e WhatsApp integrados",
-      "cta_primary": "Garantir Minha Vaga Agora",
-      "cta_secondary": "Ver Planos e Preços",
-      "countdown_title": "Oferta Termina em:",
-      "faq_title": "Tire Suas Dúvidas",
-      "faq_subtitle": "Respostas rápidas para decidir agora",
-      "urgency": "Últimas 17 Vagas - Acaba em Breve"
-    }
-  }
+  "footer": "© 2024 Felipe Gabriel. Todos os direitos reservados."
 }
-
