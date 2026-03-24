@@ -245,8 +245,175 @@
       "backToPortfolio": "Back to Portfolio"
     },
     "agencia": {
-      "title": "Digital Marketing Agency",
-      "description": "Complete system for agencies with free diagnosis and campaign management."
+      "title": "Marketing Management SaaS Enterprise",
+      "description": "Complete platform for agencies: campaign management, lead CRM and client-facing reports with proven ROI.",
+      "hero_desc": "No more spreadsheets. Increase your ROAS and prove your value to clients with a single dashboard. Everything integrated: Meta Ads, Google Ads, sales pipeline and automated reports.",
+      "badge": "Paid Media Management Enterprise",
+      "cta_primary": "Try Free Audit",
+      "cta_secondary": "See Plans",
+      "cta_demo": "See Demo",
+      
+      "diagnosis_title": "Real-Time Campaign Audit",
+      "diagnosis_subtitle": "Discover in seconds how much money your agency is leaving on the table",
+      "free_diagnosis_title": "Free Marketing Diagnosis",
+      "free_diagnosis_desc": "Instant analysis of SEO or ad performance",
+      "diagnosis_seo_title": "Complete SEO Audit",
+      "diagnosis_ads_title": "Ads Performance Audit",
+      "diagnosis_complete": "Analysis complete! Check the identified opportunities:",
+      "opportunities": "Opportunities",
+      "issues": "Issues Detected",
+      "new_diagnosis": "New Analysis",
+      "contact_specialist": "Talk to Specialist",
+      "seo_analysis": "SEO Analysis",
+      "seo_analysis_desc": "Complete technical audit of your website",
+      "ads_roi_analysis": "ROI Audit",
+      "ads_analysis_desc": "Waste analysis in paid campaigns",
+      "analyzing": "Analyzing",
+      "start_analysis": "Start Analysis",
+      
+      "analysis_loading_1": "Reading tracking pixels...",
+      "analysis_loading_2": "Analyzing ad CTR...",
+      "analysis_loading_3": "Calculating budget waste...",
+      "waste_detected": "Budget Waste Detected",
+      "optimization_potential": "Optimization Potential",
+      
+      "real_cases_title": "Success Cases with Proven ROI",
+      "real_cases_subtitle": "Agencies that multiplied their results with our platform",
+      "team_title": "Your Team of Specialists",
+      
+      "feature_1": "Campaign Management (Ads)",
+      "feature_1_desc": "Native integration with Meta Ads and Google Ads. Increase your ROAS with AI-based automatic optimization.",
+      "feature_2": "CRM & Sales Pipeline",
+      "feature_2_desc": "Track leads from first click to closing. Visualize your funnel in real-time.",
+      "feature_3": "Client-Facing Reports",
+      "feature_3_desc": "Automated reports with your agency's logo. Impress clients with clear data and proof of value.",
+      
+      "tabs": {
+        "campaigns": {
+          "title": "Campaign Management (Ads)",
+          "subtitle": "Meta & Google Ads integrated",
+          "benefits": "Unified dashboard for Meta Ads and Google Ads, Automatic ROAS optimization with AI, Real-time waste alerts, Omnichannel campaign orchestration"
+        },
+        "crm": {
+          "title": "CRM & Pipeline",
+          "subtitle": "From click to closing",
+          "benefits": "Visual Kanban lead pipeline, Automatic qualification scoring, WhatsApp Business integration, Follow-up automation"
+        },
+        "reports": {
+          "title": "Client-Facing Reports",
+          "subtitle": "Automated proof of value",
+          "benefits": "White-label reports with your brand, Automatic scheduling and delivery, Interactive client dashboards, PDF and PowerPoint export"
+        }
+      },
+      
+      "pricing": {
+        "title": "Plans for Agencies",
+        "subtitle": "Choose the ideal plan for your operation size",
+        "cta_scroll": "See Plans",
+        "freelancer": {
+          "name": "Freelancer/Boutique",
+          "description": "For individual professionals",
+          "price": "$97",
+          "period": "/month",
+          "features": [
+            "Up to 5 ad accounts",
+            "Basic CRM (100 leads)",
+            "Monthly reports",
+            "Email support"
+          ],
+          "cta": "Start Now"
+        },
+        "growth": {
+          "name": "Growth Agency",
+          "description": "For growing agencies",
+          "price": "$197",
+          "period": "/month",
+          "badge": "MOST POPULAR",
+          "features": [
+            "Up to 20 ad accounts",
+            "Advanced CRM (unlimited)",
+            "White-label reports",
+            "Campaign automation",
+            "Priority support"
+          ],
+          "cta": "Try 14 Days Free"
+        },
+        "enterprise": {
+          "name": "Enterprise/Advisory",
+          "description": "For large operations",
+          "price": "$697",
+          "period": "/month",
+          "features": [
+            "Unlimited ad accounts",
+            "Enterprise CRM + API",
+            "Custom reports",
+            "Advanced AI optimization",
+            "Dedicated account manager",
+            "Personalized onboarding"
+          ],
+          "cta": "Talk to Sales"
+        }
+      },
+      
+      "pain_spreadsheet": "No more spreadsheets",
+      "pain_roas": "Increase your ROAS",
+      "pain_value": "Prove your value to clients",
+      "pain_dashboard": "Everything in one dashboard",
+      "roi_proven": "Proven ROI",
+      "interactive_demo": "Interactive Demo",
+      "plans_prices": "Plans & Pricing",
+      "free_tool": "Free Tool",
+      "ready_to_scale": "Ready to scale your agency?",
+      "join_agencies": "Join hundreds of agencies that have transformed their management and increased their ROAS",
+      "start_free_trial": "Start Free Trial",
+      "talk_sales": "Talk to Sales",
+      "marketing_specialists": "Marketing specialists",
+      "demo_name": "Digital Marketing Agency",
+      "analyze_roi": "Analyze ROI",
+      "per_month": "Per month in unoptimized campaigns",
+      "estimated_roas": "Estimated ROAS improvement",
+      "campaign_performance": "Campaign Performance Overview",
+      "real_time": "Real-time",
+      "waste_alert": "Waste Alert",
+      "campaign_summer": "Campaign \"Summer Sale\" CTR below 1%",
+      "dashboard_demo_title": "Enterprise Dashboard in Action",
+      "dashboard_demo_subtitle": "Explore the system modules and see how your agency can scale with data",
+      
+      "modals": {
+        "signup": {
+          "title": "Create your platform account",
+          "subtitle": "Start your 14-day free trial",
+          "email": "Email",
+          "emailPlaceholder": "your@email.com",
+          "password": "Password",
+          "passwordPlaceholder": "Minimum 8 characters",
+          "submit": "Start Free Trial",
+          "submitting": "Creating account...",
+          "success": "Account created successfully!",
+          "successMessage": "We've sent a confirmation email to you."
+        },
+        "contact": {
+          "title": "Talk to a Specialist",
+          "subtitle": "Our team will contact you within 24 hours",
+          "name": "Name",
+          "namePlaceholder": "Your full name",
+          "company": "Company",
+          "companyPlaceholder": "Your agency name",
+          "budget": "Monthly Ad Budget",
+          "budgetPlaceholder": "Select a range",
+          "budgetOptions": {
+            "option1": "Up to $2,000",
+            "option2": "$2,000 - $10,000",
+            "option3": "$10,000 - $20,000",
+            "option4": "Above $20,000"
+          },
+          "submit": "Request Contact",
+          "submitting": "Sending...",
+          "success": "Request sent!",
+          "successMessage": "A specialist will contact you soon."
+        },
+        "close": "Close"
+      }
     },
     "clinica": {
       "title": "Digital Health Enterprise Platform",
@@ -354,8 +521,198 @@
       }
     },
     "escritorio": {
-      "title": "Premium Legal System",
-      "description": "Complete legal system with process management and consulting."
+      "title": "Premium Legal SaaS Enterprise",
+      "description": "Complete system for law firm management: cases, contracts, consulting and compliance in a secure platform.",
+      "hero_desc": "Never miss a deadline. End-to-end legal security with military-grade encryption. Automate bureaucracy and focus on what really matters: your client.",
+      "badge": "LegalTech Enterprise Premium",
+      "cta_primary": "Schedule Consulting",
+      "cta_secondary": "View Specialties",
+      "cta_demo": "See Demo",
+      
+      "badges_title": "Credentials That Guarantee Your Security",
+      "badges_subtitle": "Certifications and compliances that ensure your data integrity",
+      
+      "areas_title": "Practice Areas",
+      "areas_subtitle": "Specialized practice in various areas of law",
+      
+      "practices": {
+        "business": "Business Law",
+        "business_desc": "Contracts, M&A, corporate",
+        "labor": "Labor Law",
+        "labor_desc": "Claims, defenses, settlements",
+        "civil": "Civil Law",
+        "civil_desc": "Family, succession, real estate",
+        "tax": "Tax Law",
+        "tax_desc": "Tax planning, defenses",
+        "real_estate": "Real Estate Law",
+        "real_estate_desc": "Development, regularization",
+        "consumer": "Consumer Law",
+        "consumer_desc": "Claims, indemnifications"
+      },
+      
+      "booking_title": "Online Legal Consulting",
+      "booking_desc": "Schedule your consulting with security and convenience",
+      
+      "consulting_booked_successfully": "Consulting Pre-booked!",
+      "consulting_whatsapp_confirmation": "You will receive confirmation via WhatsApp shortly.",
+      "main_unit_address": "Main Unit - Av. Paulista, 1000",
+      "book_new_consulting": "New Consulting",
+      
+      "area": "Area",
+      "case": "Case",
+      "date": "Date",
+      "time": "Time",
+      "select_area": "Select practice area",
+      "select_case_for": "Select case type for {area}",
+      "select_date_for": "Select date for {area}",
+      "times_for": "Available times for {date}",
+      "back": "Back",
+      
+      "tabs": {
+        "processes": {
+          "title": "Case Management",
+          "subtitle": "Legal Tracker with automatic deadlines",
+          "benefits": "Integration with electronic courts, Critical deadline alerts, Visual Kanban dashboard, Synchronized hearings and appointments"
+        },
+        "contracts": {
+          "title": "Contracts & Signature",
+          "subtitle": "Guaranteed legal validity",
+          "benefits": "Customizable legal templates, Digital signature with ICP-Brasil, Automatic versioning, AI clause analysis"
+        },
+        "consulting": {
+          "title": "Consulting & Schedule",
+          "subtitle": "Secure and organized service",
+          "benefits": "24/7 online scheduling, Encrypted virtual room, Integrated consulting history, Automatic reminders"
+        },
+        "compliance": {
+          "title": "LGPD Compliance",
+          "subtitle": "Total security and compliance",
+          "benefits": "End-to-end encryption, Granular access control, Complete audit logs, Full LGPD compliance"
+        }
+      },
+      
+      "trust": {
+        "title": "Guaranteed Legal Security",
+        "subtitle": "Military-level data protection for your legal practice",
+        "encryption": "Military Encryption",
+        "encryption_desc": "AES-256 on all data",
+        "backup": "Redundant Backup",
+        "backup_desc": "3 copies in distinct geo-locations",
+        "lgpd": "100% GDPR/LGPD",
+        "lgpd_desc": "Total compliance with legislation",
+        "oab": "OAB Digital Seal",
+        "oab_desc": "Legal security certification"
+      },
+      
+      "models": {
+        "badge": "How We Can Help",
+        "title": "Our Practice Models",
+        "subtitle": "Choose the approach that best suits your legal needs",
+        "card1": {
+          "title": "Consulting & Opinions",
+          "subtitle": "Point technical analysis",
+          "features": [
+            "Contract analysis",
+            "Preventive legal opinions",
+            "Conflict mediation",
+            "Estate planning"
+          ],
+          "cta": "Schedule Consulting"
+        },
+        "card2": {
+          "title": "Strategic Litigation",
+          "subtitle": "Representation in complex litigation",
+          "badge": "MOST REQUESTED",
+          "features": [
+            "Defense in higher courts",
+            "Civil and labor actions",
+            "Liability audit",
+            "Oral arguments"
+          ],
+          "cta": "Talk to Specialist"
+        },
+        "card3": {
+          "title": "Retainer Services (Corporate)",
+          "subtitle": "Monthly legal security for your business",
+          "features": [
+            "Asset protection",
+            "Compliance & GDPR",
+            "Corporate contract management",
+            "Exclusive legal hotline"
+          ],
+          "cta": "Request Proposal"
+        }
+      },
+      
+      "pain_deadline": "Never miss a deadline",
+      "pain_security": "End-to-end legal security",
+      "pain_automation": "Automate bureaucracy",
+      "pain_focus": "Focus on the client",
+      
+      "demo_name": "Premium Law Office",
+      
+      "roi_proven": "Proven ROI",
+      "interactive_demo": "Interactive Demo",
+      "plans_prices": "Plans & Pricing",
+      
+      "ready_to_scale": "Ready to transform your legal practice?",
+      "join_firms": "Join hundreds of firms that have eliminated bureaucracy and increased productivity by 300%",
+      "start_free_trial": "Start Free Trial",
+      "talk_sales": "Talk to Specialist",
+      
+      "modals": {
+        "triage": {
+          "title": "Confidential Case Triage",
+          "subtitle": "Fill out the form for initial case analysis",
+          "name": "Full Name",
+          "namePlaceholder": "Your full name",
+          "company": "Company",
+          "companyPlaceholder": "Company name (if applicable)",
+          "optional": "optional",
+          "area": "Legal Area",
+          "areaPlaceholder": "Select legal area",
+          "areas": {
+            "business": "Business Law",
+            "labor": "Labor Law",
+            "civil": "Civil Law",
+            "tax": "Tax Law",
+            "real_estate": "Real Estate Law",
+            "consumer": "Consumer Law"
+          },
+          "summary": "Case Summary",
+          "summaryPlaceholder": "Briefly describe your case for initial triage...",
+          "submit": "Request Analysis",
+          "submitting": "Sending...",
+          "success": "Request Sent!",
+          "successMessage": "Our team will contact you within 24 hours to schedule your consultation.",
+          "compliance": "Your data is protected by professional secrecy and LGPD."
+        }
+      },
+      "booking": {
+        "step1_title": "Choose Specialty",
+        "step1_subtitle": "Select the legal area for your consultation",
+        "step2_title": "Select Time",
+        "step2_subtitle": "Choose an available date and time",
+        "step3_title": "Confirm Booking",
+        "step3_subtitle": "Review the details and confirm your consultation",
+        "specialty_tax": "Tax Consultation",
+        "specialty_labor": "Labor Prevention",
+        "specialty_contracts": "Contract Review",
+        "specialty_civil": "Civil Law",
+        "specialty_corporate": "Corporate Advisory",
+        "specialty_compliance": "Compliance & GDPR",
+        "next_available": "Next Business Day",
+        "date_format": "{day}/{month}",
+        "time_morning": "10:00",
+        "time_afternoon": "14:30",
+        "time_late": "16:00",
+        "confirm_button": "Confirm Booking",
+        "back_button": "Back",
+        "success_title": "Booking Confirmed",
+        "success_message": "A secure video conference link has been sent to your email.",
+        "success_detail": "Your consultation is scheduled. Our team will contact you to confirm the details.",
+        "new_booking": "New Booking"
+      }
     },
     "lancamento": {
       "title": "Launch Platform",

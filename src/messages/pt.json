@@ -245,8 +245,175 @@
       "backToPortfolio": "Voltar ao Portfolio"
     },
     "agencia": {
-      "title": "Agência de Marketing Digital",
-      "description": "Sistema completo para agências com diagnóstico gratuito e gestão de campanhas."
+      "title": "SaaS de Gestão de Marketing Enterprise",
+      "description": "Plataforma completa para agências: gestão de campanhas, CRM de leads e relatórios client-facing com ROI comprovado.",
+      "hero_desc": "Chega de planilhas. Aumente seu ROAS e prove seu valor para o cliente com um dashboard único. Tudo integrado: Meta Ads, Google Ads, pipeline de vendas e relatórios automáticos.",
+      "badge": "Gestão de Mídia Paga Enterprise",
+      "cta_primary": "Teste a Auditoria Grátis",
+      "cta_secondary": "Ver Planos",
+      "cta_demo": "Ver Demonstração",
+      
+      "diagnosis_title": "Auditoria de Campanhas em Tempo Real",
+      "diagnosis_subtitle": "Descubra em segundos quanto dinheiro sua agência está deixando na mesa",
+      "free_diagnosis_title": "Diagnóstico Gratuito de Marketing",
+      "free_diagnosis_desc": "Analise instantânea de SEO ou performance de anúncios",
+      "diagnosis_seo_title": "Auditoria SEO Completa",
+      "diagnosis_ads_title": "Auditoria de Performance Ads",
+      "diagnosis_complete": "Análise concluída! Confira as oportunidades identificadas:",
+      "opportunities": "Oportunidades",
+      "issues": "Problemas Detectados",
+      "new_diagnosis": "Nova Análise",
+      "contact_specialist": "Falar com Especialista",
+      "seo_analysis": "Análise SEO",
+      "seo_analysis_desc": "Auditoria técnica completa do seu site",
+      "ads_roi_analysis": "Auditoria de ROI",
+      "ads_analysis_desc": "Análise de desperdício em campanhas pagas",
+      "analyzing": "Analisando",
+      "start_analysis": "Iniciar Análise",
+      
+      "analysis_loading_1": "Lendo pixels de rastreamento...",
+      "analysis_loading_2": "Analisando CTR dos anúncios...",
+      "analysis_loading_3": "Calculando desperdício de verba...",
+      "waste_detected": "Desperdício de Verba Detectado",
+      "optimization_potential": "Potencial de Otimização",
+      
+      "real_cases_title": "Cases de Sucesso com ROI Comprovado",
+      "real_cases_subtitle": "Agências que multiplicaram seus resultados com nossa plataforma",
+      "team_title": "Sua Equipe de Especialistas",
+      
+      "feature_1": "Gestão de Campanhas (Ads)",
+      "feature_1_desc": "Integração nativa com Meta Ads e Google Ads. Aumente seu ROAS com otimização automática baseada em IA.",
+      "feature_2": "CRM & Pipeline de Vendas",
+      "feature_2_desc": "Acompanhe leads desde o primeiro clique até o fechamento. Visualize seu funil em tempo real.",
+      "feature_3": "Relatórios Client-Facing",
+      "feature_3_desc": "Relatórios automatizados com a logo da sua agência. Impressione clientes com dados claros e prova de valor.",
+      
+      "tabs": {
+        "campaigns": {
+          "title": "Gestão de Campanhas (Ads)",
+          "subtitle": "Meta & Google Ads integrados",
+          "benefits": "Dashboard unificado Meta Ads e Google Ads, Otimização automática de ROAS com IA, Alertas de desperdício em tempo real, Orquestração de campanhas omnichannel"
+        },
+        "crm": {
+          "title": "CRM & Pipeline",
+          "subtitle": "Do clique ao fechamento",
+          "benefits": "Pipeline visual Kanban de leads, Scoring automático de qualificação, Integração com WhatsApp Business, Automação de follow-ups"
+        },
+        "reports": {
+          "title": "Relatórios Client-Facing",
+          "subtitle": "Prova de valor automatizada",
+          "benefits": "Relatórios white-label com sua marca, Agendamento automático de envio, Dashboards interativos para clientes, Export em PDF e PowerPoint"
+        }
+      },
+      
+      "pricing": {
+        "title": "Planos para Agências",
+        "subtitle": "Escolha o plano ideal para o tamanho da sua operação",
+        "cta_scroll": "Ver Planos",
+        "freelancer": {
+          "name": "Freelancer/Eugência",
+          "description": "Para profissionais individuais",
+          "price": "R$ 197",
+          "period": "/mês",
+          "features": [
+            "Até 5 contas de anúncios",
+            "CRM básico (100 leads)",
+            "Relatórios mensais",
+            "Suporte por email"
+          ],
+          "cta": "Começar Agora"
+        },
+        "growth": {
+          "name": "Agência Growth",
+          "description": "Para agências em crescimento",
+          "price": "R$ 497",
+          "period": "/mês",
+          "badge": "MAIS POPULAR",
+          "features": [
+            "Até 20 contas de anúncios",
+            "CRM avançado (ilimitado)",
+            "Relatórios white-label",
+            "Automação de campanhas",
+            "Suporte prioritário"
+          ],
+          "cta": "Testar 14 Dias Grátis"
+        },
+        "enterprise": {
+          "name": "Enterprise/Assessoria",
+          "description": "Para grandes operações",
+          "price": "R$ 1.497",
+          "period": "/mês",
+          "features": [
+            "Contas de anúncios ilimitadas",
+            "CRM Enterprise + API",
+            "Relatórios customizados",
+            "IA de otimização avançada",
+            "Gerente de conta dedicado",
+            "Onboarding personalizado"
+          ],
+          "cta": "Falar com Vendas"
+        }
+      },
+      
+      "pain_spreadsheet": "Chega de planilhas",
+      "pain_roas": "Aumente seu ROAS",
+      "pain_value": "Prove seu valor para o cliente",
+      "pain_dashboard": "Tudo em um dashboard",
+      "roi_proven": "ROI Comprovado",
+      "interactive_demo": "Demonstração Interativa",
+      "plans_prices": "Planos & Preços",
+      "free_tool": "Ferramenta Gratuita",
+      "ready_to_scale": "Pronto para escalar sua agência?",
+      "join_agencies": "Junte-se a centenas de agências que já transformaram sua gestão e aumentaram seu ROAS",
+      "start_free_trial": "Começar Teste Grátis",
+      "talk_sales": "Falar com Vendas",
+      "marketing_specialists": "Profissionais especializados em marketing",
+      "demo_name": "Agência de Marketing Digital",
+      "analyze_roi": "Analisar ROI",
+      "per_month": "Per month in unoptimized campaigns",
+      "estimated_roas": "Estimated ROAS improvement",
+      "campaign_performance": "Campaign Performance Overview",
+      "real_time": "Real-time",
+      "waste_alert": "Waste Alert",
+      "campaign_summer": "Campaign \"Summer Sale\" CTR below 1%",
+      "dashboard_demo_title": "Dashboard Enterprise em Ação",
+      "dashboard_demo_subtitle": "Explore os módulos do sistema e veja como sua agência pode escalar com dados",
+      
+      "modals": {
+        "signup": {
+          "title": "Crie sua conta na plataforma",
+          "subtitle": "Comece seu trial gratuito de 14 dias",
+          "email": "Email",
+          "emailPlaceholder": "seu@email.com",
+          "password": "Senha",
+          "passwordPlaceholder": "Mínimo 8 caracteres",
+          "submit": "Iniciar Teste Gratuito",
+          "submitting": "Criando conta...",
+          "success": "Conta criada com sucesso!",
+          "successMessage": "Enviamos um email de confirmação para você."
+        },
+        "contact": {
+          "title": "Falar com Especialista",
+          "subtitle": "Nossa equipe entrará em contato em até 24 horas",
+          "name": "Nome",
+          "namePlaceholder": "Seu nome completo",
+          "company": "Empresa",
+          "companyPlaceholder": "Nome da sua agência",
+          "budget": "Verba Mensal em Ads",
+          "budgetPlaceholder": "Selecione uma faixa",
+          "budgetOptions": {
+            "option1": "Até R$ 10.000",
+            "option2": "R$ 10.000 - R$ 50.000",
+            "option3": "R$ 50.000 - R$ 100.000",
+            "option4": "Acima de R$ 100.000"
+          },
+          "submit": "Solicitar Contato",
+          "submitting": "Enviando...",
+          "success": "Solicitação enviada!",
+          "successMessage": "Um especialista entrará em contato em breve."
+        },
+        "close": "Fechar"
+      }
     },
     "clinica": {
       "title": "Plataforma de Saúde Digital Enterprise",
@@ -354,8 +521,198 @@
       }
     },
     "escritorio": {
-      "title": "Sistema Jurídico Premium",
-      "description": "Sistema jurídico completo com gestão de processos e consultorias."
+      "title": "SaaS Jurídico Premium Enterprise",
+      "description": "Sistema completo para gestão de escritórios de advocacia: processos, contratos, consultoria e compliance em uma plataforma segura.",
+      "hero_desc": "Nunca mais perca um prazo. Segurança jurídica de ponta a ponta com criptografia de grau militar. Automatize a burocracia e foque no que realmente importa: seu cliente.",
+      "badge": "LegalTech Enterprise Premium",
+      "cta_primary": "Agendar Consultoria",
+      "cta_secondary": "Ver Especialidades",
+      "cta_demo": "Ver Demonstração",
+      
+      "badges_title": "Credenciais que Garantem Sua Segurança",
+      "badges_subtitle": "Certificações e conformidades que asseguram a integridade dos seus dados",
+      
+      "areas_title": "Áreas de Atuação",
+      "areas_subtitle": "Atuação especializada em diversas áreas do direito",
+      
+      "practices": {
+        "business": "Direito Empresarial",
+        "business_desc": "Contratos, M&A, societário",
+        "labor": "Direito Trabalhista",
+        "labor_desc": "Reclamações, defesas, acordos",
+        "civil": "Direito Civil",
+        "civil_desc": "Família, sucessões, imobiliário",
+        "tax": "Direito Tributário",
+        "tax_desc": "Planejamento fiscal, defesas",
+        "real_estate": "Direito Imobiliário",
+        "real_estate_desc": "Incorporação, regularização",
+        "consumer": "Direito do Consumidor",
+        "consumer_desc": "Reclamações, indenizações"
+      },
+      
+      "booking_title": "Consultoria Jurídica Online",
+      "booking_desc": "Agende sua consultoria com segurança e praticidade",
+      
+      "consulting_booked_successfully": "Consultoria Pré-agendada!",
+      "consulting_whatsapp_confirmation": "Você receberá a confirmação por WhatsApp em breve.",
+      "main_unit_address": "Unidade Principal - Av. Paulista, 1000",
+      "book_new_consulting": "Nova Consultoria",
+      
+      "area": "Área",
+      "case": "Caso",
+      "date": "Data",
+      "time": "Horário",
+      "select_area": "Selecione a área de atuação",
+      "select_case_for": "Selecione o tipo de caso para {area}",
+      "select_date_for": "Selecione a data para {area}",
+      "times_for": "Horários disponíveis para {date}",
+      "back": "Voltar",
+      
+      "tabs": {
+        "processes": {
+          "title": "Gestão de Processos",
+          "subtitle": "Legal Tracker com prazos automáticos",
+          "benefits": "Integração com tribunais eletrônicos, Alertas de prazos críticos, Dashboard Kanban visual, Audiências e compromissos sincronizados"
+        },
+        "contracts": {
+          "title": "Contratos & Assinatura",
+          "subtitle": "Validade jurídica garantida",
+          "benefits": "Templates jurídicos personalizáveis, Assinatura digital com ICP-Brasil, Versionamento automático, Análise de cláusulas com IA"
+        },
+        "consulting": {
+          "title": "Consultoria & Agenda",
+          "subtitle": "Atendimento seguro e organizado",
+          "benefits": "Agendamento online 24/7, Sala virtual criptografada, Histórico de consultas integrado, Lembretes automáticos"
+        },
+        "compliance": {
+          "title": "Compliance LGPD",
+          "subtitle": "Segurança e conformidade total",
+          "benefits": "Criptografia ponta a ponta, Controle de acesso granular, Logs de auditoria completos, Conformidade total com LGPD"
+        }
+      },
+      
+      "trust": {
+        "title": "Segurança Jurídica Garantida",
+        "subtitle": "Proteção de dados em nível militar para sua prática advocatícia",
+        "encryption": "Criptografia Militar",
+        "encryption_desc": "AES-256 em todos os dados",
+        "backup": "Backup Redundante",
+        "backup_desc": "3 cópias em geo-localizações distintas",
+        "lgpd": "100% LGPD",
+        "lgpd_desc": "Conformidade total com a legislação",
+        "oab": "Selo OAB Digital",
+        "oab_desc": "Certificação de segurança jurídica"
+      },
+      
+      "models": {
+        "badge": "Como Podemos Ajudar",
+        "title": "Nossos Modelos de Atuação",
+        "subtitle": "Escolha a forma de atuação que melhor se adequa às suas necessidades jurídicas",
+        "card1": {
+          "title": "Consultoria e Pareceres",
+          "subtitle": "Análise técnica pontual",
+          "features": [
+            "Análise de contratos",
+            "Pareceres jurídicos preventivos",
+            "Mediação de conflitos",
+            "Planejamento sucessório"
+          ],
+          "cta": "Agendar Consultoria"
+        },
+        "card2": {
+          "title": "Contencioso Estratégico",
+          "subtitle": "Representação em litígios complexos",
+          "badge": "MAIS BUSCADO",
+          "features": [
+            "Defesa em instâncias superiores",
+            "Ações civis e trabalhistas",
+            "Auditoria de passivos",
+            "Sustentação oral"
+          ],
+          "cta": "Falar com Especialista"
+        },
+        "card3": {
+          "title": "Assessoria de Partido (Empresarial)",
+          "subtitle": "Segurança jurídica mensal para sua empresa",
+          "features": [
+            "Blindagem patrimonial",
+            "Compliance e LGPD",
+            "Gestão de contratos corporativos",
+            "Plantão jurídico exclusivo"
+          ],
+          "cta": "Solicitar Proposta"
+        }
+      },
+      
+      "pain_deadline": "Nunca mais perca um prazo",
+      "pain_security": "Segurança jurídica de ponta a ponta",
+      "pain_automation": "Automatize a burocracia",
+      "pain_focus": "Foque no cliente",
+      
+      "demo_name": "Escritório de Advocacia Premium",
+      
+      "roi_proven": "ROI Comprovado",
+      "interactive_demo": "Demonstração Interativa",
+      "plans_prices": "Planos & Preços",
+      
+      "ready_to_scale": "Pronto para transformar sua prática jurídica?",
+      "join_firms": "Junte-se a centenas de escritórios que já eliminaram a burocracia e aumentaram sua produtividade em 300%",
+      "start_free_trial": "Começar Teste Grátis",
+      "talk_sales": "Falar com Especialista",
+      
+      "modals": {
+        "triage": {
+          "title": "Triagem de Caso Sigilosa",
+          "subtitle": "Preencha o formulário para análise inicial do seu caso",
+          "name": "Nome Completo",
+          "namePlaceholder": "Seu nome completo",
+          "company": "Empresa",
+          "companyPlaceholder": "Nome da empresa (se aplicável)",
+          "optional": "opcional",
+          "area": "Área do Direito",
+          "areaPlaceholder": "Selecione a área de atuação",
+          "areas": {
+            "business": "Direito Empresarial",
+            "labor": "Direito Trabalhista",
+            "civil": "Direito Civil",
+            "tax": "Direito Tributário",
+            "real_estate": "Direito Imobiliário",
+            "consumer": "Direito do Consumidor"
+          },
+          "summary": "Resumo do Caso",
+          "summaryPlaceholder": "Descreva brevemente seu caso para triagem inicial...",
+          "submit": "Solicitar Análise",
+          "submitting": "Enviando...",
+          "success": "Solicitação Enviada!",
+          "successMessage": "Nossa equipe entrará em contato em até 24 horas para agendar sua consultoria.",
+          "compliance": "Seus dados estão protegidos por sigilo profissional e LGPD."
+        }
+      },
+      "booking": {
+        "step1_title": "Escolha a Especialidade",
+        "step1_subtitle": "Selecione a área do direito para sua consultoria",
+        "step2_title": "Selecione o Horário",
+        "step2_subtitle": "Escolha a data e horário disponível",
+        "step3_title": "Confirme o Agendamento",
+        "step3_subtitle": "Revise os detalhes e confirme sua consultoria",
+        "specialty_tax": "Consultoria Tributária",
+        "specialty_labor": "Preventivo Trabalhista",
+        "specialty_contracts": "Revisão de Contratos",
+        "specialty_civil": "Direito Civil",
+        "specialty_corporate": "Consultoria Societária",
+        "specialty_compliance": "Compliance & LGPD",
+        "next_available": "Próximo Dia Útil",
+        "date_format": "{day}/{month}",
+        "time_morning": "10:00",
+        "time_afternoon": "14:30",
+        "time_late": "16:00",
+        "confirm_button": "Confirmar Agendamento",
+        "back_button": "Voltar",
+        "success_title": "Agendamento Confirmado",
+        "success_message": "Um link seguro para a videoconferência foi enviado para o seu e-mail.",
+        "success_detail": "Sua consultoria está agendada. Nossa equipe entrará em contato para confirmar os detalhes.",
+        "new_booking": "Novo Agendamento"
+      }
     },
     "lancamento": {
       "title": "Plataforma de Lançamento",
