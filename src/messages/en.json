@@ -172,7 +172,53 @@
           "Customizable security policies by department"
         ]
       }
-    }
+    },
+    "financial_hub": "Financial Hub",
+    "bank_reconciliation": "Bank Reconciliation",
+    "invoice_generation": "Invoice Generation",
+    "nfe": "NFe",
+    "nfse": "NFSe",
+    "cash_flow": "Cash Flow",
+    "processed": "Processed",
+    "inflows": "Inflows",
+    "outflows": "Outflows",
+    "balance": "Balance",
+    "stock_alerts": "Stock Alerts",
+    "inventory_management": "Inventory Management",
+    "inventory_turnover": "Inventory Turnover",
+    "industry_average": "Industry Average",
+    "above_average": "above average",
+    "categories": "Categories",
+    "electronics": "Electronics",
+    "peripherals": "Peripherals",
+    "units": "units",
+    "critical": "critical",
+    "crm_sales": "CRM & Sales",
+    "sales_funnel": "Sales Funnel",
+    "leads": "Leads",
+    "opportunities": "Opportunities",
+    "closed": "Closed",
+    "contact_history": "Contact History",
+    "total_contacts": "Total Contacts",
+    "active": "Active",
+    "last_activity": "Last Activity",
+    "minutes_ago": "min ago",
+    "conversion_rate": "Conversion Rate",
+    "target": "Target",
+    "access_control": "Access Control",
+    "user_permissions": "User Permissions",
+    "admin": "Admin",
+    "managers": "Managers",
+    "operators": "Operators",
+    "security_audit": "Security Audit",
+    "logs_today": "Logs Today",
+    "alerts": "Alerts",
+    "status": "Status",
+    "secure": "Secure",
+    "data_control": "Data Control",
+    "2fa_active": "2FA Active",
+    "session_timeout": "Session Timeout",
+    "ip_whitelist": "IP Whitelist"
   },
   "Demos": {
     "gestao": {
@@ -182,6 +228,7 @@
       "cta_primary": "Start Free Trial",
       "cta_secondary": "View Demo",
       "badge": "Executive Dashboard",
+      "demo_name": "Integrated Management Portal",
       "stats": {
         "revenue": "Revenue",
         "orders": "Orders",
@@ -355,8 +402,69 @@
         }
       },
       
-      "pain_spreadsheet": "No more spreadsheets",
+      "stock_report": {
+        "title": "Stock Report",
+        "date": "Date",
+        "filter": "Filter Applied",
+        "product": "Product",
+        "sku": "SKU",
+        "stock": "Stock",
+        "minimum": "Minimum",
+        "status": "Status",
+        "generated_in": "Generated in",
+        "system_name": "Integrated Management System"
+      },
+      "smart_modules": {
+        "financial_hub": "Financial Hub",
+        "bank_reconciliation": "Bank Reconciliation",
+        "processed": "Processed",
+        "invoice_generation": "Invoice Generation",
+        "nfe": "NFe",
+        "nfse": "NFSe",
+        "cash_flow": "Cash Flow",
+        "inflows": "Inflows",
+        "outflows": "Outflows",
+        "balance": "Balance",
+        "inventory_management": "Inventory Management",
+        "stock_alerts": "Stock Alerts",
+        "units": "units",
+        "critical": "critical",
+        "inventory_turnover": "Inventory Turnover",
+        "industry_average": "Industry Average",
+        "above_average": "above average",
+        "categories": "Categories",
+        "electronics": "Electronics",
+        "peripherals": "Peripherals",
+        "crm_sales": "CRM & Sales",
+        "sales_funnel": "Sales Funnel",
+        "leads": "Leads",
+        "opportunities": "Opportunities",
+        "closed": "Closed",
+        "contact_history": "Contact History",
+        "total_contacts": "Total Contacts",
+        "active": "Active",
+        "last_activity": "Last Activity",
+        "minutes_ago": "min ago",
+        "conversion_rate": "Conversion Rate",
+        "target": "Target",
+        "access_control": "Access Control",
+        "user_permissions": "User Permissions",
+        "admin": "Admin",
+        "managers": "Managers",
+        "operators": "Operators",
+        "security_audit": "Security Audit",
+        "logs_today": "Logs Today",
+        "alerts": "Alerts",
+        "status": "Status",
+        "secure": "Secure",
+        "data_control": "Data Control",
+        "2fa_active": "2FA Active",
+        "session_timeout": "Session Timeout",
+        "ip_whitelist": "IP Whitelist"
+      },
+      "demo_name": "Integrated Management Portal",
       "pain_roas": "Increase your ROAS",
+      "pain_spreadsheet": "No more spreadsheets",
       "pain_value": "Prove your value to clients",
       "pain_dashboard": "Everything in one dashboard",
       "roi_proven": "Proven ROI",
@@ -413,6 +521,49 @@
           "successMessage": "A specialist will contact you soon."
         },
         "close": "Close"
+      },
+      "success_cases": {
+        "client1": "Vida Ativa Clinic",
+        "industry1": "Healthcare",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Conversion Increase",
+        "period1": "6 months",
+        "image1": "saude",
+        "testimonial1": "Our appointments increased 300% and the ROI was impressive. Exceptional team!",
+        "author1": "Dr. Ana Paula",
+        "role1": "Clinical Director",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Online Retail",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Sales Growth",
+        "period2": "4 months",
+        "image2": "ecommerce",
+        "testimonial2": "We went from 50 to 140 sales/day. The best investment we've made!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Law Firm",
+        "industry3": "Legal",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Conversion Rate",
+        "period3": "3 months",
+        "image3": "juridico",
+        "testimonial3": "Our new cases increased 200%. Impeccable marketing strategy.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Partner",
+        "color3": "violet"
+      },
+      "audit_tool": {
+        "placeholder": "https://client.com/ads-account",
+        "analyze_roi": "Analyze ROI",
+        "analyzing": "Analyzing"
       }
     },
     "clinica": {
@@ -715,8 +866,294 @@
       }
     },
     "lancamento": {
-      "title": "Launch Platform",
-      "description": "Complete platform for launches with checkout and sales funnel."
+      "title": "Exclusive Launch - Conversion Platform",
+      "hero_desc": "Transform your sales with our complete launch platform. Integrated checkout, sales funnel, and real-time analytics.",
+      "badge": "LIMITED OFFER",
+      "hero_title": "Your Launch Platform Ready in 24 Hours",
+      "hero_subtitle": "The definitive solution for high-conversion digital launches. Optimized checkout, automated funnel, and real-time analytics.",
+      "cta_primary": "Secure My Spot Now",
+      "cta_secondary": "Watch Demo",
+      
+      "urgency_bar": {
+        "filled": "92% of spots filled",
+        "remaining": "Only 12 units remaining",
+        "ends_in": "Offer ends in:"
+      },
+      "countdown_title": "Limited Time! The batch will expire in:",
+      "feature_1": "Instant Access",
+      "feature_1_desc": "Instant access to complete platform after payment",
+      "feature_2": "VIP Support",
+      "feature_2_desc": "Exclusive chat, phone and email priority support",
+      "feature_3": "Free Updates",
+      "feature_3_desc": "All new features and functionality updates included",
+      "faq_title": "Frequently Asked Questions",
+      "faq_subtitle": "Get your questions answered about our launch platform",
+      "discount_50": "Save 50% today",
+      "select_plan": "Choose this plan",
+      "most_popular": "Most Popular",
+      "demo_interactive_title": "Interactive Demo",
+      "demo_interactive_subtitle": "Explore all resources in action with guided demonstration",
+      "demo_interactive_cta": "View Interactive Demo",
+      
+      "urgency": "LAST SPOTS!",
+      
+      "pricing_lots": {
+        "title": "Special Offer - Limited Batches",
+        "subtitle": "Prices increase with each batch. Secure the best price now!",
+        "lot1": {
+          "name": "Batch 1 - Early Bird",
+          "status": "SOLD OUT",
+          "status_desc": "All spots have been filled",
+          "original_price": "$997",
+          "price": "$497",
+          "discount": "50% OFF",
+          "features": ["Lifetime Access", "Integrated Checkout", "Sales Funnel", "Real-time Analytics", "Priority Support", "Free Updates"],
+          "button": "Sold Out"
+        },
+        "lot2": {
+          "name": "Batch 2 - Current Offer",
+          "status": "AVAILABLE",
+          "status_desc": "Ends in a few hours",
+          "original_price": "$997",
+          "price": "$697",
+          "discount": "30% OFF",
+          "features": ["Lifetime Access", "Integrated Checkout", "Sales Funnel", "Real-time Analytics", "Priority Support", "Free Updates"],
+          "button": "Buy Now",
+          "tooltip": "🔥 Over 200 people bought in the last 2 hours"
+        },
+        "lot3": {
+          "name": "Batch 3 - Final Price",
+          "status": "COMING SOON",
+          "status_desc": "Higher price coming soon",
+          "original_price": "$997",
+          "price": "$897",
+          "discount": "10% OFF",
+          "features": ["Lifetime Access", "Integrated Checkout", "Sales Funnel", "Real-time Analytics", "Priority Support", "Free Updates"],
+          "button": "Set Alert",
+          "tooltip": "🔒 Will be unlocked when Batch 2 sells out"
+        }
+      },
+      
+      "proof": {
+        "title": "Real-time Social Proof",
+        "subtitle": "See who's buying right now",
+        "recent_purchase": "{name} from {city} just bought the {plan} plan"
+      },
+      
+      "checkout_modal": {
+        "title": "Complete Purchase",
+        "subtitle": "Complete your order and secure immediate access",
+        "order_summary": "Order Summary",
+        "product": "Product",
+        "plan": "Plan",
+        "price": "Price",
+        "original_price": "Original Price",
+        "total": "Total",
+        "discount_applied": "Discount Applied",
+        "payment_method": "Payment Method",
+        "credit_card": "Credit Card",
+        "pix": "PIX",
+        "card_number": "Card Number",
+        "card_name": "Name on Card",
+        "expiry": "Expiry",
+        "cvv": "CVV",
+        "email": "Email",
+        "complete_purchase": "Complete Purchase Now",
+        "secure_payment": "Secure Purchase · SSL Encrypted",
+        "processing": "Processing...",
+        "success": {
+          "title": "Purchase Approved! 🎉",
+          "message": "Your access has been granted! Check your email for details.",
+          "access_code": "Access Code",
+          "next_steps": "Next Steps",
+          "go_to_dashboard": "Go to Dashboard"
+        }
+      },
+      
+      "features": {
+        "title": "Everything you need for successful launches",
+        "feature1": {
+          "title": "Optimized Checkout",
+          "desc": "Up to 300% higher conversion rate with our optimized checkout tested in thousands of launches."
+        },
+        "feature2": {
+          "title": "Automated Sales Funnel",
+          "desc": "Capture leads, nurture automatically, and convert sales while you sleep."
+        },
+        "feature3": {
+          "title": "Real-time Analytics",
+          "desc": "Monitor your sales, conversions, and important metrics in real-time."
+        },
+        "feature4": {
+          "title": "Unlimited Integrations",
+          "desc": "Connect with major tools: Email Marketing, CRM, Payments, and more."
+        }
+      },
+      
+      "testimonials": {
+        "title": "Proven Results",
+        "subtitle": "See what our clients are achieving",
+        "testimonial1": {
+          "name": "John Smith",
+          "role": "Info Product Creator",
+          "content": "My conversions increased 300% after using this platform. Incredible!",
+          "result": "+300% conversions"
+        },
+        "testimonial2": {
+          "name": "Mary Johnson",
+          "role": "Digital Entrepreneur",
+          "content": "Best investment I made for my launches. Worth every penny.",
+          "result": "$50k in 30 days"
+        },
+        "testimonial3": {
+          "name": "Peter Davis",
+          "role": "Coach",
+          "content": "Simply perfect. I save hours of manual work with every launch.",
+          "result": "10h/week saved"
+        }
+      },
+      
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": {
+          "question": "How does it work after purchase?",
+          "answer": "You get immediate access to the platform with all tutorials and dedicated support to set up your first launch."
+        },
+        "q2": {
+          "question": "Can I use it for multiple launches?",
+          "answer": "Yes! With lifetime access you can create unlimited launches and sales funnels."
+        },
+        "q3": {
+          "question": "What support is offered?",
+          "answer": "We offer priority support via chat, email, and video calls to ensure your success."
+        }
+      },
+      
+      "guarantee": {
+        "title": "30-Day Ironclad Guarantee",
+        "subtitle": "Try for 30 days. If you don't love it, we'll refund 100% of your money. No questions asked.",
+        "badge": "RISK FREE"
+      },
+      
+      "final_cta": {
+        "title": "Last Chance - Limited Offer",
+        "subtitle": "Don't miss this opportunity. Price returns to normal when the timer hits zero.",
+        "button": "Secure My Spot Now",
+        "urgency": "⚠️ Only 12 spots remaining in this offer"
+      },
+      "checkout_title": "Complete Your Purchase",
+      "checkout_email": "Your best email",
+      "checkout_name": "Full name",
+      "checkout_cpf": "Tax ID",
+      "checkout_phone": "Phone",
+      "checkout_finish": "Complete Purchase",
+      "checkout_cancel": "Cancel",
+      "checkout_secure": "100% Secure Purchase",
+      "checkout_modal": {
+        "order_summary": "Order Summary",
+        "product": "Product",
+        "plan": "Plan",
+        "original_price": "Original Price",
+        "discount_applied": "Discount Applied",
+        "total": "Total",
+        "secure_payment": "100% Secure Payment",
+        "payment_method": "Payment Method",
+        "credit_card": "Credit Card",
+        "pix": "PIX",
+        "email": "Email",
+        "card_number": "Card Number",
+        "card_name": "Card Name",
+        "expiry": "Expiry",
+        "processing": "Processing...",
+        "complete_purchase": "Complete Purchase",
+        "success": {
+          "title": "Payment Approved!",
+          "message": "Your purchase has been processed successfully.",
+          "access_code": "Access Code",
+          "go_to_dashboard": "Go to Dashboard"
+        }
+      },
+      "success_cases": {
+        "client1": "Vida Ativa Clinic",
+        "industry1": "Healthcare",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Conversion Increase",
+        "period1": "6 months",
+        "image1": "saude",
+        "testimonial1": "Our appointments increased 300% and the ROI was impressive. Exceptional team!",
+        "author1": "Dr. Ana Paula",
+        "role1": "Clinical Director",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Online Retail",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Sales Growth",
+        "period2": "4 months",
+        "image2": "ecommerce",
+        "testimonial2": "We went from 50 to 140 sales/day. The best investment we've made!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Law Firm",
+        "industry3": "Legal",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Conversion Rate",
+        "period3": "3 months",
+        "image3": "juridico",
+        "testimonial3": "Our new cases increased 200%. Impeccable marketing strategy.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Partner",
+        "color3": "violet"
+      },
+      "audit_tool": {
+        "placeholder": "https://client.com/ads-account",
+        "analyze_roi": "Analyze ROI",
+        "analyzing": "Analyzing"
+      },
+      "success_cases": {
+        "client1": "Vida Ativa Clinic",
+        "industry1": "Healthcare",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Conversion Increase",
+        "period1": "6 months",
+        "image1": "saude",
+        "testimonial1": "Our appointments increased 300% and the ROI was impressive. Exceptional team!",
+        "author1": "Dr. Ana Paula",
+        "role1": "Clinical Director",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Online Retail",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Sales Growth",
+        "period2": "4 months",
+        "image2": "ecommerce",
+        "testimonial2": "We went from 50 to 140 sales/day. The best investment we've made!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Law Firm",
+        "industry3": "Legal",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Conversion Rate",
+        "period3": "3 months",
+        "image3": "juridico",
+        "testimonial3": "Our new cases increased 200%. Impeccable marketing strategy.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Partner",
+        "color3": "violet"
+      }
     }
   },
   "Checkout": {
@@ -890,7 +1327,8 @@
       "linkedin": "LinkedIn",
       "github": "GitHub", 
       "instagram": "Instagram"
-    }
+    },
+    "copyright": "© 2024 Felipe Gabriel. All rights reserved."
   },
   "footer": "© 2024 Felipe Gabriel. All rights reserved."
 }

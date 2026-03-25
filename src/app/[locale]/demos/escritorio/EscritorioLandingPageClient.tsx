@@ -12,6 +12,7 @@ import {
   Download, Share2, LayoutDashboard, Layers
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import RatingModal from "@/components/RatingModal";
 import LegalTriageModal from "@/components/office/LegalTriageModal";
 

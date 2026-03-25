@@ -403,7 +403,7 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
 </style>
 </head>
 <body>
-<h1>📦 Relatório de Estoque</h1>
+<h1>{t("stock_report.title")}</h1>
 <div class="info">
   <strong>Data:</strong> ${date}<br>
   <strong>Filtro aplicado:</strong> ${filterLabel}<br>
@@ -411,11 +411,11 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
 </div>
 <table>
   <tr>
-    <th>Produto</th>
-    <th>SKU</th>
-    <th>Estoque</th>
-    <th>Mínimo</th>
-    <th>Status</th>
+    <th>{t("stock_report.product")}</th>
+    <th>{t("stock_report.sku")}</th>
+    <th>{t("stock_report.stock")}</th>
+    <th>{t("stock_report.minimum")}</th>
+    <th>{t("stock_report.status")}</th>
   </tr>
   ${filteredItems.map(item => {
     const statusClass = item.status === 'ok' ? 'status-ok' : item.status === 'low' ? 'status-low' : 'status-critical';
@@ -430,7 +430,7 @@ td { padding: 10px; border-bottom: 1px solid #ddd; }
   }).join('')}
 </table>
 <div class="footer">
-  Gerado em ${date} - Sistema de Gestão Integrada
+  <t("generated_in") ${date} - <t("system_name")</t>
 </div>
 </body>
 </html>`;
@@ -576,7 +576,7 @@ export default function GestaoLandingPageClient() {
       <RatingModal
         isOpen={isRatingOpen}
         onClose={() => setIsRatingOpen(false)}
-        demoName="Portal de Gestão Integrada"
+        demoName={t("demo_name")}
       />
       <FilterModal 
         isOpen={isFilterOpen} 

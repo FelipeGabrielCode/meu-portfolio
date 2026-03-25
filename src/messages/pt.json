@@ -172,7 +172,53 @@
           "Políticas de segurança personalizáveis por departamento"
         ]
       }
-    }
+    },
+    "financial_hub": "Hub Financeiro",
+    "bank_reconciliation": "Conciliação Bancária",
+    "invoice_generation": "Emissão de Notas",
+    "nfe": "NFe",
+    "nfse": "NFSe",
+    "cash_flow": "Fluxo de Caixa",
+    "processed": "Processados",
+    "inflows": "Entradas",
+    "outflows": "Saídas",
+    "balance": "Saldo",
+    "stock_alerts": "Alertas de Ruptura",
+    "inventory_management": "Gestão de Estoque",
+    "inventory_turnover": "Giro de Estoque",
+    "industry_average": "Média do setor",
+    "above_average": "acima da média",
+    "categories": "Categorias",
+    "electronics": "Eletrônicos",
+    "peripherals": "Periféricos",
+    "units": "unidades",
+    "critical": "críticos",
+    "crm_sales": "CRM & Vendas",
+    "sales_funnel": "Funil de Vendas",
+    "leads": "Leads",
+    "opportunities": "Oportunidades",
+    "closed": "Fechados",
+    "contact_history": "Histórico Contatos",
+    "total_contacts": "Total Contatos",
+    "active": "Ativos",
+    "last_activity": "Última Atividade",
+    "minutes_ago": "min atrás",
+    "conversion_rate": "Taxa Conversão",
+    "target": "Meta",
+    "access_control": "Controle Acesso",
+    "user_permissions": "Permissões Usuários",
+    "admin": "Admin",
+    "managers": "Gerentes",
+    "operators": "Operadores",
+    "security_audit": "Auditoria Segurança",
+    "logs_today": "Logs Hoje",
+    "alerts": "Alertas",
+    "status": "Status",
+    "secure": "Seguro",
+    "data_control": "Controle Dados",
+    "2fa_active": "2FA Ativo",
+    "session_timeout": "Session Timeout",
+    "ip_whitelist": "IP Whitelist"
   },
   "Demos": {
     "gestao": {
@@ -182,6 +228,7 @@
       "cta_primary": "Teste Grátis",
       "cta_secondary": "Ver Demonstração",
       "badge": "Dashboard Executivo",
+      "demo_name": "Portal de Gestão Integrada",
       "stats": {
         "revenue": "Receita",
         "orders": "Pedidos",
@@ -355,8 +402,69 @@
         }
       },
       
-      "pain_spreadsheet": "Chega de planilhas",
+      "stock_report": {
+        "title": "Relatório de Estoque",
+        "date": "Data",
+        "filter": "Filtro aplicado",
+        "product": "Produto",
+        "sku": "SKU",
+        "stock": "Estoque",
+        "minimum": "Mínimo",
+        "status": "Status",
+        "generated_in": "Gerado em",
+        "system_name": "Sistema de Gestão Integrada"
+      },
+      "smart_modules": {
+        "financial_hub": "Hub Financeiro",
+        "bank_reconciliation": "Conciliação Bancária",
+        "processed": "Processados",
+        "invoice_generation": "Emissão de Notas",
+        "nfe": "NFe",
+        "nfse": "NFSe",
+        "cash_flow": "Fluxo de Caixa",
+        "inflows": "Entradas",
+        "outflows": "Saídas",
+        "balance": "Saldo",
+        "inventory_management": "Gestão de Estoque",
+        "stock_alerts": "Alertas de Ruptura",
+        "units": "unidades",
+        "critical": "críticos",
+        "inventory_turnover": "Giro de Estoque",
+        "industry_average": "Média do setor",
+        "above_average": "acima da média",
+        "categories": "Categorias",
+        "electronics": "Eletrônicos",
+        "peripherals": "Periféricos",
+        "crm_sales": "CRM & Vendas",
+        "sales_funnel": "Funil de Vendas",
+        "leads": "Leads",
+        "opportunities": "Oportunidades",
+        "closed": "Fechados",
+        "contact_history": "Histórico Contatos",
+        "total_contacts": "Total Contatos",
+        "active": "Ativos",
+        "last_activity": "Última Atividade",
+        "minutes_ago": "min atrás",
+        "conversion_rate": "Taxa Conversão",
+        "target": "Meta",
+        "access_control": "Controle Acesso",
+        "user_permissions": "Permissões Usuários",
+        "admin": "Admin",
+        "managers": "Gerentes",
+        "operators": "Operadores",
+        "security_audit": "Auditoria Segurança",
+        "logs_today": "Logs Hoje",
+        "alerts": "Alertas",
+        "status": "Status",
+        "secure": "Seguro",
+        "data_control": "Controle Dados",
+        "2fa_active": "2FA Ativo",
+        "session_timeout": "Session Timeout",
+        "ip_whitelist": "IP Whitelist"
+      },
+      "demo_name": "Portal de Gestão Integrada",
       "pain_roas": "Aumente seu ROAS",
+      "pain_spreadsheet": "Chega de planilhas",
       "pain_value": "Prove seu valor para o cliente",
       "pain_dashboard": "Tudo em um dashboard",
       "roi_proven": "ROI Comprovado",
@@ -413,6 +521,49 @@
           "successMessage": "Um especialista entrará em contato em breve."
         },
         "close": "Fechar"
+      },
+      "success_cases": {
+        "client1": "Clínica Vida Ativa",
+        "industry1": "Saúde",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Aumento em Conversão",
+        "period1": "6 meses",
+        "image1": "saude",
+        "testimonial1": "Nossos agendamentos aumentaram 300% e o ROI foi impressionante. Equipe excepcional!",
+        "author1": "Dra. Ana Paula",
+        "role1": "Diretora Clínica",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Varejo Online",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Crescimento em Vendas",
+        "period2": "4 meses",
+        "image2": "ecommerce",
+        "testimonial2": "Passamos de 50 para 140 vendas/dia. O melhor investimento que fizemos!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Advogados",
+        "industry3": "Jurídico",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Taxa de Conversão",
+        "period3": "3 meses",
+        "image3": "juridico",
+        "testimonial3": "Nossos casos novos aumentaram 200%. Estratégia de marketing impecável.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Sócio",
+        "color3": "violet"
+      },
+      "audit_tool": {
+        "placeholder": "https://cliente.com.br/conta-ads",
+        "analyze_roi": "Analisar ROI",
+        "analyzing": "Analisando"
       }
     },
     "clinica": {
@@ -715,8 +866,294 @@
       }
     },
     "lancamento": {
-      "title": "Plataforma de Lançamento",
-      "description": "Plataforma completa para lançamentos com checkout e funil de vendas."
+      "title": "Lançamento Exclusivo - Plataforma de Conversão",
+      "hero_desc": "Transforme suas vendas com nossa plataforma completa de lançamentos. Checkout integrado, funil de vendas e analytics em tempo real.",
+      "badge": "OFERTA LIMITADA",
+      "hero_title": "Sua Plataforma de Lançamento Pronta em 24 Horas",
+      "hero_subtitle": "A solução definitiva para lançamentos digitais de alta conversão. Checkout otimizado, funil automatizado e analytics em tempo real.",
+      "cta_primary": "Garantir Minha Vaga Agora",
+      "cta_secondary": "Ver Demonstração",
+      
+      "urgency_bar": {
+        "filled": "92% das vagas preenchidas",
+        "remaining": "Últimas 12 unidades disponíveis",
+        "ends_in": "Oferta termina em:"
+      },
+      "countdown_title": "Aproveite! O lote vira em:",
+      "feature_1": "Acesso Imediato",
+      "feature_1_desc": "Acesso imediato à plataforma completa após pagamento",
+      "feature_2": "Suporte VIP",
+      "feature_2_desc": "Chat exclusivo, suporte por telefone e email prioritário",
+      "feature_3": "Atualizações Inclusas",
+      "feature_3_desc": "Todas as atualizações de recursos e funcionalidades gratuitas",
+      "faq_title": "Perguntas Frequentes",
+      "faq_subtitle": "Tire suas dúvidas sobre nossa plataforma de lançamentos",
+      "discount_50": "Economize 50% hoje",
+      "select_plan": "Escolher este plano",
+      "most_popular": "Mais Popular",
+      "demo_interactive_title": "Demo Interativa",
+      "demo_interactive_subtitle": "Explore todos os recursos em ação com demonstração guiada",
+      "demo_interactive_cta": "Ver Demo Interativa",
+      
+      "urgency": "ÚLTIMAS VAGAS!",
+      
+      "pricing_lots": {
+        "title": "Oferta Especial - Lotes Limitados",
+        "subtitle": "Preços aumentam a cada lote. Garanta o melhor preço agora!",
+        "lot1": {
+          "name": "Lote 1 - Early Bird",
+          "status": "ESGOTADO",
+          "status_desc": "Todas as vagas foram preenchidas",
+          "original_price": "R$ 997",
+          "price": "R$ 497",
+          "discount": "50% OFF",
+          "features": ["Acesso Vitalício", "Checkout Integrado", "Funil de Vendas", "Analytics em Tempo Real", "Suporte Prioritário", "Atualizações Gratuitas"],
+          "button": "Esgotado"
+        },
+        "lot2": {
+          "name": "Lote 2 - Oferta Atual",
+          "status": "DISPONÍVEL",
+          "status_desc": "Acaba em poucas horas",
+          "original_price": "R$ 997",
+          "price": "R$ 697",
+          "discount": "30% OFF",
+          "features": ["Acesso Vitalício", "Checkout Integrado", "Funil de Vendas", "Analytics em Tempo Real", "Suporte Prioritário", "Atualizações Gratuitas"],
+          "button": "Comprar Agora",
+          "tooltip": "🔥 Mais de 200 pessoas compraram nas últimas 2 horas"
+        },
+        "lot3": {
+          "name": "Lote 3 - Preço Final",
+          "status": "BREVE",
+          "status_desc": "Preço maior em breve",
+          "original_price": "R$ 997",
+          "price": "R$ 897",
+          "discount": "10% OFF",
+          "features": ["Acesso Vitalício", "Checkout Integrado", "Funil de Vendas", "Analytics em Tempo Real", "Suporte Prioritário", "Atualizações Gratuitas"],
+          "button": "Liberar Aviso",
+          "tooltip": "🔒 Será desbloqueado quando o Lote 2 esgotar"
+        }
+      },
+      
+      "proof": {
+        "title": "Prova Social em Tempo Real",
+        "subtitle": "Veja quem está comprando agora mesmo",
+        "recent_purchase": "{name} de {city} acabou de comprar o plano {plan}"
+      },
+      
+      "checkout_modal": {
+        "title": "Finalizar Compra",
+        "subtitle": "Complete seu pedido e garanta seu acesso imediato",
+        "order_summary": "Resumo do Pedido",
+        "product": "Produto",
+        "plan": "Plano",
+        "price": "Preço",
+        "original_price": "Preço Original",
+        "total": "Total",
+        "discount_applied": "Desconto Aplicado",
+        "payment_method": "Método de Pagamento",
+        "credit_card": "Cartão de Crédito",
+        "pix": "PIX",
+        "card_number": "Número do Cartão",
+        "card_name": "Nome no Cartão",
+        "expiry": "Validade",
+        "cvv": "CVV",
+        "email": "E-mail",
+        "complete_purchase": "Finalizar Compra Agora",
+        "secure_payment": "Compra Segura · SSL Criptografado",
+        "processing": "Processando...",
+        "success": {
+          "title": "Compra Aprovada! 🎉",
+          "message": "Seu acesso foi liberado! Verifique seu e-mail com os detalhes.",
+          "access_code": "Código de Acesso",
+          "next_steps": "Próximos Passos",
+          "go_to_dashboard": "Ir para Dashboard"
+        }
+      },
+      
+      "features": {
+        "title": "Tudo que você precisa para lançar com sucesso",
+        "feature1": {
+          "title": "Checkout Otimizado",
+          "desc": "Taxa de conversão até 300% maior com nosso checkout otimizado e testado em milhares de lançamentos."
+        },
+        "feature2": {
+          "title": "Funil de Vendas Automatizado",
+          "desc": "Capture leads, nutra automaticamente e converta vendas enquanto você dorme."
+        },
+        "feature3": {
+          "title": "Analytics em Tempo Real",
+          "desc": "Monitore suas vendas, conversões e métricas importantes em tempo real."
+        },
+        "feature4": {
+          "title": "Integrações Ilimitadas",
+          "desc": "Conecte com as principais ferramentas: Email Marketing, CRM, Pagamentos e mais."
+        }
+      },
+      
+      "testimonials": {
+        "title": "Resultados Comprovados",
+        "subtitle": "Veja o que nossos clientes estão alcançando",
+        "testimonial1": {
+          "name": "João Silva",
+          "role": "Infoprodutor",
+          "content": "Minhas conversões aumentaram 300% depois de usar esta plataforma. Incrível!",
+          "result": "+300% em conversões"
+        },
+        "testimonial2": {
+          "name": "Maria Santos",
+          "role": "Empreendedora Digital",
+          "content": "O melhor investimento que fiz para meus lançamentos. Vale cada centavo.",
+          "result": "R$ 50k em 30 dias"
+        },
+        "testimonial3": {
+          "name": "Pedro Costa",
+          "role": "Coach",
+          "content": "Simplesmente perfeito. Economizo horas de trabalho manual a cada lançamento.",
+          "result": "10h/semanais economizadas"
+        }
+      },
+      
+      "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+          "question": "Como funciona após a compra?",
+          "answer": "Você recebe acesso imediato à plataforma com todos os tutoriais e suporte dedicado para configurar seu primeiro lançamento."
+        },
+        "q2": {
+          "question": "Posso usar em múltiplos lançamentos?",
+          "answer": "Sim! Com o acesso vitalício você pode criar ilimitados lançamentos e funis de vendas."
+        },
+        "q3": {
+          "question": "Qual o suporte oferecido?",
+          "answer": "Oferecemos suporte prioritário via chat, email e videochamadas para garantir seu sucesso."
+        }
+      },
+      
+      "guarantee": {
+        "title": "Garantia Blindada 30 Dias",
+        "subtitle": "Teste por 30 dias. Se não amar, devolvemos 100% do seu dinheiro. Sem perguntas.",
+        "badge": "SEM RISCOS"
+      },
+      
+      "final_cta": {
+        "title": "Última Chance - Oferta Limitada",
+        "subtitle": "Não perca esta oportunidade. O preço volta ao normal quando o cronômetro chegar a zero.",
+        "button": "Garantir Minha Vaga Agora",
+        "urgency": "⚠️ Apenas 12 vagas restantes nesta oferta"
+      },
+      "checkout_title": "Complete Sua Compra",
+      "checkout_email": "Seu melhor e-mail",
+      "checkout_name": "Nome completo",
+      "checkout_cpf": "CPF",
+      "checkout_phone": "Telefone",
+      "checkout_finish": "Finalizar Compra",
+      "checkout_cancel": "Cancelar",
+      "checkout_secure": "Compra 100% Segura",
+      "checkout_modal": {
+        "order_summary": "Resumo do Pedido",
+        "product": "Produto",
+        "plan": "Plano",
+        "original_price": "Preço Original",
+        "discount_applied": "Desconto Aplicado",
+        "total": "Total",
+        "secure_payment": "Pagamento 100% Seguro",
+        "payment_method": "Método de Pagamento",
+        "credit_card": "Cartão de Crédito",
+        "pix": "PIX",
+        "email": "E-mail",
+        "card_number": "Número do Cartão",
+        "card_name": "Nome no Cartão",
+        "expiry": "Validade",
+        "processing": "Processando...",
+        "complete_purchase": "Finalizar Compra",
+        "success": {
+          "title": "Pagamento Aprovado!",
+          "message": "Sua compra foi processada com sucesso.",
+          "access_code": "Código de Acesso",
+          "go_to_dashboard": "Ir para Dashboard"
+        }
+      },
+      "success_cases": {
+        "client1": "Clínica Vida Ativa",
+        "industry1": "Saúde",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Aumento em Conversão",
+        "period1": "6 meses",
+        "image1": "saude",
+        "testimonial1": "Nossos agendamentos aumentaram 300% e o ROI foi impressionante. Equipe excepcional!",
+        "author1": "Dra. Ana Paula",
+        "role1": "Diretora Clínica",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Varejo Online",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Crescimento em Vendas",
+        "period2": "4 meses",
+        "image2": "ecommerce",
+        "testimonial2": "Passamos de 50 para 140 vendas/dia. O melhor investimento que fizemos!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Advogados",
+        "industry3": "Jurídico",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Taxa de Conversão",
+        "period3": "3 meses",
+        "image3": "juridico",
+        "testimonial3": "Nossos casos novos aumentaram 200%. Estratégia de marketing impecável.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Sócio",
+        "color3": "violet"
+      },
+      "audit_tool": {
+        "placeholder": "https://cliente.com.br/conta-ads",
+        "analyze_roi": "Analisar ROI",
+        "analyzing": "Analisando"
+      },
+      "success_cases": {
+        "client1": "Clínica Vida Ativa",
+        "industry1": "Saúde",
+        "logo1": "VA",
+        "roi1": "450%",
+        "metric1": "+22%",
+        "label1": "Aumento em Conversão",
+        "period1": "6 meses",
+        "image1": "saude",
+        "testimonial1": "Nossos agendamentos aumentaram 300% e o ROI foi impressionante. Equipe excepcional!",
+        "author1": "Dra. Ana Paula",
+        "role1": "Diretora Clínica",
+        "color1": "violet",
+        "client2": "TechStore E-commerce",
+        "industry2": "Varejo Online",
+        "logo2": "TS",
+        "roi2": "320%",
+        "metric2": "+180%",
+        "label2": "Crescimento em Vendas",
+        "period2": "4 meses",
+        "image2": "ecommerce",
+        "testimonial2": "Passamos de 50 para 140 vendas/dia. O melhor investimento que fizemos!",
+        "author2": "Carlos Mendes",
+        "role2": "CEO",
+        "color2": "amber",
+        "client3": "Amaral Advogados",
+        "industry3": "Jurídico",
+        "logo3": "AA",
+        "roi3": "280%",
+        "metric3": "85%",
+        "label3": "Taxa de Conversão",
+        "period3": "3 meses",
+        "image3": "juridico",
+        "testimonial3": "Nossos casos novos aumentaram 200%. Estratégia de marketing impecável.",
+        "author3": "Dr. Roberto Amaral",
+        "role3": "Sócio",
+        "color3": "violet"
+      }
     }
   },
   "Checkout": {

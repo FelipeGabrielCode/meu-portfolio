@@ -13,8 +13,6 @@ import {
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import RatingModal from "@/components/RatingModal";
-import SignupModal from "@/components/agency/SignupModal";
-import ContactSalesModal from "@/components/agency/ContactSalesModal";
 
 // ==========================================
 // DIAGNOSTIC TOOL - AUDITORIA DE CAMPANHAS
@@ -154,7 +152,7 @@ function CampaignAuditTool({ t }: { t: (key: string, params?: Record<string, str
             type="text"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            placeholder="https://cliente.com.br/conta-ads"
+            placeholder={t("audit_tool.placeholder")}
             className="w-full px-4 py-4 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all"
             disabled={isAnalyzing}
           />
@@ -172,7 +170,7 @@ function CampaignAuditTool({ t }: { t: (key: string, params?: Record<string, str
               />
             </div>
             <div className="flex items-center justify-between text-xs">
-              <span className="text-violet-400 animate-pulse">{loadingText || t("analyzing")}</span>
+              <span className="text-violet-400 animate-pulse">{loadingText || t("audit_tool.analyzing")}</span>
               <span className="text-slate-500 font-mono">{progress}%</span>
             </div>
           </div>
@@ -186,12 +184,12 @@ function CampaignAuditTool({ t }: { t: (key: string, params?: Record<string, str
           {isAnalyzing ? (
             <>
               <RefreshCw className="w-5 h-5 animate-spin" />
-              {t("analyzing")}...
+              {t("audit_tool.analyzing")}...
             </>
           ) : (
             <>
               <Search className="w-5 h-5" />
-              {t("analyze_roi")}
+              {t("audit_tool.analyze_roi")}
             </>
           )}
         </button>
@@ -412,46 +410,46 @@ function FeatureTabs({ t }: { t: (key: string, params?: Record<string, string | 
 function RealSuccessCases({ t }: { t: (key: string, params?: Record<string, string | number>) => string }) {
   const cases = [
     {
-      client: "Clínica Vida Ativa",
-      industry: "Saúde",
-      logo: "VA",
-      roi: "450%",
-      metric: "+22%",
-      label: "Aumento em Conversão",
-      period: "6 meses",
-      image: "saude",
-      testimonial: "Nossas agendamentos aumentaram 300% e o ROI foi impressionante. Equipe excepcional!",
-      author: "Dra. Ana Paula",
-      role: "Diretora Clínica",
-      color: "violet"
+      client: t("success_cases.client1"),
+      industry: t("success_cases.industry1"),
+      logo: t("success_cases.logo1"),
+      roi: t("success_cases.roi1"),
+      metric: t("success_cases.metric1"),
+      label: t("success_cases.label1"),
+      period: t("success_cases.period1"),
+      image: t("success_cases.image1"),
+      testimonial: t("success_cases.testimonial1"),
+      author: t("success_cases.author1"),
+      role: t("success_cases.role1"),
+      color: t("success_cases.color1")
     },
     {
-      client: "TechStore E-commerce",
-      industry: "Varejo Online",
-      logo: "TS",
-      roi: "320%",
-      metric: "+180%",
-      label: "Crescimento em Vendas",
-      period: "4 meses",
-      image: "ecommerce",
-      testimonial: "Passamos de 50 para 140 vendas/dia. O melhor investimento que fizemos!",
-      author: "Carlos Mendes",
-      role: "CEO",
-      color: "amber"
+      client: t("success_cases.client2"),
+      industry: t("success_cases.industry2"),
+      logo: t("success_cases.logo2"),
+      roi: t("success_cases.roi2"),
+      metric: t("success_cases.metric2"),
+      label: t("success_cases.label2"),
+      period: t("success_cases.period2"),
+      image: t("success_cases.image2"),
+      testimonial: t("success_cases.testimonial2"),
+      author: t("success_cases.author2"),
+      role: t("success_cases.role2"),
+      color: t("success_cases.color2")
     },
     {
-      client: "Amaral Advogados",
-      industry: "Jurídico",
-      logo: "AA",
-      roi: "280%",
-      metric: "85%",
-      label: "Taxa de Conversão",
-      period: "3 meses",
-      image: "juridico",
-      testimonial: "Nossos casos novos aumentaram 200%. Estratégia de marketing impecável.",
-      author: "Dr. Roberto Amaral",
-      role: "Sócio",
-      color: "violet"
+      client: t("success_cases.client3"),
+      industry: t("success_cases.industry3"),
+      logo: t("success_cases.logo3"),
+      roi: t("success_cases.roi3"),
+      metric: t("success_cases.metric3"),
+      label: t("success_cases.label3"),
+      period: t("success_cases.period3"),
+      image: t("success_cases.image3"),
+      testimonial: t("success_cases.testimonial3"),
+      author: t("success_cases.author3"),
+      role: t("success_cases.role3"),
+      color: t("success_cases.color3")
     }
   ];
 
@@ -541,33 +539,28 @@ function CreativeTeam() {
 // ==========================================
 // PRICING SECTION
 // ==========================================
-function PricingSection({ t, features, onSignup, onContact }: { 
+function PricingSection({ t, features }: { 
   t: (key: string, params?: Record<string, string | number>) => string;
   features: Record<string, string[]>;
-  onSignup: () => void;
-  onContact: () => void;
 }) {
   const plans = [
     {
       id: "freelancer",
       icon: User,
       popular: false,
-      color: "violet",
-      action: "contact"
+      color: "violet"
     },
     {
       id: "growth",
       icon: Users,
       popular: true,
-      color: "amber",
-      action: "signup"
+      color: "amber"
     },
     {
       id: "enterprise",
       icon: Building2,
       popular: false,
-      color: "emerald",
-      action: "contact"
+      color: "emerald"
     }
   ];
 
@@ -576,14 +569,14 @@ function PricingSection({ t, features, onSignup, onContact }: {
       {plans.map((plan) => (
         <div 
           key={plan.id}
-          className={`relative p-6 rounded-2xl border transition-all duration-300 ${
+          className={`relative p-6 rounded-2xl border transition-all duration-500 transform-gpu ${
             plan.popular 
-              ? "bg-gradient-to-b from-violet-600/20 to-slate-900/90 border-violet-500/50 shadow-2xl shadow-violet-500/10 scale-105" 
-              : "bg-slate-900/50 border-slate-800 hover:border-slate-700"
+              ? "bg-gradient-to-b from-violet-600/20 to-slate-900/90 border-violet-500/50 shadow-2xl shadow-violet-500/10 scale-105 animate-pulse hover:scale-110 hover:shadow-2xl hover:shadow-violet-500/30 hover:-translate-y-1" 
+              : "bg-slate-900/50 border-slate-800 hover:border-slate-700 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/20 hover:-translate-y-1"
           }`}
         >
           {plan.popular && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 animate-bounce">
               <span className="px-3 py-1 rounded-full bg-gradient-to-r from-violet-500 to-amber-500 text-white text-xs font-bold">
                 {t(`pricing.${plan.id}.badge`)}
               </span>
@@ -612,13 +605,11 @@ function PricingSection({ t, features, onSignup, onContact }: {
             ))}
           </ul>
 
-          <button 
-            onClick={() => plan.action === "signup" ? onSignup() : onContact()}
-            className={`w-full py-3 rounded-xl font-semibold transition-all ${
-              plan.popular 
-                ? "bg-gradient-to-r from-violet-500 to-amber-500 text-white hover:opacity-90" 
-                : "bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700"
-            }`}>
+          <button className={`w-full py-3 rounded-xl font-semibold transition-all ${
+            plan.popular 
+              ? "bg-gradient-to-r from-violet-500 to-amber-500 text-white hover:opacity-90" 
+              : "bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700"
+          }`}>
             {t(`pricing.${plan.id}.cta`)}
           </button>
         </div>
@@ -653,8 +644,6 @@ export default function AgenciaLandingPageClient() {
   const common = useTranslations("Demos.common");
   const [isRatingOpen, setIsRatingOpen] = useState(false);
   const [hasShownRating, setHasShownRating] = useState(false);
-  const [isSignupOpen, setIsSignupOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
   const pricingRef = useRef<HTMLDivElement>(null);
 
   // Mostrar avaliação após 10 segundos, apenas uma vez
@@ -678,18 +667,6 @@ export default function AgenciaLandingPageClient() {
         isOpen={isRatingOpen}
         onClose={() => setIsRatingOpen(false)}
         demoName={t("demo_name")}
-      />
-      
-      <SignupModal
-        isOpen={isSignupOpen}
-        onClose={() => setIsSignupOpen(false)}
-        t={t}
-      />
-      
-      <ContactSalesModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        t={t}
       />
 
       {/* Botão Voltar */}
@@ -728,19 +705,19 @@ export default function AgenciaLandingPageClient() {
             <PainPointsBanner t={t} />
 
             <div className="flex flex-col sm:flex-row gap-2 md:gap-4 mt-6">
-              <button 
-                onClick={() => setIsSignupOpen(true)}
+              <Link 
+                href="/testar-gratis" 
                 className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl bg-violet-500 text-white font-semibold px-3 py-2 md:px-6 md:py-3 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-violet-500/25 text-xs md:text-base"
               >
                 {t("cta_primary")}
                 <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-              </button>
-              <button 
-                onClick={scrollToPricing}
+              </Link>
+              <Link 
+                href="/comecar-agora" 
                 className="inline-flex items-center justify-center gap-1.5 md:gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-3 py-2 md:px-6 md:py-3 font-semibold text-slate-300 transition-all hover:-translate-y-0.5 hover:border-slate-600 text-xs md:text-base"
               >
                 {t("cta_secondary")}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -857,8 +834,6 @@ export default function AgenciaLandingPageClient() {
               growth: t.raw("pricing.growth.features") as string[],
               enterprise: t.raw("pricing.enterprise.features") as string[]
             }}
-            onSignup={() => setIsSignupOpen(true)}
-            onContact={() => setIsContactOpen(true)}
           />
         </div>
       </section>
@@ -875,19 +850,19 @@ export default function AgenciaLandingPageClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                onClick={() => setIsSignupOpen(true)}
+                onClick={scrollToPricing}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 to-amber-500 text-white font-bold px-8 py-4 transition-all hover:opacity-90 hover:shadow-lg hover:shadow-violet-500/25"
               >
                 <Sparkles className="w-5 h-5" />
                 {t("start_free_trial")}
               </button>
-              <button 
-                onClick={() => setIsContactOpen(true)}
+              <Link 
+                href="/falar-vendas" 
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800/50 px-8 py-4 font-semibold text-slate-300 transition-all hover:bg-slate-800"
               >
                 <Phone className="w-5 h-5" />
                 {t("talk_sales")}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

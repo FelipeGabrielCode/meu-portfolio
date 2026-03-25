@@ -87,7 +87,7 @@ export default function FeatureShowcase() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-emerald-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-300">Hub Financeiro</span>
+                  <span className="text-sm font-medium text-slate-300">{t("financial_hub")}</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="w-2 h-2 bg-slate-600 rounded-full" />
@@ -103,13 +103,13 @@ export default function FeatureShowcase() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-emerald-400 flex items-center gap-2">
                     <CheckCircle className="w-4 h-4" />
-                    Conciliação Bancária
+                    {t("bank_reconciliation")}
                   </span>
                   <span className="text-xs text-emerald-300">98.5%</span>
                 </div>
                 <div className="space-y-1">
                   <div className="flex justify-between text-xs">
-                    <span className="text-slate-400">Processados</span>
+                    <span className="text-slate-400">{t("processed")}</span>
                     <span className="text-slate-300">R$ 2.4M</span>
                   </div>
                   <div className="w-full bg-slate-700 rounded-full h-1.5">
@@ -123,18 +123,18 @@ export default function FeatureShowcase() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-violet-400 flex items-center gap-2">
                     <FileText className="w-4 h-4" />
-                    Emissão de Notas
+                    {t("invoice_generation")}
                   </span>
                   <span className="text-xs text-violet-300">247</span>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs">
                     <div className="w-2 h-2 bg-violet-400 rounded-full" />
-                    <span className="text-slate-300">NFe: 142</span>
+                    <span className="text-slate-300">{t("nfe")}: 142</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs">
                     <div className="w-2 h-2 bg-violet-400 rounded-full" />
-                    <span className="text-slate-300">NFSe: 105</span>
+                    <span className="text-slate-300">{t("nfse")}: 105</span>
                   </div>
                 </div>
               </div>
@@ -144,21 +144,21 @@ export default function FeatureShowcase() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-slate-300 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4" />
-                    Fluxo de Caixa
+                    {t("cash_flow")}
                   </span>
                   <span className="text-xs text-emerald-400">+12.5%</span>
                 </div>
                 <div className="text-xs text-slate-400 space-y-1">
                   <div className="flex justify-between">
-                    <span>Entradas</span>
+                    <span>{t("inflows")}</span>
                     <span className="text-emerald-400">R$ 458K</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saídas</span>
+                    <span>{t("outflows")}</span>
                     <span className="text-red-400">R$ 312K</span>
                   </div>
                   <div className="flex justify-between pt-1 border-t border-slate-700">
-                    <span>Saldo</span>
+                    <span>{t("balance")}</span>
                     <span className="text-slate-300 font-medium">R$ 146K</span>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function FeatureShowcase() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-amber-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-300">Gestão de Estoque</span>
+                  <span className="text-sm font-medium text-slate-300">{t("inventory_management")}</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="w-2 h-2 bg-slate-600 rounded-full" />
@@ -191,18 +191,18 @@ export default function FeatureShowcase() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-red-400 flex items-center gap-2">
                     <AlertCircle className="w-4 h-4" />
-                    Alertas de Ruptura
+                    {t("stock_alerts")}
                   </span>
-                  <span className="text-xs text-red-300 animate-pulse">3 críticos</span>
+                  <span className="text-xs text-red-300 animate-pulse">3 {t("critical")}</span>
                 </div>
                 <div className="space-y-1 text-xs">
                   <div className="flex justify-between">
                     <span className="text-slate-400">Mouse MX3</span>
-                    <span className="text-red-400">2 unidades</span>
+                    <span className="text-red-400">2 {t("units")}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-400">Teclado Mecânico</span>
-                    <span className="text-amber-400">5 unidades</span>
+                    <span className="text-amber-400">5 {t("units")}</span>
                   </div>
                 </div>
               </div>
@@ -212,22 +212,22 @@ export default function FeatureShowcase() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-emerald-400 flex items-center gap-2">
                     <Target className="w-4 h-4" />
-                    Giro de Estoque
+                    {t("inventory_turnover")}
                   </span>
                   <span className="text-xs text-emerald-300">8.2x</span>
                 </div>
                 <div className="text-xs text-slate-400">
-                  <div>Média do setor: 4.5x</div>
-                  <div className="text-emerald-400 font-medium">+82% acima da média</div>
+                  <div>{t("industry_average")}: 4.5x</div>
+                  <div className="text-emerald-400 font-medium">+82% {t("above_average")}</div>
                 </div>
               </div>
 
               {/* Categories */}
               <div className="bg-slate-800 rounded-lg p-3">
-                <div className="text-sm font-medium text-slate-300 mb-2">Categorias</div>
+                <div className="text-sm font-medium text-slate-300 mb-2">{t("categories")}</div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-400">Eletrônicos</span>
+                    <span className="text-xs text-slate-400">{t("electronics")}</span>
                     <div className="flex items-center gap-2">
                       <div className="w-16 bg-slate-700 rounded-full h-1.5">
                         <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: '75%' }} />
@@ -236,7 +236,7 @@ export default function FeatureShowcase() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-slate-400">Periféricos</span>
+                    <span className="text-xs text-slate-400">{t("peripherals")}</span>
                     <div className="flex items-center gap-2">
                       <div className="w-16 bg-slate-700 rounded-full h-1.5">
                         <div className="bg-amber-500 h-1.5 rounded-full" style={{ width: '45%' }} />
@@ -258,7 +258,7 @@ export default function FeatureShowcase() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-blue-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-300">CRM & Vendas</span>
+                  <span className="text-sm font-medium text-slate-300">{t("crm_sales")}</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="w-2 h-2 bg-slate-600 rounded-full" />
@@ -273,11 +273,11 @@ export default function FeatureShowcase() {
               <div className="bg-blue-500/10 rounded-lg p-3 border border-blue-500/20">
                 <div className="text-sm font-medium text-blue-400 mb-2 flex items-center gap-2">
                   <BarChart3 className="w-4 h-4" />
-                  Funil de Vendas
+                  {t("sales_funnel")}
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-400">Leads</span>
+                    <span className="text-slate-400">{t("leads")}</span>
                     <span className="text-slate-300">1,247</span>
                   </div>
                   <div className="w-full bg-slate-700 rounded-full h-1.5">
@@ -285,7 +285,7 @@ export default function FeatureShowcase() {
                   </div>
                   
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-400">Oportunidades</span>
+                    <span className="text-slate-400">{t("opportunities")}</span>
                     <span className="text-slate-300">342</span>
                   </div>
                   <div className="w-full bg-slate-700 rounded-full h-1.5">
@@ -293,7 +293,7 @@ export default function FeatureShowcase() {
                   </div>
                   
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-400">Fechados</span>
+                    <span className="text-slate-400">{t("closed")}</span>
                     <span className="text-emerald-400">89</span>
                   </div>
                   <div className="w-full bg-slate-700 rounded-full h-1.5">
@@ -306,20 +306,20 @@ export default function FeatureShowcase() {
               <div className="bg-slate-800 rounded-lg p-3">
                 <div className="text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
                   <Eye className="w-4 h-4" />
-                  Histórico Contatos
+                  {t("contact_history")}
                 </div>
                 <div className="space-y-2 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Total Contatos</span>
+                    <span className="text-slate-400">{t("total_contacts")}</span>
                     <span className="text-slate-300">8,421</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Ativos</span>
+                    <span className="text-slate-400">{t("active")}</span>
                     <span className="text-emerald-400">3,247</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Última Atividade</span>
-                    <span className="text-slate-300">2 min atrás</span>
+                    <span className="text-slate-400">{t("last_activity")}</span>
+                    <span className="text-slate-300">2 {t("minutes_ago")}</span>
                   </div>
                 </div>
               </div>
@@ -327,11 +327,11 @@ export default function FeatureShowcase() {
               {/* Conversion Rate */}
               <div className="bg-emerald-500/10 rounded-lg p-3 border border-emerald-500/20">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-emerald-400">Taxa Conversão</span>
+                  <span className="text-sm font-medium text-emerald-400">{t("conversion_rate")}</span>
                   <span className="text-xs text-emerald-300">+23%</span>
                 </div>
                 <div className="text-lg font-bold text-emerald-400">26.3%</div>
-                <div className="text-xs text-slate-400">Meta: 25%</div>
+                <div className="text-xs text-slate-400">{t("target")}: 25%</div>
               </div>
             </div>
           </div>
@@ -345,7 +345,7 @@ export default function FeatureShowcase() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-violet-500 rounded-full" />
-                  <span className="text-sm font-medium text-slate-300">Controle Acesso</span>
+                  <span className="text-sm font-medium text-slate-300">{t("access_control")}</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="w-2 h-2 bg-slate-600 rounded-full" />
@@ -360,19 +360,19 @@ export default function FeatureShowcase() {
               <div className="bg-violet-500/10 rounded-lg p-3 border border-violet-500/20">
                 <div className="text-sm font-medium text-violet-400 mb-2 flex items-center gap-2">
                   <Settings className="w-4 h-4" />
-                  Permissões Usuários
+                  {t("user_permissions")}
                 </div>
                 <div className="space-y-2 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Admin</span>
+                    <span className="text-slate-400">{t("admin")}</span>
                     <span className="text-slate-300">3</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Gerentes</span>
+                    <span className="text-slate-400">{t("managers")}</span>
                     <span className="text-slate-300">12</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Operadores</span>
+                    <span className="text-slate-400">{t("operators")}</span>
                     <span className="text-slate-300">47</span>
                   </div>
                 </div>
@@ -382,20 +382,20 @@ export default function FeatureShowcase() {
               <div className="bg-emerald-500/10 rounded-lg p-3 border border-emerald-500/20">
                 <div className="text-sm font-medium text-emerald-400 mb-2 flex items-center gap-2">
                   <Lock className="w-4 h-4" />
-                  Auditoria Segurança
+                  {t("security_audit")}
                 </div>
                 <div className="space-y-1 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Logs Hoje</span>
+                    <span className="text-slate-400">{t("logs_today")}</span>
                     <span className="text-slate-300">1,247</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Alertas</span>
+                    <span className="text-slate-400">{t("alerts")}</span>
                     <span className="text-amber-400">2</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-slate-400">Status</span>
-                    <span className="text-emerald-400">Seguro</span>
+                    <span className="text-slate-400">{t("status")}</span>
+                    <span className="text-emerald-400">{t("secure")}</span>
                   </div>
                 </div>
               </div>
@@ -404,20 +404,20 @@ export default function FeatureShowcase() {
               <div className="bg-slate-800 rounded-lg p-3">
                 <div className="text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
                   <Database className="w-4 h-4" />
-                  Controle Dados
+                  {t("data_control")}
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-3 h-3 text-emerald-400" />
-                    <span className="text-xs text-slate-300">2FA Ativo</span>
+                    <span className="text-xs text-slate-300">{t("2fa_active")}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-3 h-3 text-emerald-400" />
-                    <span className="text-xs text-slate-300">Session Timeout</span>
+                    <span className="text-xs text-slate-300">{t("session_timeout")}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-3 h-3 text-emerald-400" />
-                    <span className="text-xs text-slate-300">IP Whitelist</span>
+                    <span className="text-xs text-slate-300">{t("ip_whitelist")}</span>
                   </div>
                 </div>
               </div>

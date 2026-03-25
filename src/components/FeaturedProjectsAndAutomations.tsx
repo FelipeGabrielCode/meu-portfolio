@@ -348,7 +348,7 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: FeaturedProject;
   const title = t(`projects.${project.translationKey}.title`);
   const description = t(`projects.${project.translationKey}.description`);
   const isLaunchProject = project.id === "launch-academy-pro";
-  const ctaText = isLaunchProject ? "Perguntas Frequentes" : "Ver Demo Interativa";
+  const ctaText = isLaunchProject ? "Ver Demo Interativa" : "Ver Demo Interativa";
 
   return (
     <div
